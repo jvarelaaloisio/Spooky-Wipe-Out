@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Fsm_Mk2
 {
-    public class PAgent : MonoBehaviour
+    public class PlayerAgent : MonoBehaviour
     {
         private List<State> _states = new List<State>();
 
