@@ -1,15 +1,16 @@
 using System;
+using UnityEngine;
 
 namespace Minigames
 {
-    public abstract class Minigame
+    public abstract class Minigame: MonoBehaviour
     {
         public Action OnWin;
         public Action OnLose;
 
-        public virtual void WinGame() => OnWin?.Invoke();
-        public virtual void LoseGame() => OnLose?.Invoke();
-        public abstract void ResetGame();
+        protected virtual void WinGame() => OnWin?.Invoke();
+        protected virtual void LoseGame() => OnLose?.Invoke();
+        protected abstract void ResetGame();
         public abstract void StartGame();
     }
 }
