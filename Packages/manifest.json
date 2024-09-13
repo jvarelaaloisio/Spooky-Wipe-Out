@@ -27,6 +27,16 @@
     "com.unity.modules.umbra": "1.0.0",
     "com.unity.modules.unityanalytics": "1.0.0",
     "com.unity.modules.video": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
-  }
+    "com.unity.modules.xr": "1.0.0",
+    "com.vikoproductions.fsm_mk2": "1.0.4"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.vikoproductions.fsm_mk2"
+      ]
+    }
+  ]
 }
