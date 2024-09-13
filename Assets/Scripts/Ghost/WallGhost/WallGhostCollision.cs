@@ -8,7 +8,10 @@ namespace Ghost.WallGhost
         public Action OnPlayerCollision;
         private void OnTriggerEnter(Collider other)
         {
-            if (IsPlayerCollision(other)) OnPlayerCollision?.Invoke();
+            if (IsPlayerCollision(other))
+            {
+                OnPlayerCollision?.Invoke();
+            }
         }
 
         private static bool IsPlayerCollision(Collider other)

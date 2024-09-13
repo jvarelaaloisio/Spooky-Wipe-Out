@@ -1,19 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using Fsm_Mk2;
-using UnityEngine;
+using Minigames;
 
-public class Catch : State
+namespace Ghost.WallGhost
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Catch : State
     {
-        
-    }
+        private Minigame minigame;
+        public override void Enter()
+        {
+            
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Tick(float delta)
+        {
+        }
+
+        public override void FixedTick(float delta)
+        {
+            
+        }
+
+        public override void Exit()
+        {
+        }
     }
 }

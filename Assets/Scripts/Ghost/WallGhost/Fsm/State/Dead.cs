@@ -1,19 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using Fsm_Mk2;
-using UnityEngine;
 
-public class Dead : State
+namespace Ghost.WallGhost
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Dead : State
     {
-        
-    }
+        public override void Enter()
+        {
+            
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Tick(float delta)
+        {
+        }
+
+        public override void FixedTick(float delta)
+        {
+            
+        }
+
+        public override void Exit()
+        {
+        }
     }
 }
