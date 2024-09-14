@@ -20,10 +20,10 @@ public class SkillCheckController : Minigame
     private bool _isGameActive = false;
 
 
-    private void Start()
-    {
-        StartGame();
-    }
+    // private void Start()
+    // {
+    //     StartGame();
+    // }
 
     protected override void WinGame()
     {

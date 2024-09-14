@@ -11,7 +11,12 @@ namespace Minigames
         [SerializeField] private float maxProgress = 1f;
         [SerializeField] private float minProgress = 0f;
         
-        private bool _hasStarted;
+        private bool _hasStarted = false;
+        
+        private void Start()
+        {
+            StartGame();
+        }
         
         protected override void WinGame()
         {
@@ -29,16 +34,14 @@ namespace Minigames
 
         private void OnTick()
         {
-            if (!_hasStarted) return;
-            
-            ad.progressBar.fillAmount -= decreaseRate * Time.deltaTime;
-            
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
                 _hasStarted = true;
                 ad.progressBar.fillAmount += increaseAmount;
             }
-
+            
+            if (!_hasStarted) return;
+            
             if (ad.progressBar.fillAmount >= maxProgress)
             {
                 ad.progressBar.fillAmount = maxProgress;
@@ -49,6 +52,8 @@ namespace Minigames
                 ad.progressBar.fillAmount = minProgress;
                 LoseGame();
             }
+           
+            ad.progressBar.fillAmount -= decreaseRate * Time.deltaTime;
         }
         
         protected override void ResetGame()
@@ -65,7 +70,7 @@ namespace Minigames
         public override void StartGame()
         {
             ad.gameObject.SetActive(true);
-            _hasStarted = true;
+            ad.progressBar.fillAmount = minProgress;
         }
     }
 }
