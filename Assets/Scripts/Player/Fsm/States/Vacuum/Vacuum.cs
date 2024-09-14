@@ -1,11 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Fsm_Mk2
 {
     public class Vacuum : State
     {
-        
         private VacuumModel _vacuumModel;
         
         private Transform _target;
@@ -14,7 +12,6 @@ namespace Fsm_Mk2
         private Ray _ray;
         
         private bool _isActive;
-        
 
         private Vector3? _collision;
         private Quaternion _left;
