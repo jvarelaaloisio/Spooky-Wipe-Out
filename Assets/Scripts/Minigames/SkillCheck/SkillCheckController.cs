@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class SkillCheckController : Minigame
 {
+    
     [SerializeField] private float needleSpeed = 200f;
     [SerializeField] private float skillCheckToWin = 5f;
 
@@ -19,20 +20,15 @@ public class SkillCheckController : Minigame
 
     private bool _isGameActive = false;
 
-
-    // private void Start()
-    // {
-    //     StartGame();
-    // }
-
     protected override void WinGame()
     {
         ResetGame();
+        OnWin?.Invoke();
     }
-
     protected override void LoseGame()
     {
         ResetGame();
+        OnLose?.Invoke();
     }
 
     private void Update()
