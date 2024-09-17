@@ -1,9 +1,27 @@
 using Fsm_Mk2;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class Walk : State
+namespace Ghost.WalkingGhost
 {
+    public class Walk : State
+    {
+        public override void Enter()
+        {
 
+        }
+
+        public override void Tick(float delta)
+        {
+
+        }
+
+        public override void FixedTick(float delta)
+        {
+
+        }
+
+        public override void Exit()
+        {
+
+        }
+    }
 }

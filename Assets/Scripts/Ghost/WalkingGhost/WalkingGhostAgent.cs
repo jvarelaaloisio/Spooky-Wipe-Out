@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Fsm_Mk2;
-using Ghost.WallGhost;
+using Ghost.WalkingGhost;
 using Minigames;
 using UnityEngine;
 using State = Fsm_Mk2.State;
