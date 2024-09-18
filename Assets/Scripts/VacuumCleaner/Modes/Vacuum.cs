@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Vacuum : MonoBehaviour, IVacuumMode
+public class Vacuum : MonoBehaviour, ITool
 {
+    public event Action OnPowerOn;
+    public event Action OnPowerOff;
+
     private void OnTriggerStay(Collider other)
     {
         if(IsVacuumable(other))
@@ -13,7 +17,7 @@ public class Vacuum : MonoBehaviour, IVacuumMode
         }
     }
 
-    public void Use()
+    public void PowerOn()
     {
         
     }
@@ -23,5 +27,10 @@ public class Vacuum : MonoBehaviour, IVacuumMode
         IVacuumable vacuumable = other.GetComponent<IVacuumable>();
 
         return vacuumable != null;
+    }
+
+    public void PowerOff()
+    {
+        throw new System.NotImplementedException();
     }
 }

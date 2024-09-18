@@ -26,5 +26,10 @@ namespace Player.FSM
                 OnVacuumEnded?.Invoke();
             }
         }
+
+        public void HandleSwitchTool(InputAction.CallbackContext context)
+        {
+
+        }
     }
 }
