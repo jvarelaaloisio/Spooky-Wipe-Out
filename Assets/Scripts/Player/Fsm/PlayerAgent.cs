@@ -25,7 +25,9 @@ namespace Fsm_Mk2
         private Transition _walkIdleToTrapped;
         private Transition _walkIdleToWalkIdle;
         private Transition _trappedToWalkIdle;
+        private Transition _walkIdleToClean;
 
+        private VacuumCleaner _vacuumCleaner;
 
         public void Start()
         {
@@ -34,11 +36,16 @@ namespace Fsm_Mk2
             adController.OnLose += SetTrappedToMoveState;
             adController.OnWin += SetTrappedToMoveState;
 
+            //inputReaderFsm.OnVacuumStarted += 
+
             State _walkIdle = new WalkIdle(playerModel, walkIdleModel);
             _states.Add(_walkIdle);
 
             State _trapped = new Trapped(playerModel);
             _states.Add(_trapped);
+
+            State _clean = new Clean();
+            _states.Add(_clean);
 
             _walkIdleToTrapped = new Transition() { From = _walkIdle, To = _trapped };
             _walkIdle.transitions.Add(_walkIdleToTrapped);
@@ -48,6 +55,9 @@ namespace Fsm_Mk2
 
             _trappedToWalkIdle = new Transition() { From = _trapped, To = _walkIdle };
             _trapped.transitions.Add(_trappedToWalkIdle);
+
+            _walkIdleToClean = new Transition() { From = _walkIdle, To = _clean };
+            _clean.transitions.Add(_walkIdleToClean);
 
             _fsm = new Fsm(_walkIdle);
         }

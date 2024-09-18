@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.ai.navigation": "1.1.5",
     "com.unity.cinemachine": "2.10.1",
     "com.unity.collab-proxy": "2.4.4",
     "com.unity.feature.development": "1.0.1",
@@ -8,6 +9,7 @@
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.4",
+    "com.vikoproductions.fsm_mk2": "1.0.4",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
@@ -27,8 +29,7 @@
     "com.unity.modules.umbra": "1.0.0",
     "com.unity.modules.unityanalytics": "1.0.0",
     "com.unity.modules.video": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.vikoproductions.fsm_mk2": "1.0.4"
+    "com.unity.modules.xr": "1.0.0"
   },
   "scopedRegistries": [
     {
