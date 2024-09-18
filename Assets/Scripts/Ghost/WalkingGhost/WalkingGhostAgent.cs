@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Fsm_Mk2;
+using Gameplay.GhostMechanics;
 using Ghost.WalkingGhost;
 using Minigames;
 using UnityEngine;
@@ -7,9 +8,10 @@ using State = Fsm_Mk2.State;
 
 namespace Ghost
 {
-    public class WalkingGhostAgent : MonoBehaviour
+    public class WalkingGhostAgent : MonoBehaviour, IVacuumable
     {
         [SerializeField] private SkillCheckController minigame;
+        [SerializeField] private RandomPatrolling patrolling;
 
         private List<State> _states = new List<State>();
 
@@ -22,7 +24,10 @@ namespace Ghost
 
         public void Start()
         {
-            State _walk = new Walk();
+            minigame.OnWin += SetCaptureState;
+            minigame.OnLose += SetWalkState;
+
+            State _walk = new Walk(patrolling);
             _states.Add(_walk);
 
             State _struggle = new Struggle();
@@ -52,6 +57,7 @@ namespace Ghost
         private void SetStruggleState()
         {
             _fsm.ApplyTransition(_walkToStruggle);
+            minigame.StartGame();
         }
 
         private void SetCaptureState()
@@ -78,6 +84,11 @@ namespace Ghost
         private void FixedUpdate()
         {
             _fsm.FixedUpdate();
+        }
+
+        public void IsBeingVacuumed()
+        {
+            SetStruggleState();
         }
     }
 }
