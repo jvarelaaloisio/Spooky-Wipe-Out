@@ -4,11 +4,12 @@ using UnityEngine.InputSystem;
 
 namespace Player.FSM
 {
-    public class InputReaderFsm : MonoBehaviour
+    public class InputReader : MonoBehaviour
     {
         public Action<Vector2,bool> OnMove;
         public Action OnVacuumStarted;
         public Action OnVacuumEnded;
+        public Action OnSwitchTool;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -29,7 +30,10 @@ namespace Player.FSM
 
         public void HandleSwitchTool(InputAction.CallbackContext context)
         {
-
+            if (context.started)
+            {
+                OnSwitchTool?.Invoke();
+            }
         }
     }
 }
