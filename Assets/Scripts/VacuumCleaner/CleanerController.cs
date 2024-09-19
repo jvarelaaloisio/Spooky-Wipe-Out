@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 //Patron State
-public class VacuumCleaner
+public class CleanerController : MonoBehaviour 
 {
     [SerializeField] private List<ToolByID> toolsByIDs = new List<ToolByID>();
     private ITool _currentTool;
@@ -21,7 +21,7 @@ public class VacuumCleaner
 
         var nextTool = toolById.tool.GetTool();
 
-        if( nextTool == null || nextTool == _currentTool)
+        if(nextTool == null || nextTool == _currentTool)
         {
             return;
         }

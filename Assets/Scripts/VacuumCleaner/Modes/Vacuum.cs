@@ -19,7 +19,7 @@ public class Vacuum : MonoBehaviour, ITool
 
     public void PowerOn()
     {
-        
+        throw new System.NotImplementedException();
     }
 
     private static bool IsVacuumable(Collider other)
