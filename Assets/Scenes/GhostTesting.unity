@@ -491,7 +491,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.8
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -679,12 +679,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480253472}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.727}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.0192307, z: 1.3980769}
+  m_LocalScale: {x: 1.9230769, y: 1.9230769, z: 1.9230769}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 898830478}
+  m_Father: {fileID: 1258525743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &480253474
 BoxCollider:
@@ -915,7 +915,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 661033110}
-        m_TargetAssemblyTypeName: Player.FSM.InputReaderFsm, Assembly-CSharp
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleMoveInput
         m_Mode: 0
         m_Arguments:
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 661033107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3885594e685034f40bbbc946a24cd1aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 77fa97f03bcdd544c873874f021bc38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &677860704
@@ -1033,7 +1033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &695191866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1110,7 +1110,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1258525743}
-  - {fileID: 480253473}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &898830479
@@ -1125,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aed8e863af645c4daeaeb636caa5567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputReaderFsm: {fileID: 661033110}
+  inputReader: {fileID: 661033110}
   walkIdleModel: {fileID: 11400000, guid: f6225c811a45c4a4bba52eb64f59c1ea, type: 2}
   playerModel: {fileID: 1258525742}
   adController: {fileID: 1987102245}
@@ -1262,6 +1261,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1170663698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170663699}
+  m_Layer: 0
+  m_Name: Cleaner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170663699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170663698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.659912, y: -4.565832, z: 7.3418603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1239018671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1434,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2027951778}
+  - {fileID: 480253473}
   m_Father: {fileID: 898830478}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1258525744
@@ -1590,7 +1621,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.5
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2988,3 +3019,4 @@ SceneRoots:
   - {fileID: 1560887405}
   - {fileID: 677860705}
   - {fileID: 2025458645}
+  - {fileID: 1170663699}

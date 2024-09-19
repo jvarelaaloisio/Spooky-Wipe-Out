@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Minigames;
 using Player.FSM;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 namespace Fsm_Mk2
@@ -13,7 +14,7 @@ namespace Fsm_Mk2
 
         private List<State> _states = new List<State>();
 
-        [SerializeField] private InputReaderFsm inputReaderFsm;
+        [SerializeField] private InputReader inputReader;
         [SerializeField] private WalkIdleModel walkIdleModel;
         [SerializeField] private GameObject playerModel;
 
@@ -27,11 +28,11 @@ namespace Fsm_Mk2
         private Transition _trappedToWalkIdle;
         private Transition _walkIdleToClean;
 
-        private VacuumCleaner _vacuumCleaner;
+        private CleanerController _vacuumCleaner;
 
         public void Start()
         {
-            inputReaderFsm.OnMove += SetMoveStateDirection;
+            inputReader.OnMove += SetMoveStateDirection;
             OnHunted += SetTrappedState;
             adController.OnLose += SetTrappedToMoveState;
             adController.OnWin += SetTrappedToMoveState;
@@ -64,8 +65,13 @@ namespace Fsm_Mk2
 
         private void SetMoveStateDirection(Vector2 direction, bool shouldRot)
         {
+            //                                  Local direction (in relation to the world)
             Vector3 moveDirection = new Vector3(direction.x, 0, direction.y);
-
+            var cameraTransform = Camera.main.transform;
+            //                                      World direction (passed through the camera transform matrix)
+            var cameraBasedMoveDirection = cameraTransform.TransformDirection(moveDirection);
+            cameraBasedMoveDirection.y = 0;
+     
             bool stateFound = false;
 
             foreach (var state in _states)
@@ -75,7 +81,8 @@ namespace Fsm_Mk2
                     if (state is WalkIdle walkIdle)
                     {
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
-                        walkIdle.SetDir(moveDirection, shouldRot);
+                        walkIdle.SetDir(cameraBasedMoveDirection, shouldRot);
+                        Debug.Log(cameraBasedMoveDirection);
                         stateFound = true;
                         break;
                     }
