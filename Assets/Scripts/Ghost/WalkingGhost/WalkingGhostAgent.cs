@@ -19,6 +19,7 @@ namespace Ghost
 
         private Transition _walkToStruggle;
         private Transition _struggleToCapture;
+        private Transition _struggleToWalk;
         private Transition _struggleToFlee;
         private Transition _fleeToWalk;
 
@@ -47,6 +48,9 @@ namespace Ghost
 
             _struggleToFlee = new Transition() { From = _struggle, To = _flee };
             _struggle.transitions.Add(_struggleToFlee);
+            
+            _struggleToWalk = new Transition() { From = _struggle, To = _walk };
+            _struggle.transitions.Add(_struggleToWalk);
 
             _fleeToWalk = new Transition() { From = _flee, To = _walk };
             _flee.transitions.Add(_fleeToWalk);
@@ -72,7 +76,7 @@ namespace Ghost
 
         private void SetWalkState()
         {
-            _fsm.ApplyTransition(_fleeToWalk);
+            _fsm.ApplyTransition(_struggleToWalk);
         }
 
         private void Update()

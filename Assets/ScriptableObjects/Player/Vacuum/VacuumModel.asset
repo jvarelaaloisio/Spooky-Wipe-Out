@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2493065e47a848b4a99dc2f67d4452af, type: 3}
   m_Name: VacuumModel
   m_EditorClassIdentifier: 
-  speed: 0
-  maxAngle: 45
-  renderDistance: 5
+  speed: 0.54
+  maxAngle: 41.1
+  renderDistance: 1.12
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256

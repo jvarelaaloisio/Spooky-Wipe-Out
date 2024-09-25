@@ -15,7 +15,7 @@ public class TrashCollector : MonoBehaviour
 
     private bool IsVacuumable(Collider other)
     {
-        IVacuumable vacuumable = other.GetComponent<IVacuumable>();
+        IVacuumable vacuumable = other.GetComponentInParent<IVacuumable>();
 
         return vacuumable != null;
     }

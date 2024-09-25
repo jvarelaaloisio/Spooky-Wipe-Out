@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,9 +9,9 @@ namespace VacuumCleaner.Modes
     {
         [SerializeField] private Transform target;
         [SerializeField] private VacuumModel model;
-        
+
         private Ray _ray;
-        
+
         private Vector3? _collision;
         private Quaternion _left;
         private Quaternion _right;
@@ -32,18 +33,18 @@ namespace VacuumCleaner.Modes
             {
                 if (CanVacuum(other))
                 {
-                    other.GetComponent<IVacuumable>().IsBeingVacuumed(target.position, model.Speed);
+                    other.GetComponentInParent<IVacuumable>().IsBeingVacuumed(target.position, model.Speed);
                 }
             }
         }
-    
+
         private static bool IsVacuumable(Collider other)
         {
-            IVacuumable vacuumable = other.GetComponent<IVacuumable>();
+            IVacuumable vacuumable = other.GetComponentInParent<IVacuumable>();
 
             return vacuumable != null;
         }
-        
+
         private bool CanVacuum(Collider other)
         {
             var angleToObject = Vector3.Angle(target.forward, other.transform.position - target.position);
@@ -56,10 +57,10 @@ namespace VacuumCleaner.Modes
             {
                 return false;
             }
-                
+
             return true;
         }
-        
+
 #if UNITY_EDITOR
 
         private void OnDrawGizmos()

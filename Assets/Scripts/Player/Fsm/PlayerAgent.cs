@@ -13,6 +13,7 @@ namespace Fsm_Mk2
     public class PlayerAgent : MonoBehaviour
     {
         public Action<Transform> OnHunted;
+        public Action<Transform> OnStruggle;
 
         private List<State> _states = new List<State>();
 
