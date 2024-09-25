@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: VacuumModel
   m_EditorClassIdentifier: 
   speed: 0.54
-  maxAngle: 41.1
-  renderDistance: 1.12
+  maxAngle: 38.1
+  renderDistance: 2.07
   wallLayer:
     serializedVersion: 2
     m_Bits: 256

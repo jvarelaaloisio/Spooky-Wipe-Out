@@ -22,11 +22,15 @@ namespace Ghost
         private Transition _struggleToWalk;
         private Transition _struggleToFlee;
         private Transition _fleeToWalk;
+        
+        bool minigameActive = false;
 
         public void Start()
         {
             minigame.OnWin += SetCaptureState;
+            minigame.OnWin += ResetMinigame;
             minigame.OnLose += SetWalkState;
+            minigame.OnLose += ResetMinigame;
 
             State _walk = new Walk(patrolling);
             _states.Add(_walk);
@@ -54,14 +58,24 @@ namespace Ghost
 
             _fleeToWalk = new Transition() { From = _flee, To = _walk };
             _flee.transitions.Add(_fleeToWalk);
-
+            
             _fsm = new Fsm(_walk);
         }
 
         private void SetStruggleState()
         {
             _fsm.ApplyTransition(_walkToStruggle);
+
+            if (minigameActive) return;
+            
             minigame.StartGame();
+            minigameActive = true;
+
+        }
+
+        private void ResetMinigame()
+        {
+            minigameActive = false;
         }
 
         private void SetCaptureState()
