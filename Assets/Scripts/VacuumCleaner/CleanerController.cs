@@ -1,41 +1,49 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using VacuumCleaner.Modes;
 
 //Patron State
-public class CleanerController : MonoBehaviour 
+namespace VacuumCleaner
 {
-    [SerializeField] private List<ToolByID> toolsByIDs = new List<ToolByID>();
-    private ITool _currentTool;
-    
-    public void SwitchToTool(int id)
+    public class CleanerController: MonoBehaviour
     {
-        var toolById = toolsByIDs.Where(toolById=> toolById.Id == id).FirstOrDefault();
+        [SerializeField] private List<ToolByID> toolsByIDs = new List<ToolByID>();
+        private ITool _currentTool;
 
-        if(toolById == null)
+        private void Start()
         {
-            Debug.LogError($"No tool for the id {id}");
-            return;
+            SwitchToTool(0);
+        }
+        
+        public void SwitchToTool(int id)
+        {
+            var toolById = toolsByIDs.Where(toolById=> toolById.Id == id).FirstOrDefault();
+
+            if(toolById == null)
+            {
+                Debug.LogError($"No tool for the id {id}");
+                return;
+            }
+
+            var nextTool = toolById.tool.GetTool();
+
+            if(nextTool == null || nextTool == _currentTool)
+            {
+                return;
+            }
+
+            _currentTool?.PowerOff();
+
+            _currentTool = nextTool;
+
+            _currentTool?.PowerOn();
         }
 
-        var nextTool = toolById.tool.GetTool();
-
-        if(nextTool == null || nextTool == _currentTool)
+        private void Update()
         {
-            return;
+            Debug.Log($@"{nameof(CleanerController)}, current mode is: {_currentTool})");
         }
-
-        _currentTool.PowerOff();
-
-        _currentTool = nextTool;
-
-        _currentTool.PowerOn();
-    }
-
-    private class ToolByID
-    {
-        public int Id;
-        public ToolProvider tool;
     }
 }

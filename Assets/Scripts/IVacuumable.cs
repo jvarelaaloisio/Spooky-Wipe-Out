@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IVacuumable
 {
-    public void IsBeingVacuumed();
+    public void IsBeingVacuumed(params object[] args);
 }

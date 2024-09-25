@@ -4,6 +4,8 @@ using Minigames;
 using Player.FSM;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
+using VacuumCleaner;
 
 
 namespace Fsm_Mk2
@@ -21,6 +23,10 @@ namespace Fsm_Mk2
         [SerializeField] private ADController adController;
         [SerializeField] private SkillCheckController skillCheckController;
 
+        [SerializeField] private CleanerController cleanerController;
+        
+        [SerializeField] private LayerMask layerRaycast;
+        
         private Fsm _fsm;
 
         private Transition _walkIdleToTrapped;
@@ -28,7 +34,6 @@ namespace Fsm_Mk2
         private Transition _trappedToWalkIdle;
         private Transition _walkIdleToClean;
 
-        private CleanerController _vacuumCleaner;
 
         public void Start()
         {
@@ -37,7 +42,10 @@ namespace Fsm_Mk2
             adController.OnLose += SetTrappedToMoveState;
             adController.OnWin += SetTrappedToMoveState;
 
-            //inputReaderFsm.OnVacuumStarted += 
+            inputReader.OnCleanerStart += SetCleanerVacuumMode;
+            // inputReader.OnCleanerStart += ChangeRotation;
+            // inputReader.OnCleanerPerform += ChangeRotation;
+            inputReader.OnCleanerEnd += SetCleanerIdleMode;
 
             State _walkIdle = new WalkIdle(playerModel, walkIdleModel);
             _states.Add(_walkIdle);
@@ -82,7 +90,6 @@ namespace Fsm_Mk2
                     {
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
                         walkIdle.SetDir(cameraBasedMoveDirection, shouldRot);
-                        Debug.Log(cameraBasedMoveDirection);
                         stateFound = true;
                         break;
                     }
@@ -146,6 +153,36 @@ namespace Fsm_Mk2
             }
         }
 
+        private void SetCleanerVacuumMode()
+        {
+            cleanerController.SwitchToTool(1);
+        }
+        
+        private void SetCleanerIdleMode()
+        {
+            cleanerController.SwitchToTool(0);
+        }
+        
+        // private void ChangeRotation()
+        // {
+        //     if (!Camera.main) return;
+        //     
+        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //     RaycastHit hit;
+        //     
+        //     if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerRaycast))
+        //     {
+        //         Vector3 targetPosition = new Vector3(hit.point.x, playerModel.transform.position.y, hit.point.z);
+        //
+        //         Vector3 direction = targetPosition - playerModel.transform.position;
+        //         Quaternion actualRotation = playerModel.transform.rotation;
+        //         float rotationAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+        //         Quaternion targetRotation = Quaternion.Euler(0f, rotationAngle, 0f);
+        //
+        //         playerModel.transform.rotation = targetRotation;
+        //     }
+        // }
+        
         private void Update()
         {
             _fsm.Update();

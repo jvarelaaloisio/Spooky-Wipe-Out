@@ -86,7 +86,7 @@ namespace Ghost
             _fsm.FixedUpdate();
         }
 
-        public void IsBeingVacuumed()
+        public void IsBeingVacuumed(params object[] args)
         {
             SetStruggleState();
         }

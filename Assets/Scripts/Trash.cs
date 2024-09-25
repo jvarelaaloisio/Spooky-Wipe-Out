@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trash : MonoBehaviour
+public class Trash : MonoBehaviour, IVacuumable
 {
-    // Start is called before the first frame update
-    void Start()
+    public void IsBeingVacuumed(params object[] args)
     {
-        
-    }
+        var rb = GetComponent<Rigidbody>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var direction = ((Vector3)args[0] - transform.position).normalized;
+            
+        rb.AddForce(direction * (float)args[1], ForceMode.VelocityChange);
     }
 }

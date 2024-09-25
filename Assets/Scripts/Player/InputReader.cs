@@ -7,8 +7,9 @@ namespace Player.FSM
     public class InputReader : MonoBehaviour
     {
         public Action<Vector2,bool> OnMove;
-        public Action OnVacuumStarted;
-        public Action OnVacuumEnded;
+        public Action OnCleanerStart;
+        public Action OnCleanerPerform;
+        public Action OnCleanerEnd;
         public Action OnSwitchTool;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
@@ -16,16 +17,23 @@ namespace Player.FSM
             OnMove?.Invoke(context.ReadValue<Vector2>(),Input.GetMouseButton(0));
         }
 
-        public void HandleVacuumCleanerInput(InputAction.CallbackContext context)
+        public void HandleCleanerInput(InputAction.CallbackContext context)
         {
             if (context.started)
             {
-                OnVacuumStarted?.Invoke();
+                OnCleanerStart?.Invoke();
             }
-            else if (context.canceled)
+            
+            if (context.performed)
             {
-                OnVacuumEnded?.Invoke();
+                OnCleanerPerform?.Invoke();
             }
+            
+            if (context.canceled)
+            {
+                OnCleanerEnd?.Invoke();
+            }
+            
         }
 
         public void HandleSwitchTool(InputAction.CallbackContext context)
