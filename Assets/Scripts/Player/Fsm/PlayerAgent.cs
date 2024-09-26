@@ -48,7 +48,7 @@ namespace Fsm_Mk2
             // inputReader.OnCleanerPerform += ChangeRotation;
             inputReader.OnCleanerEnd += SetCleanerIdleMode;
 
-            State _walkIdle = new WalkIdle(playerModel, walkIdleModel);
+            State _walkIdle = new WalkIdle(playerModel, walkIdleModel, layerRaycast);
             _states.Add(_walkIdle);
 
             State _trapped = new Trapped(playerModel);

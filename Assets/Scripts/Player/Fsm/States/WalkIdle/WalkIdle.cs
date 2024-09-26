@@ -7,6 +7,7 @@ namespace Fsm_Mk2
     {
         private GameObject _gameObject;
         private WalkIdleModel _model;
+        private LayerMask _layerRaycast;
 
         private Vector3 _dir = Vector3.zero;
         private bool _isClickPressed;
@@ -14,10 +15,11 @@ namespace Fsm_Mk2
         
         private Vector3 _counterMovement;
 
-        public WalkIdle(GameObject gameObject, WalkIdleModel model)
+        public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast)
         {
             _gameObject = gameObject;
             _model = model;
+            _layerRaycast = layerRaycast;
         }
         public override void Enter()
         {
@@ -48,6 +50,30 @@ namespace Fsm_Mk2
             if (!_isClickPressed)
             {
                 _gameObject.transform.Rotate(_gameObject.transform.up, angle * Time.deltaTime * _model.RotationSpeed);
+            }
+            else
+            {
+                ChangeRotation();
+            }
+        }
+
+        private void ChangeRotation()
+        {
+            if (!Camera.main) return;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, _layerRaycast))
+            {
+                Vector3 targetPosition = new Vector3(hit.point.x, _gameObject.transform.position.y, hit.point.z);
+
+                Vector3 direction = targetPosition - _gameObject.transform.position;
+                Quaternion actualRotation = _gameObject.transform.rotation;
+                float rotationAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+                Quaternion targetRotation = Quaternion.Euler(0f, rotationAngle, 0f);
+
+                _gameObject.transform.rotation = targetRotation;
             }
         }
 
