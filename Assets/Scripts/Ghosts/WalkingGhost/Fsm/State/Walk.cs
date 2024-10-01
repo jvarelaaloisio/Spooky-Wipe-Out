@@ -1,7 +1,7 @@
 using Fsm_Mk2;
 using Gameplay.GhostMechanics;
 
-namespace Ghost.WalkingGhost
+namespace Ghosts.WalkingGhost
 {
     public class Walk : State
     {

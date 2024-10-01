@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using Fsm_Mk2;
-using Ghost.WallGhost;
+using Ghosts.WallGhost;
 using Minigames;
 using UnityEngine;
 using State = Fsm_Mk2.State;
 
-namespace Ghost
+namespace Ghosts
 {
-    public class WallGhostAgent : MonoBehaviour
+    public class WallGhostAgent : Ghost
     {
         [SerializeField] private ADController minigame;
         [SerializeField] private Transform trappingPos;

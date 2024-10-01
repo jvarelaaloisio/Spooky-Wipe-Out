@@ -1,27 +1,25 @@
 using Fsm_Mk2;
 
-namespace Ghost.WalkingGhost
+namespace Ghosts.WallGhost
 {
-    public class Flee : State
+    public class Hunt : State
     {
         public override void Enter()
         {
-
+            
         }
 
         public override void Tick(float delta)
         {
-
         }
 
         public override void FixedTick(float delta)
         {
-
+            
         }
 
         public override void Exit()
         {
-
         }
     }
 }

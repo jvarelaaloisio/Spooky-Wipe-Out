@@ -1,8 +1,8 @@
 using Fsm_Mk2;
 
-namespace Ghost.WalkingGhost
+namespace Ghosts.WalkingGhost
 {
-    public class Struggle : State
+    public class Flee : State
     {
         public override void Enter()
         {

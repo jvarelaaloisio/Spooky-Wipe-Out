@@ -1,12 +1,18 @@
 using Fsm_Mk2;
+using Minigames;
+using UnityEngine;
 
-namespace Ghost.WallGhost
+namespace Ghosts.WallGhost
 {
-    public class Hunt : State
+    public class Catch : State
     {
-        public override void Enter()
+        public Catch()
         {
             
+        }
+        
+        public override void Enter()
+        {
         }
 
         public override void Tick(float delta)

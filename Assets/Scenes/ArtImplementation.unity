@@ -6662,7 +6662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTimer: {fileID: 1711056551}
-  startTime: 0
+  startTime: 300
   countType: 0
 --- !u!114 &1952100420
 MonoBehaviour:

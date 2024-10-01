@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using Fsm_Mk2;
 using Gameplay.GhostMechanics;
-using Ghost.WalkingGhost;
-using Minigames;
+using Ghosts.WalkingGhost;
 using UnityEngine;
 using State = Fsm_Mk2.State;
 
-namespace Ghost
+namespace Ghosts
 {
-    public class WalkingGhostAgent : MonoBehaviour, IVacuumable
+    public class WalkingGhostAgent : Ghost, IVacuumable
     {
         [SerializeField] private SkillCheckController minigame;
         [SerializeField] private RandomPatrolling patrolling;

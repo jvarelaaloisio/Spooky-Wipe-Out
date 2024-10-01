@@ -2,7 +2,7 @@ using System;
 using Fsm_Mk2;
 using UnityEngine;
 
-namespace Ghost.WallGhost
+namespace Ghosts.WallGhost
 {
     public class WallGhostCollision : MonoBehaviour
     {
