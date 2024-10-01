@@ -7,7 +7,12 @@ using UnityEngine.Serialization;
 public class Trash : MonoBehaviour, IVacuumable
 {
     [SerializeField] private GameObject model;
-    
+    public Action<Trash> OnDestroy;
+
+    private void Start()
+    {
+        GameManager.GetInstance().garbage.Add(this);
+    }
 
     public void IsBeingVacuumed(params object[] args)
     {

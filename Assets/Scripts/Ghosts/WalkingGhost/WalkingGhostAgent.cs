@@ -31,6 +31,8 @@ namespace Ghosts
             minigame.OnLose += SetWalkState;
             minigame.OnLose += ResetMinigame;
 
+            GameManager.GetInstance().ghosts.Add(this);
+
             State _walk = new Walk(patrolling);
             _states.Add(_walk);
 

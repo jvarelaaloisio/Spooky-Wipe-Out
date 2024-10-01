@@ -8,7 +8,11 @@ public class TrashCollector : MonoBehaviour
     {
         if (IsVacuumable(other))
         {
-            other.gameObject.SetActive(false);
+            other.gameObject.transform.parent.gameObject.SetActive(false);
+            Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
+            trash.OnDestroy.Invoke(trash);
+            //GameManager.GetInstance().garbage.Remove();
+            //other.gameObject.SetActive(false);
             Debug.Log("Trash was Collected");
         }
     }
