@@ -5,9 +5,16 @@ using UnityEngine;
 using Ghosts;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Minigames;
+using Fsm_Mk2;
 
 public class GameManager : MonoBehaviour
 {
+    //[SerializeField] private PlayerAgent playerAgent;
+    
+    //[SerializeField] private SkillCheckController SKMinigame;
+    //[SerializeField] private ADController ADMinigame;
+
     [SerializeField] private Timer timer;
     [SerializeField] private ObjectivesUI objectivesUI;
     public List<Ghost> ghosts;
@@ -24,11 +31,16 @@ public class GameManager : MonoBehaviour
 
         ghostCounter = ghosts.Count;
 
+        foreach (Ghost ghost in ghosts)
+        {
+            ghost.OnDestroy += RemoveGhost;
+        }
 
         foreach (Trash trash in garbage )
         {
             trash.OnDestroy += RemoveTrash;
         }
+
         if (_instance == null)
         {
             _instance = this;
@@ -53,6 +65,14 @@ public class GameManager : MonoBehaviour
         garbage.Remove(trash);
         objectivesUI.SetTrashQnty(garbage.Count);
         Debug.Log("The trash has been destroyed");
+    }
+
+    private void RemoveGhost(Ghost ghost)
+    {
+        ghost.OnDestroy -= RemoveGhost;
+        ghosts.Remove(ghost);
+        objectivesUI.SetGhostQnty(ghosts.Count);
+        Debug.Log("The ghost has been destroyed");
     }
 
     public static GameManager GetInstance()

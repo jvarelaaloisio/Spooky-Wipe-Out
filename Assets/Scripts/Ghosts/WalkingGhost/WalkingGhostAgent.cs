@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Fsm_Mk2;
 using Gameplay.GhostMechanics;
 using Ghosts.WalkingGhost;
 using UnityEngine;
+using UnityEngine.AI;
 using State = Fsm_Mk2.State;
 
 namespace Ghosts
@@ -11,6 +13,7 @@ namespace Ghosts
     {
         [SerializeField] private SkillCheckController minigame;
         [SerializeField] private RandomPatrolling patrolling;
+        [SerializeField] private NavMeshAgent navMeshAgent;
 
         private List<State> _states = new List<State>();
 
@@ -21,13 +24,10 @@ namespace Ghosts
         private Transition _struggleToWalk;
         private Transition _struggleToFlee;
         private Transition _fleeToWalk;
-        
-        bool minigameActive = false;
 
         public void Start()
         {
             minigame.OnWin += SetCaptureState;
-            minigame.OnWin += ResetMinigame;
             minigame.OnLose += SetWalkState;
             minigame.OnLose += ResetMinigame;
 
@@ -40,6 +40,7 @@ namespace Ghosts
             _states.Add(_struggle);
 
             State _capture = new Capture();
+            //_struggle.Enter () => { };
             _states.Add(_capture);
 
             State _flee = new Flee();
@@ -65,22 +66,21 @@ namespace Ghosts
 
         private void SetStruggleState()
         {
+            if (minigame.GetActive()) return;
+            
             _fsm.ApplyTransition(_walkToStruggle);
-
-            if (minigameActive) return;
             
             minigame.StartGame();
-            minigameActive = true;
-
         }
 
         private void ResetMinigame()
         {
-            minigameActive = false;
+            minigame.StopGame();
         }
 
         private void SetCaptureState()
         {
+            OnDestroy?.Invoke(this);
             _fsm.ApplyTransition(_struggleToCapture);
         }
 

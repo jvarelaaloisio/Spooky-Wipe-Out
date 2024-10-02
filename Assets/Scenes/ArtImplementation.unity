@@ -2045,7 +2045,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439301815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -2067,7 +2067,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439301815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e3d5c32255fdf0409ee6dd30bf43414, type: 3}
   m_Name: 
@@ -2094,6 +2094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigame: {fileID: 1963394716}
   patrolling: {fileID: 439301817}
+  navMeshAgent: {fileID: 0}
 --- !u!4 &439301819
 Transform:
   m_ObjectHideFlags: 0
@@ -2199,7 +2200,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.7
+  m_fontSize: 23.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2736,6 +2737,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vacuumColision: {fileID: 989551348}
   trashCollector: {fileID: 941267181}
+  SKMinigame: {fileID: 1963394716}
+  ADMinigame: {fileID: 470426147}
 --- !u!4 &622654877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 699807655336189069, guid: 8f7f7015a3fb8a2449f81490477f2d5d, type: 3}
@@ -4324,7 +4327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1138821136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5413,18 +5416,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499434913}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e3d5c32255fdf0409ee6dd30bf43414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _agent: {fileID: 0}
+  _agent: {fileID: 1499434918}
   _range: 15
   _centrePoint: {fileID: 1704709297}
   _player: {fileID: 1101089851}
   _safeDistance: 5
-  _patrolingSpeed: 400
-  _fleeSpeed: 800
+  _patrolingSpeed: 200
+  _fleeSpeed: 600
   isBeingVacuumed: 0
 --- !u!114 &1499434916
 MonoBehaviour:
@@ -5440,6 +5443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigame: {fileID: 1963394716}
   patrolling: {fileID: 1499434915}
+  navMeshAgent: {fileID: 0}
 --- !u!4 &1499434917
 Transform:
   m_ObjectHideFlags: 0
@@ -5463,7 +5467,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499434913}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -5727,7 +5731,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.8
+  m_fontSize: 22.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7822,7 +7826,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979575813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -7844,7 +7848,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979575813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e3d5c32255fdf0409ee6dd30bf43414, type: 3}
   m_Name: 
@@ -7871,6 +7875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigame: {fileID: 1963394716}
   patrolling: {fileID: 1979575815}
+  navMeshAgent: {fileID: 0}
 --- !u!4 &1979575817
 Transform:
   m_ObjectHideFlags: 0

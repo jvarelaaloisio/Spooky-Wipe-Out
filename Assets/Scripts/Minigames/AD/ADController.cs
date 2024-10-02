@@ -72,5 +72,10 @@ namespace Minigames
             ad.progressBar.fillAmount = minProgress;
             _runMinigame = true;
         }
+
+        public override void StopGame()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

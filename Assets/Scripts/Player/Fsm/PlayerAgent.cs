@@ -194,5 +194,10 @@ namespace Fsm_Mk2
         {
             _fsm.FixedUpdate();
         }
+
+        public CleanerController GetCleanerController()
+        {
+            return cleanerController;
+        }
     }
 }

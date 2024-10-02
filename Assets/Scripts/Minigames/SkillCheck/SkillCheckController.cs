@@ -7,7 +7,6 @@ using Random = UnityEngine.Random;
 
 public class SkillCheckController : Minigame
 {
-    
     [SerializeField] private float needleSpeed = 200f;
     [SerializeField] private float skillCheckToWin = 5f;
 
@@ -17,8 +16,6 @@ public class SkillCheckController : Minigame
 
     private readonly float _maxZone = 140.0f;
     private readonly float _minZone = -140.0f;
-
-    private bool _isGameActive = false;
 
     protected override void WinGame()
     {
@@ -38,7 +35,7 @@ public class SkillCheckController : Minigame
 
     private void OnTick()
     {
-        if (_isGameActive)
+        if (_isActive)
         {
             MoveNeedle();
             CheckSkillCheck();
@@ -48,15 +45,15 @@ public class SkillCheckController : Minigame
     protected override void ResetGame()
     {
         _skillcheckCounter = 0f;
-        _isGameActive = false;
+        _isActive = false;
         skillCheck.gameObject.SetActive(false);
     }
 
     public override void StartGame()
     {
+        _isActive = true;
         RandomizeSafeZone();
         skillCheck.gameObject.SetActive(true);
-        _isGameActive = true;
     }
 
     private void MoveNeedle()
@@ -87,7 +84,7 @@ public class SkillCheckController : Minigame
 
                 if (_skillcheckCounter >= skillCheckToWin)
                 {
-                    OnWin?.Invoke();
+                    WinGame();
                 }
 
                 Debug.Log("acertado");
@@ -118,6 +115,11 @@ public class SkillCheckController : Minigame
         Rect rect2 = new Rect(cornersB[0], cornersB[2] - cornersB[0]);
 
         return rect1.Overlaps(rect2);
+    }
+
+    public override void StopGame()
+    {
+        ResetGame();
     }
 }
 

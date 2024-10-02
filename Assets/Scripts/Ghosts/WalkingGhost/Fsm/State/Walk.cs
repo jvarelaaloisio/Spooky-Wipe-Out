@@ -14,7 +14,7 @@ namespace Ghosts.WalkingGhost
 
         public override void Enter()
         {
-            randomPatrolling.enabled = true;
+            //randomPatrolling.enabled = true;
         }
 
         public override void Tick(float delta)
@@ -29,7 +29,7 @@ namespace Ghosts.WalkingGhost
 
         public override void Exit()
         {
-            randomPatrolling.enabled = false;
+            //randomPatrolling.enabled = false;
         }
     }
 }

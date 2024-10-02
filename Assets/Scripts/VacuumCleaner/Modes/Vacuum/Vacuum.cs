@@ -1,3 +1,4 @@
+using Minigames;
 using System;
 using UnityEngine;
 
@@ -10,7 +11,16 @@ namespace VacuumCleaner.Modes
         
         [SerializeField] private VacuumColision vacuumColision;
         [SerializeField] private TrashCollector trashCollector;
-        
+
+        [SerializeField] private SkillCheckController SKMinigame;
+        [SerializeField] private ADController ADMinigame;
+
+        private void Start()
+        {
+            SKMinigame.OnLose += PowerOff;
+            ADMinigame.OnLose += PowerOff;
+        }
+
         public void PowerOn()
         {
             vacuumColision.gameObject.SetActive(true);

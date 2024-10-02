@@ -7,9 +7,15 @@ namespace Minigames
     {
         public Action OnWin;
         public Action OnLose;
+
+        protected bool _isActive;
+
+        public bool GetActive() => _isActive;
+
         protected virtual void WinGame() => OnWin?.Invoke();
         protected virtual void LoseGame() => OnLose?.Invoke();
         protected abstract void ResetGame();
         public abstract void StartGame();
+        public abstract void StopGame();
     }
 }
