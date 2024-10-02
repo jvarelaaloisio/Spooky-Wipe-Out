@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CircleSync : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class CircleSync : MonoBehaviour
     public Material Wall_Material;
     public Camera Camera;
     public LayerMask Mask;
-    //public GameObject AlphaTarget;
+    public float Speed;
 
     private void Update()
     {
@@ -25,6 +26,7 @@ public class CircleSync : MonoBehaviour
 
         var view = Camera.WorldToViewportPoint(transform.position);
         Wall_Material.SetVector(PosID, view);
+        
 
     }
 }
