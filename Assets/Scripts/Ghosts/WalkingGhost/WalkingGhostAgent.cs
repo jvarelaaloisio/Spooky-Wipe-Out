@@ -1,8 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Fsm_Mk2;
 using Gameplay.GhostMechanics;
 using Ghosts.WalkingGhost;
+using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using State = Fsm_Mk2.State;
@@ -11,7 +11,7 @@ namespace Ghosts
 {
     public class WalkingGhostAgent : Ghost, IVacuumable
     {
-        [SerializeField] private SkillCheckController minigame;
+        [SerializeField] private Minigame minigame;
         [SerializeField] private RandomPatrolling patrolling;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private GameObject model;
@@ -37,7 +37,7 @@ namespace Ghosts
             State _walk = new Walk(patrolling);
             _states.Add(_walk);
 
-            State _struggle = new Struggle();
+            State _struggle = new WalkingGhost.Struggle();
             _states.Add(_struggle);
 
             State _capture = new Capture(model, this, minigame);

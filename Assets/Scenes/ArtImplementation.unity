@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b6b9980635694c9f83c6ad7817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   trappingPos: {fileID: 1591146072}
 --- !u!65 &30334966
 BoxCollider:
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   patrolling: {fileID: 439301817}
   navMeshAgent: {fileID: 0}
   model: {fileID: 10151051}
@@ -3235,7 +3235,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.45
+  m_fontSize: 23.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3315,8 +3315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ad: {fileID: 1493710559}
-  decreaseRate: 0.1
-  increaseAmount: 0.05
+  decreaseRate: 0.05
+  increaseAmount: 0.1
   maxProgress: 1
   minProgress: 0
 --- !u!4 &470426148
@@ -4857,6 +4857,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 858703364}
+--- !u!1 &768299328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 768299329}
+  - component: {fileID: 768299331}
+  - component: {fileID: 768299330}
+  m_Layer: 5
+  m_Name: ProgressPointsBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &768299329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768299328}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1584204427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -230.99998, y: 11.999992}
+  m_SizeDelta: {x: 77.1748, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &768299330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768299328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8396226, g: 0.0039604935, b: 0.8116927, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 88731ced8ab4b114db6f30b18ac75969, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0.3
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &768299331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768299328}
+  m_CullTransparentMesh: 1
 --- !u!1 &770817289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,7 +5863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   patrolling: {fileID: 906221049}
   navMeshAgent: {fileID: 0}
   model: {fileID: 666879287}
@@ -6409,7 +6484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b6b9980635694c9f83c6ad7817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   trappingPos: {fileID: 100122366}
 --- !u!65 &986102941
 BoxCollider:
@@ -8515,7 +8590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b6b9980635694c9f83c6ad7817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   trappingPos: {fileID: 1787192727}
 --- !u!65 &1323283768
 BoxCollider:
@@ -9364,7 +9439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   patrolling: {fileID: 1499434915}
   navMeshAgent: {fileID: 0}
   model: {fileID: 1709626971}
@@ -9747,6 +9822,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needle: {fileID: 1826179439}
   safeZone: {fileID: 828706460}
+  pointsBar: {fileID: 1688186027}
+  progressPointsBar: {fileID: 768299330}
 --- !u!224 &1584204427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9763,6 +9840,8 @@ RectTransform:
   - {fileID: 247672698}
   - {fileID: 828706460}
   - {fileID: 1826179439}
+  - {fileID: 1688186026}
+  - {fileID: 768299329}
   m_Father: {fileID: 1759090247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9959,7 +10038,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.6
+  m_fontSize: 22.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10142,6 +10221,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679557158}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1688186025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1688186026}
+  - component: {fileID: 1688186028}
+  - component: {fileID: 1688186027}
+  m_Layer: 5
+  m_Name: PointsBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1688186026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688186025}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1584204427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -231, y: 12}
+  m_SizeDelta: {x: 77.1748, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1688186027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688186025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1688186028
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688186025}
+  m_CullTransparentMesh: 1
 --- !u!1 &1688882746
 GameObject:
   m_ObjectHideFlags: 0
@@ -12904,7 +13058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   patrolling: {fileID: 1979575815}
   navMeshAgent: {fileID: 0}
   model: {fileID: 1782375342}

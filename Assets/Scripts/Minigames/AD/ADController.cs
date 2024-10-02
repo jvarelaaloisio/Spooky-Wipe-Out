@@ -7,7 +7,7 @@ namespace Minigames
         [SerializeField] private AD ad;
     
         [SerializeField] private float decreaseRate = 0.1f;
-        [SerializeField] private float increaseAmount = 0.05f;
+        [SerializeField] private float increaseAmount = 0.15f;
         [SerializeField] private float maxProgress = 1f;
         [SerializeField] private float minProgress = 0f;
         
@@ -68,6 +68,7 @@ namespace Minigames
 
         public override void StartGame()
         {
+            OnStart?.Invoke();
             ad.gameObject.SetActive(true);
             ad.progressBar.fillAmount = minProgress;
             _runMinigame = true;
@@ -75,7 +76,11 @@ namespace Minigames
 
         public override void StopGame()
         {
-            throw new System.NotImplementedException();
+            if(_runMinigame)
+            {
+                OnStop?.Invoke();
+                ResetGame();
+            }
         }
     }
 }

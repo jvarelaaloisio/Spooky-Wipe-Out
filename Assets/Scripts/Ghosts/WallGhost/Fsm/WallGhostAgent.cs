@@ -9,7 +9,7 @@ namespace Ghosts
 {
     public class WallGhostAgent : Ghost
     {
-        [SerializeField] private ADController minigame;
+        [SerializeField] private Minigame minigame;
         [SerializeField] private Transform trappingPos;
         
         private List<State> _states = new List<State>();

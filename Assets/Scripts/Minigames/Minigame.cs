@@ -7,6 +7,8 @@ namespace Minigames
     {
         public Action OnWin;
         public Action OnLose;
+        public Action OnStart;
+        public Action OnStop;
 
         protected bool _isActive;
 

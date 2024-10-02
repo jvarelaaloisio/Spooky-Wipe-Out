@@ -6,13 +6,14 @@ namespace Fsm_Mk2
     public class WalkIdle : State
     {
         private GameObject _gameObject;
+        private Rigidbody _rigidbody;
         private WalkIdleModel _model;
         private LayerMask _layerRaycast;
 
         private Vector3 _dir = Vector3.zero;
         private bool _isClickPressed;
 
-        
+
         private Vector3 _counterMovement;
 
         public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast)
@@ -21,8 +22,10 @@ namespace Fsm_Mk2
             _model = model;
             _layerRaycast = layerRaycast;
         }
+
         public override void Enter()
         {
+            _rigidbody = _gameObject.GetComponent<Rigidbody>();
         }
 
         public override void Tick(float delta)
@@ -36,24 +39,30 @@ namespace Fsm_Mk2
 
         public override void Exit()
         {
+            _dir = Vector3.zero;
         }
 
         private void Move()
         {
-            _counterMovement = new Vector3(-_gameObject.GetComponent<Rigidbody>().velocity.x * _model.CounterMovementForce, 0,
-                -_gameObject.GetComponent<Rigidbody>().velocity.z * _model.CounterMovementForce);
-
-            _gameObject.GetComponent<Rigidbody>().AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
-
-            float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);
-
-            if (!_isClickPressed)
+            if (_rigidbody)
             {
-                _gameObject.transform.Rotate(_gameObject.transform.up, angle * Time.deltaTime * _model.RotationSpeed);
-            }
-            else
-            {
-                ChangeRotation();
+
+                _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0,
+                    -_rigidbody.velocity.z * _model.CounterMovementForce);
+
+                _rigidbody.AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
+
+                float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);
+
+                if (!_isClickPressed)
+                {
+                    _gameObject.transform.Rotate(_gameObject.transform.up,
+                        angle * Time.deltaTime * _model.RotationSpeed);
+                }
+                else
+                {
+                    ChangeRotation();
+                }
             }
         }
 

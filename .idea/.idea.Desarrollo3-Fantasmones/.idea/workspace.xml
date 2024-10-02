@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArtImplementation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArtImplementation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/WalkingGhostAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/WalkingGhostAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/TrashCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/TrashCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WallGhost/Fsm/WallGhostAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WallGhost/Fsm/WallGhostAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minigames/AD/ADController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minigames/AD/ADController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minigames/Minigame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minigames/Minigame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minigames/SkillCheck/SkillCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minigames/SkillCheck/SkillCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minigames/SkillCheck/SkillCheckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minigames/SkillCheck/SkillCheckController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/PlayerAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/PlayerAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/States/Clean.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/States/Struggle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/States/Clean.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/States/Struggle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/States/WalkIdle/WalkIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Fsm/States/WalkIdle/WalkIdle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +29,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/cc/71ed4340/Debug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/fb/79a77f92/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/ab/29dfb582/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/cf/4f53dfe1/Delegate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd823a7663ea4cdb840e6c898e2256ce958800/09/374f6397/HostView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventSystem/SceneManager/EventListenerSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.1/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/NativeInputRuntime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/FSM.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/State.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/Transition.cs" root0="SKIP_HIGHLIGHTING" />
@@ -36,22 +53,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "NewSystenAndArt",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NewSystenAndArt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/builds/v0.3.0\Desarrollo3-Fantasmones.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/builds/v0.4.0\Desarrollo3-Fantasmones.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\builds\v0.3.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -105,7 +122,8 @@
       <updated>1727256623087</updated>
       <workItem from="1727256627294" duration="393000" />
       <workItem from="1727807601543" duration="3275000" />
-      <workItem from="1727843490033" duration="4457000" />
+      <workItem from="1727843490033" duration="6956000" />
+      <workItem from="1727871540890" duration="7880000" />
     </task>
     <servers />
   </component>
@@ -124,6 +142,36 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/WalkingGhostAgent.cs</url>
+          <line>78</line>
+          <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Ghosts\WalkingGhost\WalkingGhostAgent.cs" containingFunctionPresentation="Method 'ResetMinigame'">
+            <startOffsets>
+              <option value="2389" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2409" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State/Capture.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Ghosts\WalkingGhost\Fsm\State\Capture.cs" containingFunctionPresentation="Method 'Enter'">
+            <startOffsets>
+              <option value="616" />
+            </startOffsets>
+            <endOffsets>
+              <option value="637" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Fsm_Mk2.Fsm" memberName="_current" />

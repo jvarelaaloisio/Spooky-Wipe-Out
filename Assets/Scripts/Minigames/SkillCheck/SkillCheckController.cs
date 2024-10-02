@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Minigames;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,6 +23,7 @@ public class SkillCheckController : Minigame
         ResetGame();
         OnWin?.Invoke();
     }
+
     protected override void LoseGame()
     {
         ResetGame();
@@ -51,7 +53,9 @@ public class SkillCheckController : Minigame
 
     public override void StartGame()
     {
+        OnStart?.Invoke();
         _isActive = true;
+        UpdateProgressPointsBar();
         RandomizeSafeZone();
         skillCheck.gameObject.SetActive(true);
     }
@@ -59,14 +63,14 @@ public class SkillCheckController : Minigame
     private void MoveNeedle()
     {
         var transformLocalPosition = skillCheck.needle.transform.localPosition;
-        
+
         if (transformLocalPosition.x > _maxZone || transformLocalPosition.x < _minZone)
         {
             needleSpeed = -needleSpeed;
         }
 
         transformLocalPosition.x += needleSpeed * Time.deltaTime;
-        
+
         skillCheck.needle.transform.localPosition = transformLocalPosition;
     }
 
@@ -81,6 +85,7 @@ public class SkillCheckController : Minigame
             {
                 RandomizeSafeZone();
                 _skillcheckCounter++;
+                UpdateProgressPointsBar();
 
                 if (_skillcheckCounter >= skillCheckToWin)
                 {
@@ -91,7 +96,13 @@ public class SkillCheckController : Minigame
             }
             else
             {
-                LoseGame();
+                if (_skillcheckCounter != 0)
+                {
+                    _skillcheckCounter--;
+                    UpdateProgressPointsBar();
+                }
+
+                // LoseGame();
                 Debug.Log("mal");
             }
         }
@@ -119,7 +130,15 @@ public class SkillCheckController : Minigame
 
     public override void StopGame()
     {
-        ResetGame();
+        if (_isActive)
+        {
+            OnStop?.Invoke();
+            ResetGame();
+        }
+    }
+
+    private void UpdateProgressPointsBar()
+    {
+        skillCheck.progressPointsBar.fillAmount = _skillcheckCounter / skillCheckToWin;
     }
 }
-

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Minigames
 {
@@ -7,6 +8,8 @@ namespace Minigames
     {
         public RectTransform needle;
         public RectTransform safeZone;
+        public Image pointsBar;
+        public Image progressPointsBar;
 
     }
 }

@@ -25,37 +25,43 @@ namespace Fsm_Mk2
         [SerializeField] private SkillCheckController skillCheckController;
 
         [SerializeField] private CleanerController cleanerController;
-        
+
         [SerializeField] private LayerMask layerRaycast;
-        
+
         private Fsm _fsm;
 
         private Transition _walkIdleToTrapped;
         private Transition _walkIdleToWalkIdle;
         private Transition _trappedToWalkIdle;
-        private Transition _walkIdleToClean;
+        private Transition _walkIdleToStruggle;
+        private Transition _struggleToWalkIdle;
 
 
         public void Start()
         {
             inputReader.OnMove += SetMoveStateDirection;
+            
             OnHunted += SetTrappedState;
-            adController.OnLose += SetTrappedToMoveState;
-            adController.OnWin += SetTrappedToMoveState;
+            skillCheckController.OnLose += SetTrappedToMoveState;
+            skillCheckController.OnWin += SetTrappedToMoveState;
 
             inputReader.OnCleanerStart += SetCleanerVacuumMode;
-            // inputReader.OnCleanerStart += ChangeRotation;
-            // inputReader.OnCleanerPerform += ChangeRotation;
             inputReader.OnCleanerEnd += SetCleanerIdleMode;
+            // inputReader.OnCleanerEnd += adController.StopGame;
+
+            adController.OnStart += SetWalkIdleToStruggle;
+            adController.OnWin += SetStruggleToWalkIdle;
+            adController.OnLose += SetStruggleToWalkIdle;
+            adController.OnStop += SetStruggleToWalkIdle;
 
             State _walkIdle = new WalkIdle(playerModel, walkIdleModel, layerRaycast);
             _states.Add(_walkIdle);
 
             State _trapped = new Trapped(playerModel);
             _states.Add(_trapped);
-
-            State _clean = new Clean();
-            _states.Add(_clean);
+            
+            State _struggle = new Struggle(playerModel);
+            _states.Add(_struggle);
 
             _walkIdleToTrapped = new Transition() { From = _walkIdle, To = _trapped };
             _walkIdle.transitions.Add(_walkIdleToTrapped);
@@ -66,8 +72,11 @@ namespace Fsm_Mk2
             _trappedToWalkIdle = new Transition() { From = _trapped, To = _walkIdle };
             _trapped.transitions.Add(_trappedToWalkIdle);
 
-            _walkIdleToClean = new Transition() { From = _walkIdle, To = _clean };
-            _clean.transitions.Add(_walkIdleToClean);
+            _walkIdleToStruggle = new Transition() { From = _walkIdle, To = _struggle };
+            _walkIdle.transitions.Add(_walkIdleToStruggle);
+
+            _struggleToWalkIdle = new Transition() { From = _struggle, To = _walkIdle };
+            _struggle.transitions.Add(_struggleToWalkIdle);
 
             _fsm = new Fsm(_walkIdle);
         }
@@ -80,7 +89,7 @@ namespace Fsm_Mk2
             //                                      World direction (passed through the camera transform matrix)
             var cameraBasedMoveDirection = cameraTransform.TransformDirection(moveDirection);
             cameraBasedMoveDirection.y = 0;
-     
+
             bool stateFound = false;
 
             foreach (var state in _states)
@@ -131,7 +140,7 @@ namespace Fsm_Mk2
         private void SetTrappedToMoveState()
         {
             _fsm.ApplyTransition(_trappedToWalkIdle);
-            
+
             bool stateFound = false;
 
             foreach (var state in _states)
@@ -141,7 +150,7 @@ namespace Fsm_Mk2
                     if (state is WalkIdle walkIdle)
                     {
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
-                        walkIdle.SetDir(Vector2.zero,false );
+                        walkIdle.SetDir(Vector2.zero, false);
                         stateFound = true;
                         break;
                     }
@@ -158,32 +167,22 @@ namespace Fsm_Mk2
         {
             cleanerController.SwitchToTool(1);
         }
-        
+
         private void SetCleanerIdleMode()
         {
             cleanerController.SwitchToTool(0);
         }
-        
-        // private void ChangeRotation()
-        // {
-        //     if (!Camera.main) return;
-        //     
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //     RaycastHit hit;
-        //     
-        //     if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerRaycast))
-        //     {
-        //         Vector3 targetPosition = new Vector3(hit.point.x, playerModel.transform.position.y, hit.point.z);
-        //
-        //         Vector3 direction = targetPosition - playerModel.transform.position;
-        //         Quaternion actualRotation = playerModel.transform.rotation;
-        //         float rotationAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        //         Quaternion targetRotation = Quaternion.Euler(0f, rotationAngle, 0f);
-        //
-        //         playerModel.transform.rotation = targetRotation;
-        //     }
-        // }
-        
+
+        private void SetStruggleToWalkIdle()
+        {
+            _fsm.ApplyTransition(_struggleToWalkIdle);
+        }
+
+        private void SetWalkIdleToStruggle()
+        {
+            _fsm.ApplyTransition(_walkIdleToStruggle);
+        }
+
         private void Update()
         {
             _fsm.Update();
