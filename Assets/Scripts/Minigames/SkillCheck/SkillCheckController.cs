@@ -6,12 +6,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+enum SkillCheckState
+{
+    CanLose,
+    CantLose
+}
+
 public class SkillCheckController : Minigame
 {
     [SerializeField] private float needleSpeed = 200f;
     [SerializeField] private float skillCheckToWin = 5f;
 
     [SerializeField] private SkillCheck skillCheck;
+    [SerializeField] private SkillCheckState skillCheckState;
 
     private float _skillcheckCounter = 0f;
 
@@ -96,14 +103,28 @@ public class SkillCheckController : Minigame
             }
             else
             {
-                if (_skillcheckCounter != 0)
+                if (skillCheckState == SkillCheckState.CantLose)
+                {
+                    if (_skillcheckCounter != 0)
+                    {
+                        _skillcheckCounter--;
+                        UpdateProgressPointsBar();
+                    }
+
+                    Debug.Log("mal");
+                }
+                else
                 {
                     _skillcheckCounter--;
                     UpdateProgressPointsBar();
-                }
 
-                // LoseGame();
-                Debug.Log("mal");
+                    if (_skillcheckCounter < 0)
+                    {
+                        LoseGame();
+                    }
+                    
+                    Debug.Log("mal");
+                }
             }
         }
     }

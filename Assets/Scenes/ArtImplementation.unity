@@ -12933,6 +12933,7 @@ MonoBehaviour:
   needleSpeed: 300
   skillCheckToWin: 5
   skillCheck: {fileID: 1584204426}
+  skillCheckState: 1
 --- !u!4 &1963394717
 Transform:
   m_ObjectHideFlags: 0
