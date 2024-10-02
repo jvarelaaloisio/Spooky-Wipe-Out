@@ -7,15 +7,8 @@
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArtImplementation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArtImplementation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ghosts/Ghost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/Ghost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State/Capture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State/Capture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State/Struggle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State/Struggle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/WalkingGhostAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/WalkingGhostAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectivesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectivesUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/TrashCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/TrashCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trash.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +23,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/ab/29dfb582/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/cf/4f53dfe1/Delegate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventSystem/SceneManager/EventListenerSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/FSM.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/State.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/Transition.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -111,7 +105,7 @@
       <updated>1727256623087</updated>
       <workItem from="1727256627294" duration="393000" />
       <workItem from="1727807601543" duration="3275000" />
-      <workItem from="1727843490033" duration="2660000" />
+      <workItem from="1727843490033" duration="4457000" />
     </task>
     <servers />
   </component>
