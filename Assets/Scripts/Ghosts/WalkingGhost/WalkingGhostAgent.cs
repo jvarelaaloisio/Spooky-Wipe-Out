@@ -109,5 +109,10 @@ namespace Ghosts
         {
             SetStruggleState();
         }
+
+        public State GetCurrentState()
+        {
+            return _fsm.GetCurrentState();
+        }
     }
 }

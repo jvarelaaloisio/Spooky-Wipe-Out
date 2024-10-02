@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Fsm_Mk2;
+using Ghosts;
+using Ghosts.WalkingGhost;
 using UnityEngine;
+
 
 public class TrashCollector : MonoBehaviour
 {
@@ -8,9 +12,21 @@ public class TrashCollector : MonoBehaviour
     {
         if (IsVacuumable(other))
         {
-            other.gameObject.transform.parent.gameObject.SetActive(false);
             Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
             trash?.OnBeingDestroy.Invoke(trash);
+            
+            WalkingGhostAgent ghost = other.gameObject.transform.parent.GetComponent<WalkingGhostAgent>();
+            if (trash)
+            {
+                other.gameObject.transform.parent.gameObject.SetActive(false);
+            }
+            else if (ghost)
+            {
+                if (ghost.GetCurrentState().ToString() == "Capture")
+                {
+                    other.gameObject.transform.parent.gameObject.SetActive(false);
+                }
+            }
 
             //GameManager.GetInstance().garbage.Remove();
             //other.gameObject.SetActive(false);
