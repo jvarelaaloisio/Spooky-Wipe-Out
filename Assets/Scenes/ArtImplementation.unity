@@ -1375,7 +1375,8 @@ MonoBehaviour:
   objectivesUI: {fileID: 1876919276}
   ghosts: []
   garbage: []
-  nextScene: 
+  nextScene: Menu
+  eventChannelSceneManager: {fileID: 11400000, guid: db015c9f8b5b83a47ab6053ad151f0d6, type: 2}
 --- !u!4 &276562935
 Transform:
   m_ObjectHideFlags: 0
@@ -2095,6 +2096,7 @@ MonoBehaviour:
   minigame: {fileID: 1963394716}
   patrolling: {fileID: 439301817}
   navMeshAgent: {fileID: 0}
+  model: {fileID: 10151051}
 --- !u!4 &439301819
 Transform:
   m_ObjectHideFlags: 0
@@ -5444,6 +5446,7 @@ MonoBehaviour:
   minigame: {fileID: 1963394716}
   patrolling: {fileID: 1499434915}
   navMeshAgent: {fileID: 0}
+  model: {fileID: 1709626971}
 --- !u!4 &1499434917
 Transform:
   m_ObjectHideFlags: 0
@@ -7876,6 +7879,7 @@ MonoBehaviour:
   minigame: {fileID: 1963394716}
   patrolling: {fileID: 1979575815}
   navMeshAgent: {fileID: 0}
+  model: {fileID: 1782375342}
 --- !u!4 &1979575817
 Transform:
   m_ObjectHideFlags: 0

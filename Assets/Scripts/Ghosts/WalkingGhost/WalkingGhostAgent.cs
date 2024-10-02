@@ -14,7 +14,8 @@ namespace Ghosts
         [SerializeField] private SkillCheckController minigame;
         [SerializeField] private RandomPatrolling patrolling;
         [SerializeField] private NavMeshAgent navMeshAgent;
-
+        [SerializeField] private GameObject model;
+        
         private List<State> _states = new List<State>();
 
         private Fsm _fsm;
@@ -39,8 +40,8 @@ namespace Ghosts
             State _struggle = new Struggle();
             _states.Add(_struggle);
 
-            State _capture = new Capture();
-            //_struggle.Enter () => { };
+            State _capture = new Capture(model, this, minigame);
+            
             _states.Add(_capture);
 
             State _flee = new Flee();
@@ -54,22 +55,22 @@ namespace Ghosts
 
             _struggleToFlee = new Transition() { From = _struggle, To = _flee };
             _struggle.transitions.Add(_struggleToFlee);
-            
+
             _struggleToWalk = new Transition() { From = _struggle, To = _walk };
             _struggle.transitions.Add(_struggleToWalk);
 
             _fleeToWalk = new Transition() { From = _flee, To = _walk };
             _flee.transitions.Add(_fleeToWalk);
-            
+
             _fsm = new Fsm(_walk);
         }
 
         private void SetStruggleState()
         {
             if (minigame.GetActive()) return;
-            
+
             _fsm.ApplyTransition(_walkToStruggle);
-            
+
             minigame.StartGame();
         }
 
@@ -80,7 +81,6 @@ namespace Ghosts
 
         private void SetCaptureState()
         {
-            OnDestroy?.Invoke(this);
             _fsm.ApplyTransition(_struggleToCapture);
         }
 

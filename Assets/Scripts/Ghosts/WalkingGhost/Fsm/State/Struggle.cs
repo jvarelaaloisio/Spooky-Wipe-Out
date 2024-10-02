@@ -4,6 +4,10 @@ namespace Ghosts.WalkingGhost
 {
     public class Struggle : State
     {
+        public Struggle()
+        {
+            
+        }
         public override void Enter()
         {
 

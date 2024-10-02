@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class Trash : MonoBehaviour, IVacuumable
 {
     [SerializeField] private GameObject model;
-    public Action<Trash> OnDestroy;
+    public Action<Trash> OnBeingDestroy;
 
     private void Start()
     {

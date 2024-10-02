@@ -5,6 +5,7 @@ using UnityEngine;
 using Ghosts;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using EventSystems.EventSceneManager;
 using Minigames;
 using Fsm_Mk2;
 
@@ -20,25 +21,22 @@ public class GameManager : MonoBehaviour
     public List<Ghost> ghosts;
     public List<Trash> garbage;
     [SerializeField] private string nextScene;
-
-    private int ghostCounter = 0;
-
+    [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
+    
     private static GameManager _instance;
 
     IEnumerator Start()
     {
         yield return null;
 
-        ghostCounter = ghosts.Count;
-
         foreach (Ghost ghost in ghosts)
         {
-            ghost.OnDestroy += RemoveGhost;
+            ghost.OnBeingDestroy += RemoveGhost;
         }
 
         foreach (Trash trash in garbage )
         {
-            trash.OnDestroy += RemoveTrash;
+            trash.OnBeingDestroy += RemoveTrash;
         }
 
         if (_instance == null)
@@ -52,6 +50,7 @@ public class GameManager : MonoBehaviour
         }
 
         objectivesUI.SetTrashQnty(garbage.Count);
+        objectivesUI.SetGhostQnty(ghosts.Count);
     }
 
     private void OnDestroy()
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void RemoveTrash(Trash trash)
     {
-        trash.OnDestroy -= RemoveTrash;
+        trash.OnBeingDestroy -= RemoveTrash;
         garbage.Remove(trash);
         objectivesUI.SetTrashQnty(garbage.Count);
         Debug.Log("The trash has been destroyed");
@@ -69,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     private void RemoveGhost(Ghost ghost)
     {
-        ghost.OnDestroy -= RemoveGhost;
+        ghost.OnBeingDestroy -= RemoveGhost;
         ghosts.Remove(ghost);
         objectivesUI.SetGhostQnty(ghosts.Count);
         Debug.Log("The ghost has been destroyed");
@@ -102,11 +101,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        objectivesUI.SetGhostQnty(ghostCounter);
-
         if (timer.finished || (!IsAnyGhost() && !IsAnyGarbage()))
         {
-            SceneManager.LoadScene(nextScene);
+            eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
+            eventChannelSceneManager.OnAddScene(nextScene);
         }
     }
 }

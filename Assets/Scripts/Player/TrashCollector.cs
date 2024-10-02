@@ -10,7 +10,7 @@ public class TrashCollector : MonoBehaviour
         {
             other.gameObject.transform.parent.gameObject.SetActive(false);
             Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
-            trash?.OnDestroy.Invoke(trash);
+            trash?.OnBeingDestroy.Invoke(trash);
 
             //GameManager.GetInstance().garbage.Remove();
             //other.gameObject.SetActive(false);

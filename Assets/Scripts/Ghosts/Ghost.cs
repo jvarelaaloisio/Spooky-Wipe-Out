@@ -7,6 +7,6 @@ namespace Ghosts
 {
     public class Ghost : MonoBehaviour
     {
-        public Action<Ghost> OnDestroy;
+        public Action<Ghost> OnBeingDestroy;
     }
 }
