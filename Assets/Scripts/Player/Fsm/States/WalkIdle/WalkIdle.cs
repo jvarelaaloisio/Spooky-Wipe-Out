@@ -13,6 +13,7 @@ namespace Fsm_Mk2
         private Vector3 _dir = Vector3.zero;
         private bool _isClickPressed;
 
+        private Vector3 mousePosition;
 
         private Vector3 _counterMovement;
 
@@ -46,7 +47,6 @@ namespace Fsm_Mk2
         {
             if (_rigidbody)
             {
-
                 _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0,
                     -_rigidbody.velocity.z * _model.CounterMovementForce);
 
@@ -56,21 +56,25 @@ namespace Fsm_Mk2
 
                 if (!_isClickPressed)
                 {
-                    _gameObject.transform.Rotate(_gameObject.transform.up,
-                        angle * Time.deltaTime * _model.RotationSpeed);
+                    RotateByMovementInput(angle);
                 }
                 else
                 {
-                    ChangeRotation();
+                    RotateWhileVacuuming();
                 }
             }
         }
 
-        private void ChangeRotation()
+        private void RotateByMovementInput(float angle)
+        {
+            _gameObject.transform.Rotate(_gameObject.transform.up, angle * Time.deltaTime * _model.RotationSpeed);
+        }
+
+        private void RotateWhileVacuuming()
         {
             if (!Camera.main) return;
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, _layerRaycast))
@@ -86,11 +90,20 @@ namespace Fsm_Mk2
             }
         }
 
-        public void SetDir(Vector3 newDir, bool shouldRot)
+        public void SetDir(Vector3 newDir)
         {
             _dir = newDir;
+        }
 
-            _isClickPressed = shouldRot;
+        public void SetIsClickPressedState(bool isClickPresed)
+        {
+            _isClickPressed = isClickPresed;
+            Debug.Log($"The button is : {isClickPresed}");
+        }
+
+        public void SetMousePosition(Vector3 mousePosition)
+        {
+            this.mousePosition = mousePosition;
         }
     }
 }

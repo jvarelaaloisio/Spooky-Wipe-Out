@@ -15,13 +15,22 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Clean",
+                    "name": "ActivateVacuum",
                     "type": "Button",
                     "id": "71e3c655-25f9-4b19-aa61-fb4abb86a2b4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AimVaccum",
+                    "type": "Value",
+                    "id": "a9fc24c2-0912-4865-b28b-7db1108a7d65",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -164,7 +173,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Clean",
+                    "action": "ActivateVacuum",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a274acd5-8ad0-4211-bfb5-d9f27c5333f6",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActivateVacuum",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b52b1088-59f1-4dba-bfa8-19ab79531ca5",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimVaccum",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

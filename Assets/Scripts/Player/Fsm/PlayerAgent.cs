@@ -40,6 +40,8 @@ namespace Fsm_Mk2
         public void Start()
         {
             inputReader.OnMove += SetMoveStateDirection;
+            inputReader.OnAimingVacuum += SetAimingVacuumDirection;
+            inputReader.OnClick += SetIsClickPressed;
             
             OnHunted += SetTrappedState;
             skillCheckController.OnLose += SetTrappedToMoveState;
@@ -81,7 +83,7 @@ namespace Fsm_Mk2
             _fsm = new Fsm(_walkIdle);
         }
 
-        private void SetMoveStateDirection(Vector2 direction, bool shouldRot)
+        private void SetMoveStateDirection(Vector2 direction)
         {
             //                                  Local direction (in relation to the world)
             Vector3 moveDirection = new Vector3(direction.x, 0, direction.y);
@@ -99,7 +101,55 @@ namespace Fsm_Mk2
                     if (state is WalkIdle walkIdle)
                     {
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
-                        walkIdle.SetDir(cameraBasedMoveDirection, shouldRot);
+                        walkIdle.SetDir(cameraBasedMoveDirection);
+                        stateFound = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!stateFound)
+            {
+                Debug.Log("Current state not found in the list of states.");
+            }
+        }
+
+        private void SetAimingVacuumDirection(Vector2 position)
+        {
+            Vector3 mousePosition = new Vector3(position.x, position.y);
+
+            bool stateFound = false;
+
+            foreach (var state in _states)
+            {
+                if (_fsm.GetCurrentState() == state)
+                {
+                    if (state is WalkIdle walkIdle)
+                    {
+                        walkIdle.SetMousePosition(mousePosition);
+                        stateFound = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!stateFound)
+            {
+                Debug.Log("Current state not found in the list of states.");
+            }
+        }
+
+        private void SetIsClickPressed(bool isPressed)
+        {
+            bool stateFound = false;
+
+            foreach (var state in _states)
+            {
+                if (_fsm.GetCurrentState() == state)
+                {
+                    if (state is WalkIdle walkIdle)
+                    {
+                        walkIdle.SetIsClickPressedState(isPressed);
                         stateFound = true;
                         break;
                     }
@@ -150,7 +200,7 @@ namespace Fsm_Mk2
                     if (state is WalkIdle walkIdle)
                     {
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
-                        walkIdle.SetDir(Vector2.zero, false);
+                        walkIdle.SetDir(Vector2.zero);
                         stateFound = true;
                         break;
                     }
