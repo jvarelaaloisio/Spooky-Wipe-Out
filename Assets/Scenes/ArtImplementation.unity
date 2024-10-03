@@ -3235,7 +3235,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.05
+  m_fontSize: 24.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10038,7 +10038,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.25
+  m_fontSize: 23.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12303,6 +12303,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 71e3c655-25f9-4b19-aa61-fb4abb86a2b4
     m_ActionName: Player/Clean[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899032050}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleMouseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a9fc24c2-0912-4865-b28b-7db1108a7d65
+    m_ActionName: Player/AimVaccum[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
