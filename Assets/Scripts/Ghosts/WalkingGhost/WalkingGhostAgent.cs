@@ -25,6 +25,7 @@ namespace Ghosts
         private Transition _struggleToWalk;
         private Transition _struggleToFlee;
         private Transition _fleeToWalk;
+        [SerializeField] private bool logFsmStateChanges = false;
 
         public void Start()
         {
@@ -97,7 +98,8 @@ namespace Ghosts
         private void Update()
         {
             _fsm.Update();
-            Debug.Log(_fsm.GetCurrentState());
+            if(logFsmStateChanges)
+                Debug.Log(_fsm.GetCurrentState());
         }
 
         private void FixedUpdate()

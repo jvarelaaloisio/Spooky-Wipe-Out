@@ -1,10 +1,17 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Minigames
 {
+    [Obsolete]
     public class AD : MonoBehaviour
     {
-        public Image progressBar;
+        [SerializeField] private Image progressBar;
+
+        public void SetProgressBarFill( float value )
+        {
+            progressBar.fillAmount = value;
+        }
     }
 }
