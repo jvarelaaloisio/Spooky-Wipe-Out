@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3236,7 +3235,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.4
+  m_fontSize: 24.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3315,7 +3314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c70519dd1faded458b570c150d43c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputReader: {fileID: 1899032050}
   ad: {fileID: 1493710559}
   decreaseRate: 0.05
   increaseAmount: 0.1
@@ -10040,7 +10038,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.5
+  m_fontSize: 23.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12305,6 +12303,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 71e3c655-25f9-4b19-aa61-fb4abb86a2b4
     m_ActionName: Player/Clean[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899032050}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleMouseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a9fc24c2-0912-4865-b28b-7db1108a7d65
+    m_ActionName: Player/AimVaccum[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
