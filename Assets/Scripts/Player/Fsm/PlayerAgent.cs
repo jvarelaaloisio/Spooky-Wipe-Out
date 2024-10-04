@@ -44,17 +44,17 @@ namespace Fsm_Mk2
             inputReader.OnClick += SetIsClickPressed;
             
             OnHunted += SetTrappedState;
-            skillCheckController.OnLose += SetTrappedToMoveState;
-            skillCheckController.OnWin += SetTrappedToMoveState;
+            adController.OnLose += SetTrappedToMoveState;
+            adController.OnWin += SetTrappedToMoveState;
 
-            inputReader.OnCleanerStart += SetCleanerVacuumMode;
-            inputReader.OnCleanerEnd += SetCleanerIdleMode;
-            // inputReader.OnCleanerEnd += adController.StopGame;
+            inputReader.OnClickStart += SetCleanerVacuumMode;
+            inputReader.OnClickEnd += SetCleanerIdleMode;
+            inputReader.OnClickEnd += skillCheckController.StopGame;
 
-            adController.OnStart += SetWalkIdleToStruggle;
-            adController.OnWin += SetStruggleToWalkIdle;
-            adController.OnLose += SetStruggleToWalkIdle;
-            adController.OnStop += SetStruggleToWalkIdle;
+            skillCheckController.OnStart += SetWalkIdleToStruggle;
+            skillCheckController.OnWin += SetStruggleToWalkIdle;
+            skillCheckController.OnLose += SetStruggleToWalkIdle;
+            skillCheckController.OnStop += SetStruggleToWalkIdle;
 
             State _walkIdle = new WalkIdle(playerModel, walkIdleModel, layerRaycast);
             _states.Add(_walkIdle);
@@ -62,7 +62,7 @@ namespace Fsm_Mk2
             State _trapped = new Trapped(playerModel);
             _states.Add(_trapped);
             
-            State _struggle = new Struggle(playerModel);
+            State _struggle = new Struggle(playerModel, cleanerController);
             _states.Add(_struggle);
 
             _walkIdleToTrapped = new Transition() { From = _walkIdle, To = _trapped };
@@ -226,17 +226,19 @@ namespace Fsm_Mk2
         private void SetStruggleToWalkIdle()
         {
             _fsm.ApplyTransition(_struggleToWalkIdle);
+            inputReader.OnClickStart += SetCleanerVacuumMode;
         }
 
         private void SetWalkIdleToStruggle()
         {
+            inputReader.OnClickStart -= SetCleanerVacuumMode;
             _fsm.ApplyTransition(_walkIdleToStruggle);
         }
 
         private void Update()
         {
             _fsm.Update();
-            Debug.Log(_fsm.GetCurrentState());
+            Debug.Log($"{name}: current state -> {_fsm.GetCurrentState()}");
         }
 
         private void FixedUpdate()

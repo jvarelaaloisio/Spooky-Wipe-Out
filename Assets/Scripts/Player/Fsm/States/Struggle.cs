@@ -1,14 +1,17 @@
 using Fsm_Mk2;
 using UnityEngine;
+using VacuumCleaner;
 
 public class Struggle : State
 {
     private GameObject _model;
+    private CleanerController _cleanerController;
     private Rigidbody _rigidbody;
 
-    public Struggle(GameObject model)
+    public Struggle(GameObject model, CleanerController cleanerController)
     {
         _model = model;
+        _cleanerController = cleanerController;
     }
 
     public override void Enter()
@@ -23,6 +26,7 @@ public class Struggle : State
 
     public override void Tick(float delta)
     {
+        _cleanerController.SwitchToTool(1);
     }
 
     public override void FixedTick(float delta)

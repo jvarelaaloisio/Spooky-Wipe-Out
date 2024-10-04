@@ -31,7 +31,6 @@ namespace Ghosts
         {
             minigame.OnWin += SetCaptureState;
             minigame.OnLose += SetWalkState;
-            minigame.OnLose += ResetMinigame;
 
             GameManager.GetInstance().ghosts.Add(this);
 
@@ -73,11 +72,6 @@ namespace Ghosts
             _fsm.ApplyTransition(_walkToStruggle);
 
             minigame.StartGame();
-        }
-
-        private void ResetMinigame()
-        {
-            minigame.StopGame();
         }
 
         private void SetCaptureState()

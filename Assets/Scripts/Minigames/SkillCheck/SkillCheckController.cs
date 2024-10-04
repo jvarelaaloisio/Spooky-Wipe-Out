@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Minigames;
+using Player.FSM;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,7 +15,9 @@ enum SkillCheckState
 
 public class SkillCheckController : Minigame
 {
-    [SerializeField] private float needleSpeed = 200f;
+    [SerializeField] private InputReader inputReader;
+    
+    [SerializeField] private float needleSpeed = 600f;
     [SerializeField] private float skillCheckToWin = 5f;
 
     [SerializeField] private SkillCheck skillCheck;

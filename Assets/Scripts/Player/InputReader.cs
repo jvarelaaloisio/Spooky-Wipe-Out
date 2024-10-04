@@ -9,10 +9,11 @@ namespace Player.FSM
         public Action<Vector2> OnMove;
         public Action<Vector2> OnAimingVacuum;
         public Action<bool> OnClick;
-        public Action OnCleanerStart;
-        public Action OnCleanerPerform;
-        public Action OnCleanerEnd;
+        public Action OnClickStart;
+        public Action OnClickPerform;
+        public Action OnClickEnd;
         public Action OnSwitchTool;
+        public Action OnJumpStart;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -24,23 +25,23 @@ namespace Player.FSM
             OnAimingVacuum?.Invoke(context.ReadValue<Vector2>());
         }
 
-        public void HandleCleanerInput(InputAction.CallbackContext context)
+        public void HandleClickInput(InputAction.CallbackContext context)
         {
             OnClick?.Invoke(context.performed);
 
             if (context.started)
             {
-                OnCleanerStart?.Invoke();
+                OnClickStart?.Invoke();
             }
 
             if (context.performed)
             {
-                OnCleanerPerform?.Invoke();
+                OnClickPerform?.Invoke();
             }
 
             if (context.canceled)
             {
-                OnCleanerEnd?.Invoke();
+                OnClickEnd?.Invoke();
             }
         }
 
@@ -49,6 +50,14 @@ namespace Player.FSM
             if (context.started)
             {
                 OnSwitchTool?.Invoke();
+            }
+        }
+
+        public void HandleSpaceInput(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnJumpStart?.Invoke();
             }
         }
     }

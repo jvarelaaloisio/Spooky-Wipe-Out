@@ -1080,7 +1080,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 661033110}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
-        m_MethodName: HandleCleanerInput
+        m_MethodName: HandleClickInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

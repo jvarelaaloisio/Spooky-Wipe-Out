@@ -8,7 +8,6 @@ namespace Minigames
     {
         public RectTransform needle;
         public RectTransform safeZone;
-        public Image pointsBar;
         public Image progressPointsBar;
 
     }

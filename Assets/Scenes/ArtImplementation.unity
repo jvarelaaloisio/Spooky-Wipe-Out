@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b6b9980635694c9f83c6ad7817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   trappingPos: {fileID: 1591146072}
 --- !u!65 &30334966
 BoxCollider:
@@ -3126,10 +3126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   patrolling: {fileID: 439301817}
   navMeshAgent: {fileID: 0}
   model: {fileID: 10151051}
+  logFsmStateChanges: 0
 --- !u!4 &439301819
 Transform:
   m_ObjectHideFlags: 0
@@ -3235,7 +3236,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.25
+  m_fontSize: 23.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3314,11 +3315,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c70519dd1faded458b570c150d43c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputReader: {fileID: 1899032050}
   ad: {fileID: 1493710559}
-  decreaseRate: 0.05
+  decreaseRate: 0.5
   increaseAmount: 0.1
   maxProgress: 1
   minProgress: 0
+  threshold: 0.8
+  maxAfkTime: 5
+  decreaseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &470426148
 Transform:
   m_ObjectHideFlags: 0
@@ -5508,8 +5536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.099976, y: -60}
-  m_SizeDelta: {x: 40, y: 40}
+  m_AnchoredPosition: {x: -60, y: -60}
+  m_SizeDelta: {x: 80, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828706461
 MonoBehaviour:
@@ -5863,10 +5891,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   patrolling: {fileID: 906221049}
   navMeshAgent: {fileID: 0}
   model: {fileID: 666879287}
+  logFsmStateChanges: 0
 --- !u!1 &911493553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6484,7 +6513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b6b9980635694c9f83c6ad7817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   trappingPos: {fileID: 100122366}
 --- !u!65 &986102941
 BoxCollider:
@@ -8590,7 +8619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b6b9980635694c9f83c6ad7817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 1963394716}
+  minigame: {fileID: 470426147}
   trappingPos: {fileID: 1787192727}
 --- !u!65 &1323283768
 BoxCollider:
@@ -9439,10 +9468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   patrolling: {fileID: 1499434915}
   navMeshAgent: {fileID: 0}
   model: {fileID: 1709626971}
+  logFsmStateChanges: 0
 --- !u!4 &1499434917
 Transform:
   m_ObjectHideFlags: 0
@@ -9822,7 +9852,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needle: {fileID: 1826179439}
   safeZone: {fileID: 828706460}
-  pointsBar: {fileID: 1688186027}
   progressPointsBar: {fileID: 768299330}
 --- !u!224 &1584204427
 RectTransform:
@@ -10038,7 +10067,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
+  m_fontSize: 22.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12291,7 +12320,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1899032050}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
-        m_MethodName: HandleCleanerInput
+        m_MethodName: HandleClickInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12319,6 +12348,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a9fc24c2-0912-4865-b28b-7db1108a7d65
     m_ActionName: Player/AimVaccum[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899032050}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleSpaceInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7e060387-0ab4-454a-aa88-4251be972be9
+    m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -12946,10 +12991,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dededc4a59f70643a587135f7d4ec0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needleSpeed: 300
+  inputReader: {fileID: 1899032050}
+  needleSpeed: 600
   skillCheckToWin: 5
   skillCheck: {fileID: 1584204426}
-  skillCheckState: 1
+  skillCheckState: 0
 --- !u!4 &1963394717
 Transform:
   m_ObjectHideFlags: 0
@@ -13075,10 +13121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: {fileID: 470426147}
+  minigame: {fileID: 1963394716}
   patrolling: {fileID: 1979575815}
   navMeshAgent: {fileID: 0}
   model: {fileID: 1782375342}
+  logFsmStateChanges: 0
 --- !u!4 &1979575817
 Transform:
   m_ObjectHideFlags: 0

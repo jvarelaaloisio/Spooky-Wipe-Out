@@ -18,13 +18,12 @@ namespace Minigames
         [SerializeField] private float maxProgress = 1f;
         [SerializeField] private float minProgress = 0f;
         [SerializeField] private float threshold = 0.8f;
-        [SerializeField] private float decreaseRateMultiplier = 1.0f;
+        
         [SerializeField] private float maxAfkTime = 5.0f;
-
-        [SerializeField] private AnimationCurve defillCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private float progress { get; set; } = 0.0f;
         private float _expectedSign = 1.0f;
-        private float _lastSuccessfulInputTime = -1f;
+        // private float _lastSuccessfulInputTime = -1f;
 
         private bool HasPlayerWon => progress >= maxProgress;
 
@@ -33,11 +32,11 @@ namespace Minigames
         public override void StartGame()
         {
             OnStart?.Invoke();
-            ad.gameObject.SetActive(true);
             
-            progress = minProgress;
+            ad.gameObject.SetActive(true);
+            // _lastSuccessfulInputTime = Time.time;
             inputReader.OnMove += HandleInput;
-            _lastSuccessfulInputTime = Time.time;
+            progress = minProgress;
             StartCoroutine(DecreaseProgressOverTime());
         }
 
@@ -49,29 +48,27 @@ namespace Minigames
 
         protected override void WinGame()
         {
-            ResetGame();
             OnWin?.Invoke();
+            ResetGame();
         }
 
         protected override void LoseGame()
         {
-            ResetGame();
             OnLose?.Invoke();
+            ResetGame();
         }
 
         protected override void ResetGame()
         {
-            StopCoroutine(nameof(DecreaseProgressOverTime));
+            inputReader.OnMove -= HandleInput;
+            StopCoroutine(DecreaseProgressOverTime());
 
             progress = minProgress;
             ad.gameObject.SetActive(false);
-            inputReader.OnMove -= HandleInput;
         }
 
-        private void HandleInput(Vector2 inputDirection, bool shouldRot)
+        private void HandleInput(Vector2 inputDirection)
         {
-            Debug.Log($"{name}: Input received -> {inputDirection.x}");
-
             float absDirection = Mathf.Abs(inputDirection.x);
             float directionSign = Mathf.Sign(inputDirection.x);
 
@@ -79,25 +76,24 @@ namespace Minigames
             {
                 UpdateProgress(progress + increaseAmount);
                 _expectedSign *= -1;
-                _lastSuccessfulInputTime = Time.time;
+                // _lastSuccessfulInputTime = Time.time;
             }
         }
 
         private void UpdateProgress(float value)
         {
-            Debug.Log($"{name}: Current progress -> {value}");
             progress = value;
             if (HasPlayerWon)
                 WinGame();
-            else if (HasPlayerLost && maxAfkTime <= _lastSuccessfulInputTime - Time.time)
-                LoseGame();
+            // else if (HasPlayerLost && maxAfkTime <= _lastSuccessfulInputTime - Time.time)
+            //     LoseGame();
 
             ad.SetProgressBarFill(progress);
         }
 
         private IEnumerator DecreaseProgressOverTime()
         {
-            while (!destroyCancellationToken.IsCancellationRequested)
+            while (ad.gameObject.activeInHierarchy)
             {
                 DecreaseProgress();
                 yield return null;
@@ -106,8 +102,8 @@ namespace Minigames
 
         private void DecreaseProgress()
         {
-            float curveValue = defillCurve.Evaluate(progress);
-            Debug.Log($"{name}: ProgressDecreaseCurve({progress}) = {curveValue}");
+            float curveValue = decreaseCurve.Evaluate(progress);
+            
             var decreaseAmount = Mathf.Clamp(
                 progress - decreaseRate * Time.deltaTime * curveValue,
                 minProgress, maxProgress);
