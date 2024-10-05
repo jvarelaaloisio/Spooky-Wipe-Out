@@ -19,7 +19,7 @@ namespace Minigames
         [SerializeField] private float minProgress = 0f;
         [SerializeField] private float threshold = 0.8f;
         
-        [SerializeField] private float maxAfkTime = 5.0f;
+        // [SerializeField] private float maxAfkTime = 5.0f;
         [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private float progress { get; set; } = 0.0f;
         private float _expectedSign = 1.0f;

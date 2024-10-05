@@ -1,4 +1,5 @@
 using System;
+using EventSystems.EventSceneManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,8 @@ namespace Player.FSM
         public Action OnClickEnd;
         public Action OnSwitchTool;
         public Action OnJumpStart;
+
+        [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -58,6 +61,15 @@ namespace Player.FSM
             if (context.started)
             {
                 OnJumpStart?.Invoke();
+            }
+        }
+        
+        public void HandleResetCheat(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
+                eventChannelSceneManager.OnAddScene(gameObject.scene.name);
             }
         }
     }
