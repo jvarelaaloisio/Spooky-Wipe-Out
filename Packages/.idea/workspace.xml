@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="255807b9-1100-448a-a99e-8c5dbbec78ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bathtub_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bed_V3.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bedside_Table_V3.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Big_Oven_V4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Books_Stack_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Books_Stack_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Candelabra_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Candelabra_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Candle_V1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Candle_V1.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Chains_Ghost_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Chains_Ghost_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Chair_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Chair_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Closet_V3.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Closet_V3.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Dishwasher_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Dishwasher_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Fancy_Table_V4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Fancy_Table_V4.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Fireplace_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Fireplace_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Floor&amp;Walls_V7.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Floor&amp;Walls_V7.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Lantern_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Lantern_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Office_Desk_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Office_Desk_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Refrigerator_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Refrigerator_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Rug_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Rug_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Washbasin_V2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Washbasin_V2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/See_Through_Walls.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/See_Through_Walls/See_Through_Shader.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/See_Through_Walls/See_Through_Shader.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/2D_Texture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/2D_Texture/Manifold 15 - 512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/2D_Texture/Manifold 15 - 512x512.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/FBX/Tornado_Twist V4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/FBX/Tornado_Twist V4.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/FBX/Tornado_Twist V4_Int.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/FBX/Tornado_Twist V4_Int.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Shader/TornadoShaderInt.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Shader/TornadoShaderInt.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Materials/Tornado_Mat_Color_1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Materials/Tornado_Mat_Color_1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Materials/Tornado_Mat_Color_2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Materials/Tornado_Mat_Color_2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Prefab/Tornado_VFX.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders/Tornado_VFX_Package/Tornado_Prefab/Tornado_VFX.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Skybox.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Skybox/New Material.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Skybox/New Material.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/InputSystem.inputsettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/InputSystem.inputsettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/New Universal Render Pipeline Asset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/New Universal Render Pipeline Asset_Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bathtub.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Candelabra.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Candelabra.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Candle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Candle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Chains_Ghost.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Chains_Ghost.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Dishwasher.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Dishwasher.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Fireplace.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Fireplace.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Floor_&amp;_Walls.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Lantern.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Office_Desk.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Office_Desk.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Rug.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Rug.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Tornado_VFX Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Tornado_VFX Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Washbasin.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Washbasin.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scenes/Base_Map.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scenes/Base_Map.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scenes/Base_Map/Global Volume Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scenes/Base_Map/Global Volume Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CircleSync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/UniversalRenderPipelineGlobalSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Bed_V2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Bed_V2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bed_V3.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Bedside_Table_V2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Bedside_Table_V2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Big_Oven_V4.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Big_Oven_V3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Big_Oven_V3.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bathtub_V2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Blue_Refrigerator_V1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Blue_Refrigerator_V1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bedside_Table_V3.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Bookshelf_V1.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bookshelf_V1.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Bookshelf_V1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Bookshelf_V1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Chair_V1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Chair_V1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Closet_V2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Closet_V2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Fancy_Table_V3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Fancy_Table_V3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Floor&amp;Walls_V5.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Floor&amp;Walls_V5.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Floor&amp;Walls_V6.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Floor&amp;Walls_V6.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Kitchen_Counter_V1.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Kitchen_Counter_V1.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Kitchen_Counter_V1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Kitchen_Counter_V1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Lantern_V1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Lantern_V1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Manolo_V2.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Manolo_V2.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Manolo_V2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/FBX/Manolo_V2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Stack_Of_Books_V1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/FBX/Stack_Of_Books_V1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Assets.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Assets.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Assets.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Assets.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Assets.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Assets.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Assets.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Assets.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor_Exterior.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor_Exterior.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor_Exterior.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Floor_Exterior.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/PlayerColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/PlayerColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/PlayerColor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/PlayerColor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Walls_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Walls_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Walls_Material.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Base_Map_Materials/Walls_Material.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/Floor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/Floor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/PlayerColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/PlayerColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Art/Materials/PlayerColor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Materials/PlayerColor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Input.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Art/Base_Map_Art/Shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Input/PlayerInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Input/PlayerInput.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Materials/Assets.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Materials/Assets.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Materials/Assets.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Materials/Assets.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Materials/Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Materials/Floor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Materials/Floor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Materials/PlayerColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Materials/PlayerColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Materials/PlayerColor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Materials/PlayerColor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bathtub.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bathtub.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bed.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bed.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bedside_Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bedside_Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bedside_Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bedside_Table.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Big_Oven.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Big_Oven.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Big_Oven.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Big_Oven.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Books_Stack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Books_Stack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Books_Stack.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Books_Stack.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bookshelf.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bookshelf.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bookshelf.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Bookshelf.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Chair.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Chair.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Chair.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Closet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Closet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Closet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Closet.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Fancy_Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Fancy_Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Fancy_Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Fancy_Table.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Kitchen_Counter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Kitchen_Counter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Kitchen_Counter.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Kitchen_Counter.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Lantern.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Lantern.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Refrigerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Refrigerator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Refrigerator.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Refrigerator.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Bed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Bed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Bed.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Bed.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Bedside_Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Bedside_Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Bedside_Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Bedside_Table.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Big_Oven.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Big_Oven.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Big_Oven.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Big_Oven.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Blue_Refrigerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Blue_Refrigerator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Blue_Refrigerator.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Blue_Refrigerator.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Bookshelf.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Bookshelf.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Bookshelf.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Bookshelf.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Chair.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Chair.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Chair.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Closet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Closet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Closet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Closet.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Fancy_Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Fancy_Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Fancy_Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Fancy_Table.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Floor_&amp;_Walls.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Floor_&amp;_Walls.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Base_Map_Prefab/Floor_&amp;_Walls.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Kitchen_Counter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Kitchen_Counter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Kitchen_Counter.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Kitchen_Counter.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Lantern.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Lantern.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Lantern.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Lantern.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bed.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bed.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bedside_Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bedside_Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bedside_Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bedside_Table.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Big_Oven.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Big_Oven.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Big_Oven.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Big_Oven.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Blue_Refrigerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Blue_Refrigerator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Blue_Refrigerator.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Blue_Refrigerator.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bookshelf.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bookshelf.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bookshelf.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Bookshelf.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Chair.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Chair.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Chair.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Closet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Closet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Closet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Closet.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Fancy_Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Fancy_Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Fancy_Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Fancy_Table.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Kitchen_Counter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Kitchen_Counter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Kitchen_Counter.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Kitchen_Counter.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Lantern.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Lantern.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Lantern.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Lantern.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Stack_of_Books.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Stack_of_Books.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Stack_of_Books.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/RoomModels/Stack_of_Books.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Stack_of_Books.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Stack_of_Books.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Prefabs/Stack_of_Books.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Prefabs/Stack_of_Books.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/ArtImplementation.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/ArtImplementation.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/Base_Map.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/Base_Map.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/Boot.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/Boot.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/Level1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/Level1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/MySceneManager.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/MySceneManager.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/Boot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/Boot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/CircleSync.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/CircleSync.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/InputReader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/InputReader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/Player/InputReader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/Player/InputReader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2n7teKtZ7NnKCoQ8vGhr1m5gfnG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="255807b9-1100-448a-a99e-8c5dbbec78ee" name="Changes" comment="" />
+      <created>1728336037856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728336037856</updated>
+      <workItem from="1728336040124" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

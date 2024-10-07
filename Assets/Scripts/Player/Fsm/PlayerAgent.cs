@@ -238,7 +238,6 @@ namespace Fsm_Mk2
         private void Update()
         {
             _fsm.Update();
-            Debug.Log($"{name}: current state -> {_fsm.GetCurrentState()}");
         }
 
         private void FixedUpdate()
