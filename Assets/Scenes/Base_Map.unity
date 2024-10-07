@@ -3028,7 +3028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a9e8cda84c1e3489516d0abc5a79c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  running: {fileID: 1258525748}
+  running: {fileID: 0}
 --- !u!1001 &668579541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5329,8 +5329,6 @@ GameObject:
   - component: {fileID: 1258525745}
   - component: {fileID: 1258525744}
   - component: {fileID: 1258525747}
-  - component: {fileID: 1258525748}
-  - component: {fileID: 1258525749}
   m_Layer: 0
   m_Name: Manolo
   m_TagString: Untagged
@@ -5456,43 +5454,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1258525748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258525742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6484b6eb71ce604eb94fa8ecc588c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movementForce: 40
-  _counterMovementForce: 5
-  _rotationSpeed: 5
-  layerRaycast:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &1258525749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258525742}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae54ddf719024d4ab086e6b2c966c79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Materials: []
-  Camera: {fileID: 102969459}
-  Mask:
-    serializedVersion: 2
-    m_Bits: 8
-  raycastDistance: 5
-  speedAlpha: 0
 --- !u!1001 &1259104260
 PrefabInstance:
   m_ObjectHideFlags: 0
