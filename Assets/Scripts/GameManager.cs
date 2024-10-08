@@ -12,7 +12,7 @@ using Fsm_Mk2;
 public class GameManager : MonoBehaviour
 {
     //[SerializeField] private PlayerAgent playerAgent;
-    
+
     //[SerializeField] private SkillCheckController SKMinigame;
     //[SerializeField] private ADController ADMinigame;
 
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public List<Trash> garbage;
     [SerializeField] private string nextScene;
     [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
-    
+
     private static GameManager _instance;
 
     IEnumerator Start()
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
             ghost.OnBeingDestroy += RemoveGhost;
         }
 
-        foreach (Trash trash in garbage )
+        foreach (Trash trash in garbage)
         {
             trash.OnBeingDestroy += RemoveTrash;
         }
@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 
         objectivesUI.SetTrashQnty(garbage.Count);
         objectivesUI.SetGhostQnty(ghosts.Count);
+
+        timer.OnFinish += FinishGame;
     }
 
     private void OnDestroy()
@@ -64,6 +66,8 @@ public class GameManager : MonoBehaviour
         garbage.Remove(trash);
         objectivesUI.SetTrashQnty(garbage.Count);
         Debug.Log("The trash has been destroyed");
+
+        GameIsOver();
     }
 
     private void RemoveGhost(Ghost ghost)
@@ -72,6 +76,8 @@ public class GameManager : MonoBehaviour
         ghosts.Remove(ghost);
         objectivesUI.SetGhostQnty(ghosts.Count);
         Debug.Log("The ghost has been destroyed");
+
+        GameIsOver();
     }
 
     public static GameManager GetInstance()
@@ -88,7 +94,7 @@ public class GameManager : MonoBehaviour
     {
         return ghosts.Any(ghost => ghost.isActiveAndEnabled);
     }
-    
+
     public bool IsAnyGarbage()
     {
         return garbage.Any(trash => trash.isActiveAndEnabled);
@@ -99,12 +105,17 @@ public class GameManager : MonoBehaviour
         return timer.GetTime();
     }
 
-    private void Update()
+    private void GameIsOver()
     {
-        if (timer.finished || (!IsAnyGhost() && !IsAnyGarbage()))
+        if (!(IsAnyGhost() && IsAnyGarbage()))
         {
+            FinishGame();
+        }
+    }
+
+    private void FinishGame()
+    {
             eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
             eventChannelSceneManager.OnAddScene(nextScene);
-        }
     }
 }

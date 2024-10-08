@@ -1,5 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Gameplay.Timer
 {
@@ -11,33 +13,49 @@ namespace Gameplay.Timer
 
     public class Timer : MonoBehaviour
     {
+        public Action OnFinish;
+
         public TextMeshProUGUI textTimer;
         [SerializeField] private float startTime;
         [SerializeField] private float objectiveTime;
         [SerializeField] private CountType countType;
 
-        private float _timer;
-        public bool finished;
+        private float _currentTime;
+        private bool _finished;
+        private const float Tolerance = 0.01f;
 
         private void Start()
         {
-            _timer = startTime;
-            finished = false;
+            _currentTime = startTime;
+            _finished = false;
         }
 
         private void Update()
         {
-            if (countType == CountType.CountUp)
+            switch (countType)
             {
-                _timer += Time.deltaTime;
-            }
-            else if (countType == CountType.CountDown)
-            {
-                _timer -= Time.deltaTime;
+                case CountType.CountUp:
+                    _currentTime += Time.deltaTime;
+                    break;
+                case CountType.CountDown:
+                    _currentTime -= Time.deltaTime;
+                    break;
             }
 
-            int minutes = (int)_timer / 60;
-            int seconds = (int)_timer % 60;
+            SetTimerText();
+
+
+            if (Mathf.Abs(_currentTime - objectiveTime) < Tolerance)
+            {
+                _finished = true;
+                OnFinish?.Invoke();
+            }
+        }
+
+        private void SetTimerText()
+        {
+            int minutes = (int)_currentTime / 60;
+            int seconds = (int)_currentTime % 60;
 
             if (seconds >= 10)
             {
@@ -47,16 +65,16 @@ namespace Gameplay.Timer
             {
                 textTimer.text = minutes + ":0" + seconds;
             }
-
-            if (Mathf.Approximately(_timer, objectiveTime))
-            {
-                finished = true;
-            }
         }
 
         public float GetTime()
         {
-            return _timer;
+            return _currentTime;
+        }
+
+        public bool GetIsFinished()
+        {
+            return _finished;
         }
     }
 }
