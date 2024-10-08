@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
 
     private void GameIsOver()
     {
-        if (!(IsAnyGhost() && IsAnyGarbage()))
+        if (!IsAnyGhost() && !IsAnyGarbage())
         {
             FinishGame();
         }
