@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2953182122070659062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3243406864001405913}
-  m_Layer: 0
-  m_Name: Art
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3243406864001405913
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2953182122070659062}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7966345285246733565}
-  m_Father: {fileID: 28276268676792185}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8419141999324106417
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28276268676792185}
   - component: {fileID: 1473106093502774934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3243406864001405913}
+  - {fileID: 7966345285246733565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1473106093502774934
@@ -84,19 +52,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3243406864001405913}
+    m_TransformParent: {fileID: 28276268676792185}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000000023841857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.011398186
+      value: 0.011398392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0000000023841857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -104,7 +72,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalRotation.y
@@ -112,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0000000037252907
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -133,6 +101,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_Name
       value: Apple_V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ec9de5a833b95bc4bae61f18187401b8, type: 3}
       propertyPath: m_IsActive
@@ -200,7 +172,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47380683, y: 0.54123026, z: 0.42000633}
+  m_Size: {x: 0.45, y: 0.54, z: 0.44}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &7966345285246733565 stripped
 Transform:
