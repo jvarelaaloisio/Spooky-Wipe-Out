@@ -11413,7 +11413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1438084139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f876b0f7b333e64b926f5fe9b74e987, type: 3}
+  m_Script: {fileID: 11500000, guid: 6222ca3e096618441b792c60698494ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventChannelSceneManager: {fileID: 11400000, guid: db015c9f8b5b83a47ab6053ad151f0d6, type: 2}
@@ -11464,6 +11464,10 @@ PrefabInstance:
     - target: {fileID: 8260102735222170896, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_Name
       value: 'Player '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260102735222170896, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9006773269549684460, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_Size.y
