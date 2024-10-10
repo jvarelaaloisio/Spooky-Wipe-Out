@@ -1,18 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class WashFloorModel : MonoBehaviour
+namespace VacuumCleaner.Modes
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "WashFloorModel", menuName = "Cleaner/Tools/WashFloorModel")]
+    public class WashFloorModel : ScriptableObject
     {
-        
-    }
+        [SerializeField] private float washSpeed;
+        [SerializeField] private float minScale;
+        [SerializeField] private float maxAngle = 45.0f;
+        [SerializeField] private float renderDistance = 5.0f;
+        [SerializeField] private LayerMask wallLayer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public float WashSpeed
+        {
+            get => washSpeed;
+            set => washSpeed = value;
+        }
+
+        public float MinScale
+        {
+            get => minScale;
+            set => minScale = value;
+        }
+
+        public float MaxAngle
+        {
+            get => maxAngle;
+            set => maxAngle = value;
+        }
+
+        public float RenderDistance
+        {
+            get => renderDistance;
+            set => renderDistance = value;
+        }
+
+        public LayerMask WallLayer
+        {
+            get => wallLayer;
+            set => wallLayer = value;
+        }
     }
 }

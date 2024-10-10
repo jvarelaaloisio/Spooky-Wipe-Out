@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ActivateVacuum",
+                    "name": "ActivateCleaner",
                     "type": "Button",
                     "id": "71e3c655-25f9-4b19-aa61-fb4abb86a2b4",
                     "expectedControlType": "Button",
@@ -45,6 +45,15 @@
                     "name": "Cheats",
                     "type": "Button",
                     "id": "71ee446a-41d5-44c0-b6ed-01e53afed33b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchTool",
+                    "type": "Button",
+                    "id": "788afff8-212d-4c71-aff9-9525a436dfda",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -191,7 +200,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "ActivateVacuum",
+                    "action": "ActivateCleaner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -202,7 +211,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ActivateVacuum",
+                    "action": "ActivateCleaner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -247,6 +256,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Cheats",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d4ca59d-192e-4d88-9af2-6b5b7999c565",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "SwitchTool",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

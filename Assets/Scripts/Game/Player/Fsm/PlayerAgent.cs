@@ -36,21 +36,26 @@ namespace Fsm_Mk2
         private Transition _walkIdleToStruggle;
         private Transition _struggleToWalkIdle;
 
+        private int currentCleaner;
+
 
         public void Start()
         {
+            currentCleaner = 1;
+            
             inputReader.OnMove += SetMoveStateDirection;
             inputReader.OnAimingVacuum += SetAimingVacuumDirection;
             inputReader.OnClick += SetIsClickPressed;
-            
+
             OnHunted += SetTrappedState;
             adController.OnLose += SetTrappedToMoveState;
             adController.OnWin += SetTrappedToMoveState;
 
-            inputReader.OnClickStart += SetCleanerVacuumMode;
+            inputReader.OnClickStart += ActiveCleaner;
             inputReader.OnClickEnd += SetCleanerIdleMode;
-            inputReader.OnClickEnd += skillCheckController.StopGame;
-
+            
+            inputReader.OnSwitchTool += SwitchTool;
+            
             skillCheckController.OnStart += SetWalkIdleToStruggle;
             skillCheckController.OnWin += SetStruggleToWalkIdle;
             skillCheckController.OnLose += SetStruggleToWalkIdle;
@@ -61,7 +66,7 @@ namespace Fsm_Mk2
 
             State _trapped = new Trapped(playerModel);
             _states.Add(_trapped);
-            
+
             State _struggle = new Struggle(playerModel, cleanerController);
             _states.Add(_struggle);
 
@@ -213,14 +218,27 @@ namespace Fsm_Mk2
             }
         }
 
-        private void SetCleanerVacuumMode()
+        private void ActiveCleaner()
         {
-            cleanerController.SwitchToTool(1);
+            cleanerController.SwitchToTool(currentCleaner);
         }
 
         private void SetCleanerIdleMode()
         {
             cleanerController.SwitchToTool(0);
+        }
+
+        private void SetCleanerVacuumMode()
+        {
+            currentCleaner = 1;
+        }
+        private void SwitchTool()
+        {
+            currentCleaner += 1;
+            if (currentCleaner >= 3)
+            {
+                currentCleaner = 1;
+            }
         }
 
         private void SetStruggleToWalkIdle()

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 15ab938a44cffcf46ba6024fc7b16f39, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: d9e3219de75c43642b9c59b19b2a59db, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -178,6 +178,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 71ee446a-41d5-44c0-b6ed-01e53afed33b
     m_ActionName: Player/Cheats[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8379392752930090030}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleSwitchTool
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 788afff8-212d-4c71-aff9-9525a436dfda
+    m_ActionName: Player/SwitchTool[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
