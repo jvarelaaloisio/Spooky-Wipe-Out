@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/Player/InputReader.cs.meta
-guid: 77fa97f03bcdd544c873874f021bc38b
-========
-guid: 0ae54ddf719024d4ab086e6b2c966c79
->>>>>>>> ArtImplementation:Assets/Scripts/CircleSync.cs.meta
+guid: 6222ca3e096618441b792c60698494ce
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

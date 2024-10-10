@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2086324881517798603}
   - component: {fileID: 5570601895139665493}
-  - component: {fileID: 8379392752930090030}
+  - component: {fileID: 4929937290722937582}
   m_Layer: 0
   m_Name: InputReader
   m_TagString: Untagged
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379392752930090030}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleMoveInput
         m_Mode: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379392752930090030}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleClickInput
         m_Mode: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
     m_ActionName: Player/Clean[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379392752930090030}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleMouseInput
         m_Mode: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
     m_ActionName: Player/AimVaccum[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379392752930090030}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleSpaceInput
         m_Mode: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379392752930090030}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleResetCheat
         m_Mode: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8379392752930090030
+--- !u!114 &4929937290722937582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2935691085672996378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77fa97f03bcdd544c873874f021bc38b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6222ca3e096618441b792c60698494ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventChannelSceneManager: {fileID: 11400000, guid: db015c9f8b5b83a47ab6053ad151f0d6, type: 2}
