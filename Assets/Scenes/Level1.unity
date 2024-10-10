@@ -8500,6 +8500,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57d99e9964ac3a443805fea1ff17c7db, type: 2}
+    - target: {fileID: 8760797556601528919, guid: b561242c340aec64b9146c8ecc071ca1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8893816600244499356, guid: b561242c340aec64b9146c8ecc071ca1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -10283,7 +10287,7 @@ GameObject:
   - component: {fileID: 1904356646}
   - component: {fileID: 1904356645}
   - component: {fileID: 1904356644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor_Exterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11451,6 +11455,10 @@ PrefabInstance:
       propertyPath: adController
       value: 
       objectReference: {fileID: 470426147}
+    - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: layerRaycast.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: skillCheckController
       value: 
