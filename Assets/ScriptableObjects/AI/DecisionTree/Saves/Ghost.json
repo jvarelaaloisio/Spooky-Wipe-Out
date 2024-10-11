@@ -1,0 +1,3 @@
+{"Kind":1,"ClassType":"Action_AttackExample","OutcomeClassNames":[],"PositionInEditor":{"x":775.0,"y":68.0}}
+{"Kind":1,"ClassType":"EmptyAction","OutcomeClassNames":[],"PositionInEditor":{"x":781.0,"y":251.0}}
+{"Kind":0,"ClassType":"CanSeeHunter","OutcomeClassNames":["Action_AttackExample","EmptyAction"],"PositionInEditor":{"x":461.0,"y":162.0}}

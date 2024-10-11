@@ -35,7 +35,7 @@
   },
   "scopedRegistries": [
     {
-      "name": "package.openupm.com",
+      "name": "openupm",
       "url": "https://package.openupm.com",
       "scopes": [
         "com.vikoproductions.fsm_mk2"
