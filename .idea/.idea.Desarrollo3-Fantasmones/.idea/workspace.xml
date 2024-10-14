@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VacuumCleaner/Modes/WashFloor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VacuumCleaner/Modes/WashFloor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Walls_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Walls_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Garbage/Ectoplasm/Ectoplasm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Garbage/Ectoplasm/Ectoplasm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ObjectivesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ObjectivesUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +53,7 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;WaterGun&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -59,7 +64,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/builds/v0.4.1\Desarrollo3-Fantasmones.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/build/v0.5.0/Desarrollo3-Fantasmones.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\builds\v0.3.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -123,6 +128,8 @@
       <workItem from="1728389205288" duration="126000" />
       <workItem from="1728389354773" duration="3164000" />
       <workItem from="1728592297973" duration="12000" />
+      <workItem from="1728612146604" duration="158000" />
+      <workItem from="1728612380107" duration="1310000" />
     </task>
     <servers />
   </component>
@@ -146,14 +153,7 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State/Capture.cs</url>
           <line>24</line>
-          <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Ghosts\WalkingGhost\Fsm\State\Capture.cs" containingFunctionPresentation="Method 'Enter'">
-            <startOffsets>
-              <option value="616" />
-            </startOffsets>
-            <endOffsets>
-              <option value="637" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Ghosts\WalkingGhost\Fsm\State\Capture.cs" containingFunctionPresentation="Method 'Enter'" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

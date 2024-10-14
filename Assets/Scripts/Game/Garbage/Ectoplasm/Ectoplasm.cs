@@ -1,7 +1,14 @@
+using System;
 using UnityEngine;
 
 public class Ectoplasm : MonoBehaviour, IWasheable
 {
+    public Action<Ectoplasm> OnBeingDestroy;
+    private void Start()
+    {     
+        GameManager.GetInstance().ectoplasms.Add(this);
+    }
+    
     public void IsBeingWashed(params object[] args)
     {
         if (transform.localScale.x > (float)args[1] || transform.localScale.y > (float)args[1] || transform.localScale.z > (float)args[1])
@@ -19,6 +26,7 @@ public class Ectoplasm : MonoBehaviour, IWasheable
         else
         {
             gameObject.SetActive(false);
+            OnBeingDestroy?.Invoke(this);
         }
     }
 }

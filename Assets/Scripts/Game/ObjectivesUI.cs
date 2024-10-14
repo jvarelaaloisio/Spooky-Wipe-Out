@@ -7,6 +7,7 @@ public class ObjectivesUI : MonoBehaviour
 {
     public TextMeshProUGUI textRemainingGhosts;
     public TextMeshProUGUI textRemainingTrash;
+    public TextMeshProUGUI textRemainingEctoplasmQnty;
 
     public void SetGhostQnty(int ghostsQnty)
     {
@@ -16,5 +17,10 @@ public class ObjectivesUI : MonoBehaviour
     public void SetTrashQnty(int trashQnty)
     {
         textRemainingTrash.text = trashQnty + " Trash Remaining";
+    }
+    
+    public void SetEctoplasmQnty(int ectoplasmQnty)
+    {
+        textRemainingEctoplasmQnty.text = ectoplasmQnty + " Ectoplasm Remaining";
     }
 }

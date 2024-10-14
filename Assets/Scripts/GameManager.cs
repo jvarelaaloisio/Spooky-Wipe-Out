@@ -8,6 +8,7 @@ using System.Collections;
 using EventSystems.EventSceneManager;
 using Minigames;
 using Fsm_Mk2;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ObjectivesUI objectivesUI;
     public List<Ghost> ghosts;
     public List<Trash> garbage;
+    public List<Ectoplasm> ectoplasms;
     [SerializeField] private string nextScene;
     [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
 
@@ -38,6 +40,11 @@ public class GameManager : MonoBehaviour
         {
             trash.OnBeingDestroy += RemoveTrash;
         }
+        
+        foreach (Ectoplasm ectoplasm in ectoplasms)
+        {
+            ectoplasm.OnBeingDestroy += RemoveEctoplasm;
+        }
 
         if (_instance == null)
         {
@@ -51,6 +58,7 @@ public class GameManager : MonoBehaviour
 
         objectivesUI.SetTrashQnty(garbage.Count);
         objectivesUI.SetGhostQnty(ghosts.Count);
+        objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
 
         timer.OnFinish += FinishGame;
     }
@@ -79,6 +87,16 @@ public class GameManager : MonoBehaviour
 
         GameIsOver();
     }
+    
+    private void RemoveEctoplasm(Ectoplasm ectoplasm)
+    {
+        ectoplasm.OnBeingDestroy -= RemoveEctoplasm;
+        ectoplasms.Remove(ectoplasm);
+        objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
+        Debug.Log("The ectoplasm has been destroyed");
+
+        GameIsOver();
+    }
 
     public static GameManager GetInstance()
     {
@@ -99,6 +117,11 @@ public class GameManager : MonoBehaviour
     {
         return garbage.Any(trash => trash.isActiveAndEnabled);
     }
+    
+    public bool IsAnyEctoplasm()
+    {
+        return ectoplasms.Any(ectoplasm => ectoplasm.isActiveAndEnabled);
+    }
 
     public float GetTimeLeft()
     {
@@ -107,7 +130,7 @@ public class GameManager : MonoBehaviour
 
     private void GameIsOver()
     {
-        if (!IsAnyGhost() && !IsAnyGarbage())
+        if (!IsAnyGhost() && !IsAnyGarbage() && !IsAnyEctoplasm())
         {
             FinishGame();
         }
