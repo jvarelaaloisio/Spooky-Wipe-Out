@@ -12,8 +12,8 @@ namespace Ghosts
     public class WalkingGhostAgent : Ghost, IVacuumable
     {
         [SerializeField] private Minigame minigame;
-        [SerializeField] private RandomPatrolling patrolling;
-        [SerializeField] private NavMeshAgent navMeshAgent;
+        [SerializeField] private GhostPatrolling patrolling;
+        [SerializeField] private GhostFlee flee;
         [SerializeField] private GameObject model;
         
         private List<State> _states = new List<State>();
@@ -25,6 +25,7 @@ namespace Ghosts
         private Transition _struggleToWalk;
         private Transition _struggleToFlee;
         private Transition _fleeToWalk;
+        private Transition _walkToFlee;
         [SerializeField] private bool logFsmStateChanges = false;
 
         public void Start()
@@ -44,7 +45,7 @@ namespace Ghosts
             
             _states.Add(_capture);
 
-            State _flee = new Flee();
+            State _flee = new Flee(flee);
             _states.Add(_flee);
 
             _walkToStruggle = new Transition() { From = _walk, To = _struggle };
@@ -61,6 +62,9 @@ namespace Ghosts
 
             _fleeToWalk = new Transition() { From = _flee, To = _walk };
             _flee.transitions.Add(_fleeToWalk);
+
+            _walkToFlee = new Transition() { From = _walk, To = _flee };
+            _flee.transitions.Add(_walkToFlee);
 
             _fsm = new Fsm(_walk);
         }
@@ -87,6 +91,16 @@ namespace Ghosts
         private void SetWalkState()
         {
             _fsm.ApplyTransition(_struggleToWalk);
+        }
+
+        private void SetFleeWalkingState()
+        {
+            _fsm.ApplyTransition(_fleeToWalk);
+        }
+
+        private void SetWalkingFleeState()
+        {
+            _fsm.ApplyTransition(_walkToFlee);
         }
 
         private void Update()

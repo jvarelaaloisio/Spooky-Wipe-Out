@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Action_Patrolling : AI.DecisionTree.TreeAction
+public class Action_Flee : AI.DecisionTree.TreeAction
 {
-    public Action OnPatrolling;
+    public Action OnFlee;
 
     public override void NodeFunction()
     {
-        OnPatrolling?.Invoke();
+        OnFlee?.Invoke();
     }
 }
