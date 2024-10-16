@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Timer;
@@ -12,6 +13,8 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
+    public Action OnWin;
+    public Action OnLose;
     //[SerializeField] private PlayerAgent playerAgent;
 
     //[SerializeField] private SkillCheckController SKMinigame;
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Timer timer;
     [SerializeField] private ObjectivesUI objectivesUI;
+    [SerializeField] private GameObject playerUI;
     public List<Ghost> ghosts;
     public List<Trash> garbage;
     public List<Ectoplasm> ectoplasms;
@@ -60,7 +64,7 @@ public class GameManager : MonoBehaviour
         objectivesUI.SetGhostQnty(ghosts.Count);
         objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
 
-        timer.OnFinish += FinishGame;
+        timer.OnFinish += LoseGame;
     }
 
     private void OnDestroy()
@@ -128,17 +132,28 @@ public class GameManager : MonoBehaviour
         return timer.GetTime();
     }
 
+    public void SetPlayerUIState(bool state)
+    {
+        playerUI.SetActive(state);
+    }
+
     private void GameIsOver()
     {
         if (!IsAnyGhost() && !IsAnyGarbage() && !IsAnyEctoplasm())
         {
-            FinishGame();
+            WinGame();
         }
     }
 
-    private void FinishGame()
+    private void WinGame()
     {
-            eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
-            eventChannelSceneManager.OnAddScene(nextScene);
+        SetPlayerUIState(false);
+        OnWin?.Invoke();
+    }
+    
+    private void LoseGame()
+    {
+        SetPlayerUIState(false);
+        OnLose?.Invoke();
     }
 }
