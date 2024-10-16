@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f119be8b7a99dfd4f84aca2187d58776
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cat Comic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fddbea2e0b6bb0d4dbf48c98a4eba0bc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
