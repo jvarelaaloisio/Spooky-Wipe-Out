@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
         objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
 
         timer.OnFinish += LoseGame;
+        
+        Time.timeScale = 1f;
     }
 
     private void OnDestroy()

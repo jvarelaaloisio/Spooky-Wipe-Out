@@ -16,11 +16,13 @@ public class ResultScreen : MonoBehaviour
 
     private void InitLoseScreen()
     {
+        Time.timeScale = 0f;
         loseScreen.SetActive(true);
     } 
     
     private void InitWinScreen()
     {
+        Time.timeScale = 0f;
         winScreen.SetActive(true);
     }
 }
