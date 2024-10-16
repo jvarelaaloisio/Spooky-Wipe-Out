@@ -60,7 +60,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4929937290722937582}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleMoveInput
         m_Mode: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4929937290722937582}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleClickInput
         m_Mode: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
     m_ActionName: Player/Clean[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4929937290722937582}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleMouseInput
         m_Mode: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
     m_ActionName: Player/AimVaccum[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4929937290722937582}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleSpaceInput
         m_Mode: 0
@@ -163,24 +163,12 @@ MonoBehaviour:
     m_ActionId: 7e060387-0ab4-454a-aa88-4251be972be9
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
-        m_MethodName: HandleResetCheat
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 71ee446a-41d5-44c0-b6ed-01e53afed33b
     m_ActionName: Player/Cheats[/Keyboard/r]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379392752930090030}
+      - m_Target: {fileID: 4929937290722937582}
         m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
         m_MethodName: HandleSwitchTool
         m_Mode: 0
@@ -194,6 +182,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 788afff8-212d-4c71-aff9-9525a436dfda
     m_ActionName: Player/SwitchTool[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4929937290722937582}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandlePause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b54d5156-5eaa-4c52-ad91-a7ea71474c5b
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -211,4 +215,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6222ca3e096618441b792c60698494ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventChannelSceneManager: {fileID: 11400000, guid: db015c9f8b5b83a47ab6053ad151f0d6, type: 2}
