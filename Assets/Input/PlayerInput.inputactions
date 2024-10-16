@@ -33,7 +33,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
+                    "name": "SpaceInput",
                     "type": "Button",
                     "id": "7e060387-0ab4-454a-aa88-4251be972be9",
                     "expectedControlType": "Button",
@@ -54,6 +54,15 @@
                     "name": "SwitchTool",
                     "type": "Button",
                     "id": "788afff8-212d-4c71-aff9-9525a436dfda",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "b54d5156-5eaa-4c52-ad91-a7ea71474c5b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -233,7 +242,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
+                    "action": "SpaceInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -244,18 +253,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad;Joystick",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "66b09053-278c-4fd7-adc7-c1e0d122a88e",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Cheats",
+                    "action": "SpaceInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -267,6 +265,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "SwitchTool",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6490f41e-223f-4982-9310-2b3e4f44461e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee32be48-6845-4f7b-be38-bb4dda7a6137",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

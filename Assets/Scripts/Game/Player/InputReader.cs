@@ -15,8 +15,7 @@ namespace Player.FSM
         public Action OnClickEnd;
         public Action OnSwitchTool;
         public Action OnJumpStart;
-
-        [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
+        public Action OnPauseStart;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -64,12 +63,11 @@ namespace Player.FSM
             }
         }
         
-        public void HandleResetCheat(InputAction.CallbackContext context)
+        public void HandlePause(InputAction.CallbackContext context)
         {
             if (context.started)
             {
-                eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
-                eventChannelSceneManager.OnAddScene(gameObject.scene.name);
+                OnPauseStart?.Invoke();
             }
         }
     }
