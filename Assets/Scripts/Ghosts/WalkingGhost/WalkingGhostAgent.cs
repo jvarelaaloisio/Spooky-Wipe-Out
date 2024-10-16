@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using AI.DecisionTree.Helpers;
 using Fsm_Mk2;
 using Gameplay.GhostMechanics;
 using Ghosts.WalkingGhost;
@@ -15,7 +17,12 @@ namespace Ghosts
         [SerializeField] private GhostPatrolling patrolling;
         [SerializeField] private GhostFlee flee;
         [SerializeField] private GameObject model;
-        
+        [SerializeField] private TextAsset treeAsset;
+
+        [field:SerializeField] public float viewHunterDistance { get; private set; } = 8.0f;
+
+        [SerializeField] private Transform hunter;
+
         private List<State> _states = new List<State>();
 
         private Fsm _fsm;
@@ -27,6 +34,16 @@ namespace Ghosts
         private Transition _fleeToWalk;
         private Transition _walkToFlee;
         [SerializeField] private bool logFsmStateChanges = false;
+
+        AI.DecisionTree.Tree tree;
+
+        private Dictionary<Type, Action> actionsByType = new();
+
+        private void Awake()
+        {
+            actionsByType.Add(typeof(Action_Patrolling), SetFleeWalkingState);
+            actionsByType.Add(typeof(Action_Flee), SetWalkingFleeState);
+        }
 
         public void Start()
         {
@@ -42,7 +59,7 @@ namespace Ghosts
             _states.Add(_struggle);
 
             State _capture = new Capture(model, this, minigame);
-            
+
             _states.Add(_capture);
 
             State _flee = new Flee(flee);
@@ -66,7 +83,34 @@ namespace Ghosts
             _walkToFlee = new Transition() { From = _walk, To = _flee };
             _flee.transitions.Add(_walkToFlee);
 
+            //TODO: Fixear la fsm porque trabaja con transitions y al pasarle un current state nunca esta entrando xd
             _fsm = new Fsm(_walk);
+
+            if (treeAsset != null)
+            {
+                tree = TreeHelper.LoadTree(treeAsset, GetGhostData);
+                tree.Callback = HandleDecision;
+            }
+            else
+            {
+                Debug.Log("The path is empty");
+            }
+        }
+
+        private void HandleDecision(object[] args)
+        {
+            if (args.Length == 0) return;
+
+            if (args[0] is Type type && actionsByType.TryGetValue(type, out Action action))
+            {
+                Debug.Log($"decision found: {type.Name}");
+                action?.Invoke();
+            }
+        }
+
+        private object GetGhostData()
+        {
+            return new GhostBehaviourData(this, hunter);
         }
 
         private void SetStruggleState()
@@ -105,8 +149,10 @@ namespace Ghosts
 
         private void Update()
         {
+            tree.RunTree();
+
             _fsm.Update();
-            if(logFsmStateChanges)
+            if (logFsmStateChanges)
                 Debug.Log(_fsm.GetCurrentState());
         }
 

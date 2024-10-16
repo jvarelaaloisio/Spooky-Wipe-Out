@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigame: {fileID: 0}
   patrolling: {fileID: 0}
+  flee: {fileID: 0}
   model: {fileID: 0}
   logFsmStateChanges: 0
 --- !u!195 &8968938385445474440

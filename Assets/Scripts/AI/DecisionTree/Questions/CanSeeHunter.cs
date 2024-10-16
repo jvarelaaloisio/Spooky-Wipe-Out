@@ -1,5 +1,4 @@
 using UnityEngine;
-using Ghosts;
 
 public class CanSeeHunter : AI.DecisionTree.TreeQuestion
 {
@@ -14,18 +13,14 @@ public class CanSeeHunter : AI.DecisionTree.TreeQuestion
 
         if(getData() is GhostBehaviourData data)
         {
-            // set using data.self.<<something>>
+            Vector3 hunterPosition = data.hunter.position.IgnoreY();
+            Vector3 selfPosition = data.self.transform.position.IgnoreY();
 
-            float viewDistance = 5;
-            var result = Vector3.Distance(data.hunter.position.IgnoreY(), data.self.transform.position.IgnoreY()) < viewDistance;
+            var result = Vector3.Distance(hunterPosition, selfPosition) <= data.self.viewHunterDistance;
+            
             return result ? 0 : 1;
         }
 
         return 1;
     }
-}
-public struct GhostBehaviourData
-{
-    public WalkingGhostAgent self { get; set; }
-    public Transform hunter{ get; set; }
 }

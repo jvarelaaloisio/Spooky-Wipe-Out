@@ -42,7 +42,7 @@ public class GhostPatrolling : MonoBehaviour
 
         float distanceToWaypoint = Vector3.Distance(_waypoints[_currentWaypointIndex].position.IgnoreY(), transform.position.IgnoreY());
 
-        if(distanceToWaypoint <= 1)
+        if(distanceToWaypoint <= 2)
         {
             _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Count;
         }

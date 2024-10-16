@@ -1,5 +1,7 @@
 using Fsm_Mk2;
 using Gameplay.GhostMechanics;
+using System;
+using UnityEngine;
 
 namespace Ghosts.WalkingGhost
 {
@@ -14,6 +16,7 @@ namespace Ghosts.WalkingGhost
 
         public override void Enter()
         {
+            Debug.Log ("enter walk state");
             _ghostPatrolling.enabled = true;
         }
 

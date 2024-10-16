@@ -523,6 +523,11 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!20 &20930451 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6086777180912172107, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
+  m_PrefabInstance: {fileID: 1646982063200531820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &38209773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,9 +2642,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 468326754}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: hunter
+      value: 
+      objectReference: {fileID: 1665960199}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: minigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treePath
+      value: Assets/ScriptableObjects/AI/DecisionTree/Saves/Ghost.json
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treeAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: 93a2894d174b24e4d80a3f2b5c3f5d19, type: 3}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: patrolling
       value: 
@@ -2651,6 +2668,10 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: logFsmStateChanges
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: <viewHunterDistance>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6536113984159830565, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -4233,9 +4254,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 758681685}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: hunter
+      value: 
+      objectReference: {fileID: 1665960199}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: minigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treePath
+      value: Assets/ScriptableObjects/AI/DecisionTree/Saves/Ghost.json
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treeAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: 93a2894d174b24e4d80a3f2b5c3f5d19, type: 3}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: patrolling
       value: 
@@ -4247,6 +4280,10 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: logFsmStateChanges
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: <viewHunterDistance>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6536113984159830565, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -5223,6 +5260,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5738579221985815272, guid: 33f331dae59442b419ffba58409f01ac, type: 3}
   m_PrefabInstance: {fileID: 902735334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &904380171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904380172}
+  m_Layer: 0
+  m_Name: GhostDecisionTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904380172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904380171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.34, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905367945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5486100169439382970, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
@@ -6010,9 +6078,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1044717092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d515065e0eb93144bd4101bfbfbc800, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e601026ccde85141bf637e8caa63085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Materials:
+  - {fileID: 2100000, guid: 57d99e9964ac3a443805fea1ff17c7db, type: 2}
+  - {fileID: 2100000, guid: fc7977181f74b4a42a3a9f06eb6a302a, type: 2}
+  Camera: {fileID: 20930451}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 8
+  raycastDistance: 5
+  speedAlpha: 1.2
 --- !u!65 &1066575031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6572,7 +6649,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180466427}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9feda5d697e1caf4eb95e979dad98b59, type: 3}
   m_Name: 
@@ -6582,7 +6659,7 @@ MonoBehaviour:
   - {fileID: 1593056942}
   - {fileID: 1471549611}
   - {fileID: 1889755850}
-  _patrolingSpeed: 3
+  _patrolingSpeed: 100
 --- !u!114 &1180466432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6590,13 +6667,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180466427}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5fe8f119b4dd499029d4e32bd98f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1665960199}
-  _fleeSpeed: 5
+  _fleeSpeed: 300
 --- !u!1001 &1185045216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10965,9 +11042,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 723519157}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: hunter
+      value: 
+      objectReference: {fileID: 1665960199}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: minigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treePath
+      value: Assets/ScriptableObjects/AI/DecisionTree/Saves/Ghost.json
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treeAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: 93a2894d174b24e4d80a3f2b5c3f5d19, type: 3}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: patrolling
       value: 
@@ -10975,6 +11064,10 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: navMeshAgent
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: <viewHunterDistance>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6536113984159830565, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -11011,7 +11104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46461979}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9feda5d697e1caf4eb95e979dad98b59, type: 3}
   m_Name: 
@@ -11022,7 +11115,7 @@ MonoBehaviour:
   - {fileID: 1297021922}
   - {fileID: 73369371}
   - {fileID: 926558230}
-  _patrolingSpeed: 3
+  _patrolingSpeed: 100
 --- !u!114 &1688402454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11030,13 +11123,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46461979}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5fe8f119b4dd499029d4e32bd98f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1665960199}
-  _fleeSpeed: 5
+  _fleeSpeed: 300
 --- !u!208 &1705234286
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11511,9 +11604,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1810752049}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: hunter
+      value: 
+      objectReference: {fileID: 1665960199}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: minigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treePath
+      value: Assets/ScriptableObjects/AI/DecisionTree/Saves/Ghost.json
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: treeAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: 93a2894d174b24e4d80a3f2b5c3f5d19, type: 3}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: patrolling
       value: 
@@ -11525,6 +11630,10 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: logFsmStateChanges
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: <viewHunterDistance>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6536113984159830565, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -11566,7 +11675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289455745}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9feda5d697e1caf4eb95e979dad98b59, type: 3}
   m_Name: 
@@ -11578,7 +11687,7 @@ MonoBehaviour:
   - {fileID: 1838501081}
   - {fileID: 80955270}
   - {fileID: 1374050535}
-  _patrolingSpeed: 3
+  _patrolingSpeed: 100
 --- !u!114 &1810752057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11586,13 +11695,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289455745}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5fe8f119b4dd499029d4e32bd98f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1665960199}
-  _fleeSpeed: 5
+  _fleeSpeed: 300
 --- !u!1001 &1812345760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13352,7 +13461,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112463328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9feda5d697e1caf4eb95e979dad98b59, type: 3}
   m_Name: 
@@ -13362,7 +13471,7 @@ MonoBehaviour:
   - {fileID: 593358477}
   - {fileID: 1546858867}
   - {fileID: 1745096045}
-  _patrolingSpeed: 3
+  _patrolingSpeed: 100
 --- !u!114 &2112463333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13370,13 +13479,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112463328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5fe8f119b4dd499029d4e32bd98f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1665960199}
-  _fleeSpeed: 5
+  _fleeSpeed: 300
 --- !u!1001 &2130913856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14374,3 +14483,4 @@ SceneRoots:
   - {fileID: 201149896}
   - {fileID: 226660447}
   - {fileID: 492893945}
+  - {fileID: 904380172}
