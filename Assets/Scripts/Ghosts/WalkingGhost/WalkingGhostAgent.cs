@@ -54,6 +54,7 @@ namespace Ghosts
 
             minigame.OnWin += SetCaptureState;
             minigame.OnLose += SetWalkState;
+            minigame.OnStop += SetWalkState;
 
             GameManager.GetInstance().ghosts.Add(this);
 
@@ -93,8 +94,6 @@ namespace Ghosts
 
             //TODO: Fixear la fsm porque trabaja con transitions y al pasarle un current state nunca esta entrando xd
             _fsm = new Fsm(_walk);
-
-            SetStartWalk();
 
             if (treeAsset != null)
             {
