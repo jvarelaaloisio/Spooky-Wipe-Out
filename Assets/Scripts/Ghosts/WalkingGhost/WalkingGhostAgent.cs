@@ -27,17 +27,20 @@ namespace Ghosts
 
         private Fsm _fsm;
 
-        private Transition _walkToStruggle;
+        private Transition _fleeToStruggle;
         private Transition _struggleToCapture;
         private Transition _struggleToWalk;
         private Transition _struggleToFlee;
         private Transition _fleeToWalk;
         private Transition _walkToFlee;
+        private Transition _startWalk;
         [SerializeField] private bool logFsmStateChanges = false;
 
         AI.DecisionTree.Tree tree;
 
         private Dictionary<Type, Action> actionsByType = new();
+
+        private NavMeshAgent _agent;
 
         private void Awake()
         {
@@ -47,6 +50,8 @@ namespace Ghosts
 
         public void Start()
         {
+            _agent = GetComponent<NavMeshAgent>();
+
             minigame.OnWin += SetCaptureState;
             minigame.OnLose += SetWalkState;
 
@@ -55,7 +60,7 @@ namespace Ghosts
             State _walk = new Walk(patrolling);
             _states.Add(_walk);
 
-            State _struggle = new WalkingGhost.Struggle();
+            State _struggle = new WalkingGhost.Struggle(_agent);
             _states.Add(_struggle);
 
             State _capture = new Capture(model, this, minigame);
@@ -65,8 +70,8 @@ namespace Ghosts
             State _flee = new Flee(flee);
             _states.Add(_flee);
 
-            _walkToStruggle = new Transition() { From = _walk, To = _struggle };
-            _walk.transitions.Add(_walkToStruggle);
+            _fleeToStruggle = new Transition() { From = _flee, To = _struggle };
+            _flee.transitions.Add(_fleeToStruggle);
 
             _struggleToCapture = new Transition() { From = _struggle, To = _capture };
             _struggle.transitions.Add(_struggleToCapture);
@@ -81,10 +86,15 @@ namespace Ghosts
             _flee.transitions.Add(_fleeToWalk);
 
             _walkToFlee = new Transition() { From = _walk, To = _flee };
-            _flee.transitions.Add(_walkToFlee);
+            _walk.transitions.Add(_walkToFlee);
+
+            _startWalk = new Transition() { From = _walk, To = _walk };
+            _walk.transitions.Add(_startWalk);
 
             //TODO: Fixear la fsm porque trabaja con transitions y al pasarle un current state nunca esta entrando xd
             _fsm = new Fsm(_walk);
+
+            SetStartWalk();
 
             if (treeAsset != null)
             {
@@ -117,7 +127,7 @@ namespace Ghosts
         {
             if (minigame.GetActive()) return;
 
-            _fsm.ApplyTransition(_walkToStruggle);
+            _fsm.ApplyTransition(_fleeToStruggle);
 
             minigame.StartGame();
         }
@@ -140,6 +150,11 @@ namespace Ghosts
         private void SetFleeWalkingState()
         {
             _fsm.ApplyTransition(_fleeToWalk);
+        }
+
+        private void SetStartWalk()
+        {
+            _fsm.ApplyTransition(_startWalk);
         }
 
         private void SetWalkingFleeState()

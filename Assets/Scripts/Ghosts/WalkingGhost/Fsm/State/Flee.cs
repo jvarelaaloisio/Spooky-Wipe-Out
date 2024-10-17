@@ -1,4 +1,5 @@
 using Fsm_Mk2;
+using UnityEngine;
 
 namespace Ghosts.WalkingGhost
 {
@@ -13,6 +14,7 @@ namespace Ghosts.WalkingGhost
 
         public override void Enter()
         {
+            //Debug.Log("Entro al enter de flee");
             _ghostFlee.enabled = true;
         }
 
@@ -28,6 +30,7 @@ namespace Ghosts.WalkingGhost
 
         public override void Exit()
         {
+            //Debug.Log("Entro al exit de flee");
             _ghostFlee.enabled = false;
         }
     }

@@ -16,13 +16,13 @@ namespace Ghosts.WalkingGhost
 
         public override void Enter()
         {
-            Debug.Log ("enter walk state");
+            //Debug.Log ("enter walk state");
             _ghostPatrolling.enabled = true;
         }
 
         public override void Tick(float delta)
         {
-
+            //Debug.Log("im walking");
         }
 
         public override void FixedTick(float delta)

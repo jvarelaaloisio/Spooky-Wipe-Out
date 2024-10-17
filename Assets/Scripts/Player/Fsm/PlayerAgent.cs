@@ -56,13 +56,13 @@ namespace Fsm_Mk2
             skillCheckController.OnLose += SetStruggleToWalkIdle;
             skillCheckController.OnStop += SetStruggleToWalkIdle;
 
-            State _walkIdle = new WalkIdle(playerModel, walkIdleModel, layerRaycast);
+            State _walkIdle = new WalkIdle(gameObject, walkIdleModel, layerRaycast);
             _states.Add(_walkIdle);
 
-            State _trapped = new Trapped(playerModel);
+            State _trapped = new Trapped(gameObject);
             _states.Add(_trapped);
             
-            State _struggle = new Struggle(playerModel, cleanerController);
+            State _struggle = new Struggle(gameObject, cleanerController);
             _states.Add(_struggle);
 
             _walkIdleToTrapped = new Transition() { From = _walkIdle, To = _trapped };

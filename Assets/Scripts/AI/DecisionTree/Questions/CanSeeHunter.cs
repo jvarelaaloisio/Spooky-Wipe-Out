@@ -17,6 +17,8 @@ public class CanSeeHunter : AI.DecisionTree.TreeQuestion
             Vector3 selfPosition = data.self.transform.position.IgnoreY();
 
             var result = Vector3.Distance(hunterPosition, selfPosition) <= data.self.viewHunterDistance;
+
+            //Debug.Log($"La distancia fue {Vector3.Distance(hunterPosition, selfPosition)}");
             
             return result ? 0 : 1;
         }

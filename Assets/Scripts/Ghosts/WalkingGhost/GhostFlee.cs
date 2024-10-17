@@ -18,7 +18,7 @@ public class GhostFlee : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //_fleeSpeedDeltaTimed = _fleeSpeed * Time.deltaTime;
+        _fleeSpeedDeltaTimed = _fleeSpeed * Time.deltaTime;
 
         Flee();
     }
@@ -26,9 +26,8 @@ public class GhostFlee : MonoBehaviour
     private void Flee()
     {
         Vector3 directionToPlayer = transform.position - _player.position;
-        Vector3 fleeDirection = transform.position + directionToPlayer.normalized;
 
-        _agent.speed = _fleeSpeed;
-        _agent.Move(fleeDirection);
+        _agent.speed = _fleeSpeedDeltaTimed;
+        _agent.Move(directionToPlayer.normalized * _agent.speed);
     }
 }
