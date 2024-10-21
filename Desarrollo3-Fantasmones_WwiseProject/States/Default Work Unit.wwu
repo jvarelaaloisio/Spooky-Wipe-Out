@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{58280D57-A644-4038-8713-1B41B403A5F4}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{58280D57-A644-4038-8713-1B41B403A5F4}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameState" ID="{C349B599-7156-458A-868B-22FC2BC1E854}">
+					<ChildrenList>
+						<State Name="None" ID="{8104D599-B0BC-4675-902E-E6001385A495}"/>
+						<State Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+						<State Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+						<State Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+						<State Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1281810935	Start			\Default Work Unit\Start	
+	1741888361	Music_Playing			\Default Work Unit\Music_Playing	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	523675216	Music_Playing	C:\Unity\Desarrollo3-Fantasmones\Desarrollo3-Fantasmones_WwiseProject\.cache\Mac\SFX\1 Tubthumping_8E324C96.wem	523675216.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music_Playing	
+

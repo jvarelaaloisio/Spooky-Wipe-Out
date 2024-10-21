@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{850AB33F-1E5A-8EFF-3D91-D49A5CF9C2B1}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="4091656514" Name="GameState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1852808225" Name="Playing"/>
+						<State Id="2201105581" Name="Credits"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FE2DD59D-06B2-93D6-82E6-50BC2718AB14}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="523675216" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>1 Tubthumping.wav</ShortName>
+					<Path>Media/523675216.wem</Path>
+					<CachePath>SFX/1 Tubthumping_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1741888361" Name="Music_Playing" DurationType="OneShot" DurationMin="278.832" DurationMax="278.832">
+					<MediaRefs>
+						<MediaRef Id="523675216"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1281810935" Name="Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{4A421281-D0A8-8EB8-BD13-B42B475EED47}</FileHash>
+</SoundBanksInfo>
