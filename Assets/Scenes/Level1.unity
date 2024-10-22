@@ -9750,6 +9750,18 @@ PrefabInstance:
       propertyPath: navMeshAgent
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5683093143675321173, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: m_Height
+      value: 3.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683093143675321173, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: m_Radius
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683093143675321173, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: m_Center.z
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7534280635867931546, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: m_Name
       value: Chains_Ghost
