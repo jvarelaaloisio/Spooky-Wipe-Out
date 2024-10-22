@@ -16,10 +16,9 @@ public class GhostFlee : MonoBehaviour
 
     private int maxAttempts = 30;
 
-    private void Start()
+    private void Awake()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _agent.ResetPath();
     }
 
     private void OnEnable()
