@@ -14,12 +14,15 @@ namespace Ghosts
     public class WalkingGhostAgent : Ghost, IVacuumable
     {
         [SerializeField] private Minigame minigame;
-        [SerializeField] private GhostPatrolling patrolling;
-        [SerializeField] private GhostFlee flee;
         [SerializeField] private GameObject model;
         [SerializeField] private TextAsset treeAsset;
 
+        private GhostPatrolling _patrollingGhost;
+        private GhostFlee _fleeGhost;
+        private GhostRest _restGhost;
+
         [field:SerializeField] public float viewHunterDistance { get; private set; } = 8.0f;
+        [field:SerializeField] public bool isRested { get; set; }
 
         [SerializeField] private Transform hunter;
 
@@ -34,6 +37,12 @@ namespace Ghosts
         private Transition _fleeToWalk;
         private Transition _walkToFlee;
         private Transition _startWalk;
+        private Transition _fleeToRest;
+        private Transition _walkToRest;
+        private Transition _restToWalk;
+        private Transition _restToFlee;
+        private Transition _restToStruggle;
+
         [SerializeField] private bool logFsmStateChanges = false;
 
         AI.DecisionTree.Tree tree;
@@ -44,8 +53,15 @@ namespace Ghosts
 
         private void Awake()
         {
+            _patrollingGhost = GetComponent<GhostPatrolling>();
+            _fleeGhost = GetComponent<GhostFlee>();
+            _restGhost = GetComponent<GhostRest>();
+
             actionsByType.Add(typeof(Action_Patrolling), SetFleeWalkingState);
             actionsByType.Add(typeof(Action_Flee), SetWalkingFleeState);
+            actionsByType.Add(typeof(Action_Rest), SetFleeRestState);
+
+            isRested = true;
         }
 
         public void Start()
@@ -58,7 +74,7 @@ namespace Ghosts
 
             GameManager.GetInstance().ghosts.Add(this);
 
-            State _walk = new Walk(patrolling);
+            State _walk = new Walk(_patrollingGhost);
             _states.Add(_walk);
 
             State _struggle = new WalkingGhost.Struggle(_agent);
@@ -68,8 +84,11 @@ namespace Ghosts
 
             _states.Add(_capture);
 
-            State _flee = new Flee(flee);
+            State _flee = new Flee(_fleeGhost);
             _states.Add(_flee);
+
+            State _rest = new Rest(_restGhost);
+            _states.Add(_rest);
 
             _fleeToStruggle = new Transition() { From = _flee, To = _struggle };
             _flee.transitions.Add(_fleeToStruggle);
@@ -92,7 +111,21 @@ namespace Ghosts
             _startWalk = new Transition() { From = _walk, To = _walk };
             _walk.transitions.Add(_startWalk);
 
-            //TODO: Fixear la fsm porque trabaja con transitions y al pasarle un current state nunca esta entrando xd
+            _fleeToRest = new Transition() { From = _flee, To = _rest };
+            _flee.transitions.Add(_fleeToRest);
+
+            _walkToRest = new Transition() { From = _walk, To = _rest };
+            _walk.transitions.Add(_walkToRest);
+
+            _restToWalk = new Transition() { From = _rest, To = _walk };
+            _rest.transitions.Add(_restToWalk);
+
+            _restToFlee = new Transition() { From = _rest, To = _flee };
+            _rest.transitions.Add(_restToFlee);
+
+            _restToStruggle = new Transition() { From = _rest, To = _struggle };
+            _rest.transitions.Add(_restToStruggle);
+
             _fsm = new Fsm(_walk);
 
             if (treeAsset != null)
@@ -104,6 +137,21 @@ namespace Ghosts
             {
                 Debug.Log("The path is empty");
             }
+
+            _fleeGhost.SetRestState.AddListener(SetRestedState);
+            _restGhost.SetRestState.AddListener(SetRestedState);
+        }
+
+        private void OnDisable()
+        {
+            _fleeGhost.SetRestState.RemoveListener(SetRestedState);
+            _restGhost.SetRestState.RemoveListener(SetRestedState);
+        }
+
+        private void SetRestedState(bool value)
+        {
+            isRested = value;
+            Debug.Log($"estado del descanso: {isRested}");
         }
 
         private void HandleDecision(object[] args)
@@ -127,6 +175,7 @@ namespace Ghosts
             if (minigame.GetActive()) return;
 
             _fsm.ApplyTransition(_fleeToStruggle);
+            _fsm.ApplyTransition(_restToStruggle);
 
             minigame.StartGame();
         }
@@ -149,6 +198,7 @@ namespace Ghosts
         private void SetFleeWalkingState()
         {
             _fsm.ApplyTransition(_fleeToWalk);
+            _fsm.ApplyTransition(_restToWalk);
         }
 
         private void SetStartWalk()
@@ -159,6 +209,13 @@ namespace Ghosts
         private void SetWalkingFleeState()
         {
             _fsm.ApplyTransition(_walkToFlee);
+            _fsm.ApplyTransition(_restToFlee);
+        }
+
+        private void SetFleeRestState()
+        {
+            _fsm.ApplyTransition(_fleeToRest);
+            _fsm.ApplyTransition(_walkToRest);
         }
 
         private void Update()
