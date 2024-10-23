@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
-public class GhostFlee : MonoBehaviour
+public class GhostFlee : MonoBehaviour, IRest
 {
     [SerializeField] private Transform _player;
     [SerializeField] private float _fleeSpeed = 5f;
@@ -15,6 +16,8 @@ public class GhostFlee : MonoBehaviour
     private float maxScapeDistance = 45.0f;
 
     private int maxAttempts = 30;
+
+    public UnityEvent<bool> SetRestState { get; set; } = new UnityEvent<bool>();
 
     private void Awake()
     {
@@ -58,7 +61,6 @@ public class GhostFlee : MonoBehaviour
 
             if(NavMesh.SamplePosition(randomDirection, out navMeshHit, maxScapeDistance, NavMesh.AllAreas))
             {
-                Debug.Log($"{navMeshHit}");
                 return navMeshHit.position;
             }
 
