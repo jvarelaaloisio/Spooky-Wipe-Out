@@ -376,7 +376,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2924545648786824309}
-  - component: {fileID: 7816305601731866052}
   m_Layer: 7
   m_Name: AlphaTarget
   m_TagString: Untagged
@@ -399,27 +398,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3948732764486441961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7816305601731866052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5017105014744059435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77fa97f03bcdd544c873874f021bc38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Materials:
-  - {fileID: 2100000, guid: fef9870bbc3e8cf4698291549b58ba61, type: 2}
-  - {fileID: 2100000, guid: fcb6a0ed79e9bd4409a49f9185a67766, type: 2}
-  Camera: {fileID: 0}
-  Mask:
-    serializedVersion: 2
-    m_Bits: 8
-  raycastDistance: 5
-  speedAlpha: 3.5
 --- !u!1 &5450383065914872171
 GameObject:
   m_ObjectHideFlags: 0

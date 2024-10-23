@@ -40,10 +40,5 @@ namespace VacuumCleaner
 
             _currentTool?.PowerOn();
         }
-
-        private void Update()
-        {
-            Debug.Log($@"{nameof(CleanerController)}, current mode is: {_currentTool})");
-        }
     }
 }

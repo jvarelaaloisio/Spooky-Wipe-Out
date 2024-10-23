@@ -61,7 +61,6 @@ namespace Ghosts
         private void Update()
         {
             _fsm.Update();
-            Debug.Log(_fsm.GetCurrentState());
         }
 
         private void FixedUpdate()
