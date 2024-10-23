@@ -47,19 +47,20 @@ namespace Fsm_Mk2
         {
             if (_rigidbody)
             {
-                _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0,
-                    -_rigidbody.velocity.z * _model.CounterMovementForce);
-
                 _rigidbody.AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
 
                 float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);
 
                 if (!_isClickPressed)
                 {
+                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0, -_rigidbody.velocity.z * _model.CounterMovementForce);
+
                     RotateByMovementInput(angle);
                 }
                 else
                 {
+                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForceVacuuming, 0, -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming);
+
                     RotateWhileVacuuming();
                 }
             }

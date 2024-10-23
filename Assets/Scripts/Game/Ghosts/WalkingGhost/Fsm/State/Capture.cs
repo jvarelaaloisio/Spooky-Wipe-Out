@@ -20,7 +20,7 @@ namespace Ghosts.WalkingGhost
         public override void Enter()
         {
             _agent.OnBeingDestroy?.Invoke(_agent);
-            _model.SetActive(false);
+            _agent.gameObject.SetActive(false);
             _agent.enabled = false;
             _minigame.StopGame();
         }
