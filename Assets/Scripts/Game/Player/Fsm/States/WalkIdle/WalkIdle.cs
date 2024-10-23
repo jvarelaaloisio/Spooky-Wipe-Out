@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
 
@@ -5,6 +6,7 @@ namespace Fsm_Mk2
 {
     public class WalkIdle : State
     {
+        private Action<bool> _OnWalk;
         private GameObject _gameObject;
         private Rigidbody _rigidbody;
         private WalkIdleModel _model;
@@ -17,11 +19,12 @@ namespace Fsm_Mk2
 
         private Vector3 _counterMovement;
 
-        public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast)
+        public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast, Action<bool> OnWalk)
         {
             _gameObject = gameObject;
             _model = model;
             _layerRaycast = layerRaycast;
+            _OnWalk = OnWalk;
         }
 
         public override void Enter()
@@ -45,8 +48,11 @@ namespace Fsm_Mk2
 
         private void Move()
         {
+            
             if (_rigidbody)
             {
+                _OnWalk?.Invoke(_dir.normalized != Vector3.zero);
+                
                 _rigidbody.AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
 
                 float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);

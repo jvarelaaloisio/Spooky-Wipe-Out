@@ -101,8 +101,6 @@ public class SkillCheckController : Minigame
                 {
                     WinGame();
                 }
-
-                Debug.Log("acertado");
             }
             else
             {
@@ -113,8 +111,6 @@ public class SkillCheckController : Minigame
                         _skillcheckCounter--;
                         UpdateProgressPointsBar();
                     }
-
-                    Debug.Log("mal");
                 }
                 else
                 {
@@ -125,8 +121,6 @@ public class SkillCheckController : Minigame
                     {
                         LoseGame();
                     }
-                    
-                    Debug.Log("mal");
                 }
             }
         }

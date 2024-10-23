@@ -7,12 +7,15 @@ using Ghosts.WalkingGhost;
 using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using State = Fsm_Mk2.State;
 
 namespace Ghosts
 {
     public class WalkingGhostAgent : Ghost, IVacuumable
     {
+        public UnityEvent<bool> OnVacuumed;
+        
         [SerializeField] private Minigame minigame;
         [SerializeField] private GameObject model;
         [SerializeField] private TextAsset treeAsset;
@@ -174,6 +177,8 @@ namespace Ghosts
         {
             if (minigame.GetActive()) return;
 
+            OnVacuumed?.Invoke(true);
+            gameObject.transform.forward = hunter.forward;
             _fsm.ApplyTransition(_fleeToStruggle);
             _fsm.ApplyTransition(_restToStruggle);
 
@@ -187,11 +192,13 @@ namespace Ghosts
 
         private void SetFleeState()
         {
+            OnVacuumed?.Invoke(false);
             _fsm.ApplyTransition(_struggleToFlee);
         }
 
         private void SetWalkState()
         {
+            OnVacuumed?.Invoke(false);
             _fsm.ApplyTransition(_struggleToWalk);
         }
 
@@ -208,6 +215,7 @@ namespace Ghosts
 
         private void SetWalkingFleeState()
         {
+            OnVacuumed?.Invoke(false);
             _fsm.ApplyTransition(_walkToFlee);
             _fsm.ApplyTransition(_restToFlee);
         }

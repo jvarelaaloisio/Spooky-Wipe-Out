@@ -3,7 +3,27 @@ guid: e1b9768bf57b20f4f937a22c89877b67
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChainGhostRigV2_Ghost_Mat1
+    second: {fileID: 2100000, guid: edc7dbdc00c0a5549bed38ee54a8151b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChainGhostRigV2_Metal1
+    second: {fileID: 2100000, guid: e0d6f0247e2685c4bb83b25315b61646, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChainGhostRigV2_Negro
+    second: {fileID: 2100000, guid: e4f83c48c4405cc46b21575e745cd877, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChainGhostRigV2_lambert5
+    second: {fileID: 2100000, guid: bfd97ad69a7538b408e0504b25b56957, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
