@@ -3,13 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Start" ID="{13B0EC72-58F7-43FE-945A-4BF54CAB2F48}"/>
-				<Event Name="Music_Playing" ID="{7260EE5D-B24A-4E94-B3C4-7730B137668F}">
+				<Event Name="Start" ID="{13B0EC72-58F7-43FE-945A-4BF54CAB2F48}">
 					<ChildrenList>
-						<Action Name="" ID="{D98B37C6-D8C1-4455-A066-7E84EBA1EF03}" ShortID="705993737">
+						<Action Name="" ID="{A70B06E9-DFD5-4DAC-BE9B-C5305451AC29}" ShortID="1032489432">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music_Playing" ID="{8EE84EE7-3242-4028-A72D-8D6C6A82522A}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									<ObjectRef Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

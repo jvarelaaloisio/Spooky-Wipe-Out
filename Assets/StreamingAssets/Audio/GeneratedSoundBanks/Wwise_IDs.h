@@ -13,7 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID MUSIC_PLAYING = 1741888361U;
         static const AkUniqueID START = 1281810935U;
     } // namespace EVENTS
 
@@ -34,6 +33,21 @@ namespace AK
         } // namespace GAMESTATE
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace NEW_SWITCH_GROUP
+        {
+            static const AkUniqueID GROUP = 2250165792U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID NEW_SWITCH = 1914034948U;
+                static const AkUniqueID NEW_SWITCH_01 = 3952450474U;
+            } // namespace SWITCH
+        } // namespace NEW_SWITCH_GROUP
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {

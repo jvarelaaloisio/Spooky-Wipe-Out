@@ -3,40 +3,228 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{3C248A58-6566-4DB4-AD50-76632301869B}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Music_Playing" ID="{8EE84EE7-3242-4028-A72D-8D6C6A82522A}" ShortID="821583325">
+				<SwitchContainer Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" ShortID="392384810">
 					<PropertyList>
-						<Property Name="IsStreamingEnabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="MakeUpGain" Type="Real64">
-							<ValueList>
-								<Value>-24</Value>
-							</ValueList>
-						</Property>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="None" ID="{8104D599-B0BC-4675-902E-E6001385A495}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
 						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="GameState" ID="{C349B599-7156-458A-868B-22FC2BC1E854}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="1 Tubthumping" ID="{048F7D58-F087-4091-87EA-323A945C546D}">
-							<Language>SFX</Language>
-							<AudioFile>1 Tubthumping.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="523675216"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<Sound Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}" ShortID="787581667">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keys" ID="{1405E60B-D58B-4A1A-BC66-30AA5E63D727}">
+									<Language>SFX</Language>
+									<AudioFile>Keys.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="414954598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keys" ID="{1405E60B-D58B-4A1A-BC66-30AA5E63D727}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}" ShortID="903954639">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="mx_Playing" ID="{8EE84EE7-3242-4028-A72D-8D6C6A82522A}" ShortID="821583325">
+									<PropertyList>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="1 Tubthumping" ID="{048F7D58-F087-4091-87EA-323A945C546D}">
+											<Language>SFX</Language>
+											<AudioFile>1 Tubthumping.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="523675216"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="1 Tubthumping" ID="{048F7D58-F087-4091-87EA-323A945C546D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="silence" ID="{B9D9F4C5-B213-476E-9265-D66569D5E646}" ShortID="917442290">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{AAAE41CE-A512-4549-B275-F54A0A2AF095}" ShortID="234075148" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{AAAE41CE-A512-4549-B275-F54A0A2AF095}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="silence" ID="{B9D9F4C5-B213-476E-9265-D66569D5E646}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="mx_Playing" ID="{8EE84EE7-3242-4028-A72D-8D6C6A82522A}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="1 Tubthumping" ID="{048F7D58-F087-4091-87EA-323A945C546D}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameState" ID="{C349B599-7156-458A-868B-22FC2BC1E854}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+								<CustomState Name="" ID="{F05A64C2-CDA1-4CFF-A85C-BD19E9A5845E}" ShortID="192260708">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="69"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+								<CustomState Name="" ID="{62BD5F0E-C8A0-4ABE-98B7-FB65DF25DFDE}" ShortID="728526304">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="73"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+								<CustomState Name="" ID="{E3E0A457-B95E-4F62-BE5A-4BE57B7196E3}" ShortID="42528524"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+								<CustomState Name="" ID="{6778FE5B-1FF2-4162-B84E-2446909D2BBC}" ShortID="476342109"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FirstOccurenceOnly" Type="bool" Value="True"/>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FirstOccurenceOnly" Type="bool" Value="True"/>
+								</PropertyList>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+								<ItemList>
+									<ItemRef Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+								<ItemList>
+									<ItemRef Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+								<ItemList>
+									<ItemRef Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+								<ItemList>
+									<ItemRef Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -1,7 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1281810935	Start			\Default Work Unit\Start	
-	1741888361	Music_Playing			\Default Work Unit\Music_Playing	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4091656514	GameState			\Default Work Unit\GameState	
+
+State	ID	Name	State Group			Notes
+	748895195	None	GameState			
+	1852808225	Playing	GameState			
+	2201105581	Credits	GameState			
+	2607556080	Menu	GameState			
+	3092587493	Pause	GameState			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	234075148	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\silence\Silence	
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	523675216	Music_Playing	C:\Unity\Desarrollo3-Fantasmones\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\1 Tubthumping_8E324C96.wem	523675216.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music_Playing	
+	414954598	mx_Menu	C:\Unity\Desarrollo3-Fantasmones\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Keys_3CD5CF17.wem	414954598.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_Menu	
+	523675216	mx_Playing	C:\Unity\Desarrollo3-Fantasmones\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\1 Tubthumping_8709A909.wem	523675216.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\mx_Playing	
 
