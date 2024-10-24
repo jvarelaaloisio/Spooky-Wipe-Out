@@ -105,7 +105,7 @@ namespace Fsm_Mk2
         public void SetIsClickPressedState(bool isClickPresed)
         {
             _isClickPressed = isClickPresed;
-            Debug.Log($"The button is : {isClickPresed}");
+            //Debug.Log($"The button is : {isClickPresed}");
         }
 
         public void SetMousePosition(Vector3 mousePosition)
