@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isVacuum
+    m_ConditionEvent: isBeingCaptured
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1515991283352935202}
@@ -34,7 +34,7 @@ AnimatorController:
   m_Name: Chains_Ghost_Animator
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isVacuum
+  - m_Name: isBeingCaptured
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -114,7 +114,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isVacuum
+    m_ConditionEvent: isBeingCaptured
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8874855548148070416}

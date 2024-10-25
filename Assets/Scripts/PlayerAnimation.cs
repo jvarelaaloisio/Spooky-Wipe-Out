@@ -1,48 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-   private Animator animator;
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-
-    }
-
+    private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+    [SerializeField] private Animator animator;
     
-    void Update()
+    public void SetWalkState(bool isWalking)
     {
-        if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
-        {
-            animator.SetBool("IsWalking", true);
-        }
-
-        else
-        {
-            animator.SetBool("IsWalking", false);
-        }
-
-        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.S)))
-        {
-            animator.SetBool("IsWalking", false);
-        }
-
-        if (Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.D)))
-        {
-            animator.SetBool("IsWalking", false);
-        }
-
-        if (Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.W))))
-        {
-            animator.SetBool("IsWalking", true);
-        }
-
-        if (Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.S))))
-        {
-            animator.SetBool("IsWalking", true);
-        }
+        animator.SetBool(IsWalking, isWalking);
     }
 }

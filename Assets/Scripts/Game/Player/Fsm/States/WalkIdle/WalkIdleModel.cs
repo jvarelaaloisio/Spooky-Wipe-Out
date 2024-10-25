@@ -7,7 +7,7 @@ namespace Fsm_Mk2
     {
         [SerializeField] private float movementForce = 30;
         [SerializeField] private float counterMovementForce = 5;
-        [SerializeField] private float counterMovementForceVacuuming = 15;
+        [SerializeField] private float counterMovementForceVacuuming = 10;
         [SerializeField] private float rotationSpeed = 5;
         [SerializeField] private LayerMask layerRaycast;
         

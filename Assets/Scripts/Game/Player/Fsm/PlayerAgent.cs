@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Minigames;
 using Player.FSM;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using VacuumCleaner;
@@ -14,7 +15,8 @@ namespace Fsm_Mk2
     {
         public Action<Transform> OnHunted;
         public Action<Transform> OnStruggle;
-
+        public UnityEvent<bool> OnWalk;
+        
         private List<State> _states = new List<State>();
 
         [SerializeField] private InputReader inputReader;
@@ -61,13 +63,13 @@ namespace Fsm_Mk2
             skillCheckController.OnLose += SetStruggleToWalkIdle;
             skillCheckController.OnStop += SetStruggleToWalkIdle;
 
-            State _walkIdle = new WalkIdle(playerModel, walkIdleModel, layerRaycast);
+            State _walkIdle = new WalkIdle(this.gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _states.Add(_walkIdle);
 
-            State _trapped = new Trapped(playerModel);
+            State _trapped = new Trapped(this.gameObject);
             _states.Add(_trapped);
 
-            State _struggle = new Struggle(playerModel, cleanerController);
+            State _struggle = new Struggle(this.gameObject, cleanerController);
             _states.Add(_struggle);
 
             _walkIdleToTrapped = new Transition() { From = _walkIdle, To = _trapped };
@@ -86,6 +88,11 @@ namespace Fsm_Mk2
             _struggle.transitions.Add(_struggleToWalkIdle);
 
             _fsm = new Fsm(_walkIdle);
+        }
+
+        private void OnWalkAction(bool obj)
+        {
+            OnWalk?.Invoke(obj);
         }
 
         private void SetMoveStateDirection(Vector2 direction)
@@ -108,6 +115,7 @@ namespace Fsm_Mk2
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
                         walkIdle.SetDir(cameraBasedMoveDirection);
                         stateFound = true;
+                       
                         break;
                     }
                 }
