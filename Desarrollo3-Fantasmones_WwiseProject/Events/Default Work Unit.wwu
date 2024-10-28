@@ -14,6 +14,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}"/>
+				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

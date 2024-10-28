@@ -3,10 +3,21 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{17BA2A63-0719-4369-B273-52F3C7434ABC}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="New_Switch_Group" ID="{9EA27D99-57B3-48FF-A7FA-AE17700EDB5C}">
+				<SwitchGroup Name="Steps" ID="{3995780E-4E6F-4349-B73A-3426D2C2E189}">
 					<ChildrenList>
-						<Switch Name="New_Switch" ID="{0E23ABCE-AAF9-4703-8E8E-32C8A07EF3A0}"/>
-						<Switch Name="New_Switch_01" ID="{6D4D1638-BEBB-4A4D-9A35-A6445844A335}"/>
+						<Switch Name="Wood" ID="{7A301372-327D-4F6F-81B7-B50F8BCB7541}"/>
+						<Switch Name="Carpet" ID="{E50277A9-D642-468D-80DC-8D8B076525F7}"/>
+						<Switch Name="Tile" ID="{A64FA257-F5CD-4616-9055-826E390F9EAA}"/>
+						<Switch Name="Stop" ID="{B71B3AEC-F74F-4543-8E48-3405A461160D}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Vacuum" ID="{AE7B4539-F9C5-43B4-BC4C-36CC23D90FF2}">
+					<ChildrenList>
+						<Switch Name="VacWorking" ID="{C247058C-C8A7-44F9-AC52-5F5DF66FDFAB}"/>
+						<Switch Name="VacWorkingOnGhost" ID="{D3D8E89D-2604-41F8-B803-AB3C3265C160}"/>
+						<Switch Name="HidroWorking" ID="{D983C13A-B30B-4B8C-9DBE-93885FB42EE3}"/>
+						<Switch Name="HidroWorkingOnGoo" ID="{6CE5E5B8-8802-4B71-BD28-0B04E7895F8A}"/>
+						<Switch Name="Stop" ID="{32DA640B-AF0D-41E2-A8C6-BA7597AA57B6}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
