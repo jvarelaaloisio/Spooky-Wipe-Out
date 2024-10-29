@@ -1,11 +1,19 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1123143573	Start_Lvl1			\Default Work Unit\Start_Lvl1	
 	1281810935	Start			\Default Work Unit\Start	
+	2644656531	TrashVacuumed			\Default Work Unit\TrashVacuumed	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
 
 State	ID	Name	State Group			Notes
 	748895195	None	GameState			
+	1305749800	Playing_04	GameState			
+	1305749801	Playing_05	GameState			
+	1305749802	Playing_06	GameState			
+	1305749805	Playing_01	GameState			
+	1305749806	Playing_02	GameState			
+	1305749807	Playing_03	GameState			
 	1852808225	Playing	GameState			
 	2201105581	Credits	GameState			
 	2607556080	Menu	GameState			
@@ -15,6 +23,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	234075148	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\silence\Silence	
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	414954598	mx_Menu	C:\Unity\Desarrollo3-Fantasmones\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Keys_3CD5CF17.wem	414954598.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_Menu	
-	523675216	mx_Playing	C:\Unity\Desarrollo3-Fantasmones\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\1 Tubthumping_8709A909.wem	523675216.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\mx_Playing	
+	414954598	mx_Menu	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Keys_3CD5CF17.wem	414954598.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_Menu	
+	523675216	mx_Playing	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\1 Tubthumping_8709A909.wem	523675216.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\mx_Playing	
 

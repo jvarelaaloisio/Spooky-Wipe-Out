@@ -25,6 +25,12 @@
 				<StateGroup Id="4091656514" Name="GameState">
 					<States>
 						<State Id="748895195" Name="None"/>
+						<State Id="1305749800" Name="Playing_04"/>
+						<State Id="1305749801" Name="Playing_05"/>
+						<State Id="1305749802" Name="Playing_06"/>
+						<State Id="1305749805" Name="Playing_01"/>
+						<State Id="1305749806" Name="Playing_02"/>
+						<State Id="1305749807" Name="Playing_03"/>
 						<State Id="1852808225" Name="Playing"/>
 						<State Id="2201105581" Name="Credits"/>
 						<State Id="2607556080" Name="Menu"/>
@@ -33,15 +39,26 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="2250165792" Name="New_Switch_Group">
+				<SwitchGroup Id="1718617278" Name="Steps">
 					<Switches>
-						<Switch Id="1914034948" Name="New_Switch"/>
-						<Switch Id="3952450474" Name="New_Switch_01"/>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
+						<Switch Id="2637588553" Name="Tile"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3699816212" Name="Vacuum">
+					<Switches>
+						<Switch Id="445047094" Name="HidroWorkingOnGoo"/>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2036889338" Name="VacWorking"/>
+						<Switch Id="2909722414" Name="HidroWorking"/>
+						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4964E128-AD3F-95CD-A225-0C6D38A1D160}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2B01494-74F2-230B-2C47-42FF4D36CAB3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -100,11 +117,19 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1123143573" Name="Start_Lvl1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2644656531" Name="TrashVacuumed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="4091656514" Name="GameState">
 					<States>
 						<State Id="748895195" Name="None"/>
+						<State Id="1305749800" Name="Playing_04"/>
+						<State Id="1305749801" Name="Playing_05"/>
+						<State Id="1305749802" Name="Playing_06"/>
+						<State Id="1305749805" Name="Playing_01"/>
+						<State Id="1305749806" Name="Playing_02"/>
+						<State Id="1305749807" Name="Playing_03"/>
 						<State Id="1852808225" Name="Playing"/>
 						<State Id="2201105581" Name="Credits"/>
 						<State Id="2607556080" Name="Menu"/>
@@ -114,5 +139,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EAB3B936-5FC1-71E2-5384-AB3B2716BBEE}</FileHash>
+	<FileHash>{50B3A369-7B68-7E01-1280-2205A988B26F}</FileHash>
 </SoundBanksInfo>

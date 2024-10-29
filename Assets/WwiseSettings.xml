@@ -12,7 +12,7 @@
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise2023.1.7.8574</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../Desarrollo3-Fantasmones_WwiseProject/Desarrollo3-Fantasmones_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../Spooky-Wipe-Out/Desarrollo3-Fantasmones_WwiseProject/Desarrollo3-Fantasmones_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>

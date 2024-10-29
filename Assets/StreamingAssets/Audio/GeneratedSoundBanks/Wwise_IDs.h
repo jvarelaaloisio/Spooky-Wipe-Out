@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID START = 1281810935U;
+        static const AkUniqueID START_LVL1 = 1123143573U;
+        static const AkUniqueID TRASHVACUUMED = 2644656531U;
     } // namespace EVENTS
 
     namespace STATES
@@ -29,6 +31,12 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PAUSE = 3092587493U;
                 static const AkUniqueID PLAYING = 1852808225U;
+                static const AkUniqueID PLAYING_01 = 1305749805U;
+                static const AkUniqueID PLAYING_02 = 1305749806U;
+                static const AkUniqueID PLAYING_03 = 1305749807U;
+                static const AkUniqueID PLAYING_04 = 1305749800U;
+                static const AkUniqueID PLAYING_05 = 1305749801U;
+                static const AkUniqueID PLAYING_06 = 1305749802U;
             } // namespace STATE
         } // namespace GAMESTATE
 
@@ -36,16 +44,32 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace NEW_SWITCH_GROUP
+        namespace STEPS
         {
-            static const AkUniqueID GROUP = 2250165792U;
+            static const AkUniqueID GROUP = 1718617278U;
 
             namespace SWITCH
             {
-                static const AkUniqueID NEW_SWITCH = 1914034948U;
-                static const AkUniqueID NEW_SWITCH_01 = 3952450474U;
+                static const AkUniqueID CARPET = 2412606308U;
+                static const AkUniqueID STOP = 788884573U;
+                static const AkUniqueID TILE = 2637588553U;
+                static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
-        } // namespace NEW_SWITCH_GROUP
+        } // namespace STEPS
+
+        namespace VACUUM
+        {
+            static const AkUniqueID GROUP = 3699816212U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HIDROWORKING = 2909722414U;
+                static const AkUniqueID HIDROWORKINGONGOO = 445047094U;
+                static const AkUniqueID STOP = 788884573U;
+                static const AkUniqueID VACWORKING = 2036889338U;
+                static const AkUniqueID VACWORKINGONGHOST = 3149481222U;
+            } // namespace SWITCH
+        } // namespace VACUUM
 
     } // namespace SWITCHES
 
