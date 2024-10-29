@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Cheats",
-                    "type": "Button",
-                    "id": "71ee446a-41d5-44c0-b6ed-01e53afed33b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "SwitchTool",
                     "type": "Button",
                     "id": "788afff8-212d-4c71-aff9-9525a436dfda",
