@@ -6,17 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/2D/Minigames/AD/chart_minigame_stroke.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/2D/Minigames/AD/chart_minigame_stroke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/2D/Minigames/AD/chart_minigame_underbar.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/2D/Minigames/AD/chart_minigame_underbar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/2D/Minigames/SkillCheck/Collider_ghost_Minigame.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/2D/Minigames/SkillCheck/Collider_ghost_Minigame.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/GreenWalls_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/GreenWalls_Mat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/Pillar_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/Pillar_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/URP/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/URP/New Universal Render Pipeline Asset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Fsm/PlayerAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Fsm/PlayerAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +30,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/cf/4f53dfe1/Delegate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd823a7663ea4cdb840e6c898e2256ce958800/09/374f6397/HostView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventSystem/SceneManager/EventListenerSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SetHandPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.1/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownGUI.cs" root0="SKIP_HIGHLIGHTING" />
@@ -146,7 +142,7 @@
       <workItem from="1729953888226" duration="3000" />
       <workItem from="1729953930619" duration="1279000" />
       <workItem from="1730221775744" duration="202000" />
-      <workItem from="1730221994057" duration="2348000" />
+      <workItem from="1730221994057" duration="5597000" />
     </task>
     <servers />
   </component>
