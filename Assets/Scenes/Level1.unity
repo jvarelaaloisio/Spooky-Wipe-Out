@@ -11606,6 +11606,30 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 2139917822}
+    - target: {fileID: 5294681581282829300, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
+      propertyPath: decreaseCurve.m_Curve.Array.data[1].time
+      value: 0.21502304
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294681581282829300, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
+      propertyPath: decreaseCurve.m_Curve.Array.data[1].value
+      value: 2.1731894
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294681581282829300, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
+      propertyPath: decreaseCurve.m_Curve.Array.data[2].value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294681581282829300, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
+      propertyPath: decreaseCurve.m_Curve.Array.data[1].inSlope
+      value: 2.4048023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294681581282829300, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
+      propertyPath: decreaseCurve.m_Curve.Array.data[1].outSlope
+      value: 2.4048023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294681581282829300, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
+      propertyPath: decreaseCurve.m_Curve.Array.data[1].outWeight
+      value: 0.09136626
+      objectReference: {fileID: 0}
     - target: {fileID: 6590737876948366415, guid: 7cf61e271edf3e448a53a727f25ea52e, type: 3}
       propertyPath: m_Name
       value: ADController
