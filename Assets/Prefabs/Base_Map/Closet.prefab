@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3006695039809445456}
+  - component: {fileID: 845650514753198104}
+  - component: {fileID: 8436513731894818875}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -32,6 +34,43 @@ Transform:
   - {fileID: 6561057283713007682}
   m_Father: {fileID: 1818216743481630056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &845650514753198104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14579713673898771}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9434454, y: 3.9217427, z: 1.3061402}
+  m_Center: {x: 0.0000014305115, y: 1.9596711, z: 0.0023342376}
+--- !u!208 &8436513731894818875
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14579713673898771}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.4720001, y: 1.9610001, z: 0.65300006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.96, z: 0.002}
+  m_TimeToStationary: 0.5
 --- !u!1 &472187553976422150
 GameObject:
   m_ObjectHideFlags: 0
