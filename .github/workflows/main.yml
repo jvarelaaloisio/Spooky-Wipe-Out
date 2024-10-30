@@ -72,4 +72,4 @@ jobs:
         with:
           webhook_id: ${{ secrets.WEBHOOK_ID }}
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          message: "@here ${{ env.BuildName }} is out on https://mateo-monastra.itch.io/dementiabusters \n ${{ env.ReleaseBody }} "
+          message: "@here ${{ env.BuildName }} is out on https://mateo-monastra.itch.io/spooky-wipe-out \n ${{ env.ReleaseBody }} "

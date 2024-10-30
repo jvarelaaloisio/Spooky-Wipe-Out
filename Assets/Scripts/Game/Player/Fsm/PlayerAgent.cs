@@ -21,7 +21,6 @@ namespace Fsm_Mk2
 
         [SerializeField] private InputReader inputReader;
         [SerializeField] private WalkIdleModel walkIdleModel;
-        [SerializeField] private GameObject playerModel;
 
         [SerializeField] private ADController adController;
         [SerializeField] private SkillCheckController skillCheckController;
@@ -235,29 +234,34 @@ namespace Fsm_Mk2
         {
             cleanerController.SwitchToTool(0);
         }
-
-        private void SetCleanerVacuumMode()
-        {
-            currentCleaner = 1;
-        }
         private void SwitchTool()
         {
             currentCleaner += 1;
-            if (currentCleaner >= 3)
+
+            switch (currentCleaner)
             {
-                currentCleaner = 1;
+                case 1:
+                    CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
+                    break;
+                
+                case 2:
+                    CleanerSelectionUIControler.GetInstance().PowerOnWashFloor();
+                break;
+                
+                default:
+                    currentCleaner = 1;
+                    CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
+                    break;
             }
         }
 
         private void SetStruggleToWalkIdle()
         {
             _fsm.ApplyTransition(_struggleToWalkIdle);
-            inputReader.OnClickStart += SetCleanerVacuumMode;
         }
 
         private void SetWalkIdleToStruggle()
         {
-            inputReader.OnClickStart -= SetCleanerVacuumMode;
             _fsm.ApplyTransition(_walkIdleToStruggle);
         }
 

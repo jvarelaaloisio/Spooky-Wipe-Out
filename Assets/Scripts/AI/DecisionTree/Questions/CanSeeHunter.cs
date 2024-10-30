@@ -16,7 +16,7 @@ public class CanSeeHunter : AI.DecisionTree.TreeQuestion
             Vector3 hunterPosition = data.hunter.position.IgnoreY();
             Vector3 selfPosition = data.self.transform.position.IgnoreY();
 
-            var result = Vector3.Distance(hunterPosition, selfPosition) <= data.self.viewHunterDistance;
+            var result = Vector3.Distance(hunterPosition, selfPosition) <= data.self.currentHunterDistance;
 
             return result ? 0 : 1;
         }

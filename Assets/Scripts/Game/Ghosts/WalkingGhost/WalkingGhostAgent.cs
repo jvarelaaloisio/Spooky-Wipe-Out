@@ -25,6 +25,8 @@ namespace Ghosts
         private GhostRest _restGhost;
 
         [field:SerializeField] public float viewHunterDistance { get; private set; } = 8.0f;
+        [field:SerializeField] public float awareHunterDistance { get; private set; } = 16.0f;
+        [field:SerializeField] public float currentHunterDistance { get; private set; }
         [field:SerializeField] public bool isRested { get; set; }
 
         [SerializeField] private Transform hunter;
@@ -65,6 +67,7 @@ namespace Ghosts
             actionsByType.Add(typeof(Action_Rest), SetFleeRestState);
 
             isRested = true;
+            currentHunterDistance = viewHunterDistance;
         }
 
         public void Start()
@@ -204,6 +207,7 @@ namespace Ghosts
 
         private void SetFleeWalkingState()
         {
+            currentHunterDistance = viewHunterDistance;
             _fsm.ApplyTransition(_fleeToWalk);
             _fsm.ApplyTransition(_restToWalk);
         }
@@ -216,12 +220,14 @@ namespace Ghosts
         private void SetWalkingFleeState()
         {
             OnVacuumed?.Invoke(false);
+            currentHunterDistance = awareHunterDistance;
             _fsm.ApplyTransition(_walkToFlee);
             _fsm.ApplyTransition(_restToFlee);
         }
 
         private void SetFleeRestState()
         {
+            currentHunterDistance = viewHunterDistance;
             _fsm.ApplyTransition(_fleeToRest);
             _fsm.ApplyTransition(_walkToRest);
         }
