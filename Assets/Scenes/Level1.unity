@@ -11145,6 +11145,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2139917822}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: playerModel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: adController
       value: 
       objectReference: {fileID: 470426147}

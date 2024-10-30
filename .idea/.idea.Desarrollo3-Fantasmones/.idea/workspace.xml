@@ -5,38 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ghosts/WalkingGhost/Fsm/State.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3D/Characters/Chains Ghost/Animations/Chains_Ghost_Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3D/Characters/Chains Ghost/Animations/Chains_Ghost_Animator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3D/Characters/Chains Ghost/FBX/Chains_Ghost_Anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3D/Characters/Chains Ghost/FBX/Chains_Ghost_Anim.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3D/Characters/Chains Ghost/FBX/Chains_Ghost_V2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3D/Characters/Chains Ghost/FBX/Chains_Ghost_V2.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3D/Characters/Manolo/FBX/Manolo_Mesh_Anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3D/Characters/Manolo/FBX/Manolo_Mesh_Anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/2D/Pause/Pause_menu_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/2D/Pause/Pause_menu_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/2D/ResultScreens/Restart_Bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/2D/ResultScreens/Restart_Bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/2D/ResultScreens/Restart_Bottom_Pushed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/2D/ResultScreens/Restart_Bottom_Pushed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Fonts/cat_comic/Cat Comic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Fonts/cat_comic/Cat Comic SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/GreenWalls_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/GreenWalls_Mat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/Pillar_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Assets_Materials/Pillar_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Books_Stack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Books_Stack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Couch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Couch.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Dishwasher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Dishwasher.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Floor_&amp;_Green_Walls.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Floor_&amp;_Green_Walls.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Pillar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Pillar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/TV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/TV.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Wall_2x4_Right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Wall_2x4_Right.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Wall_4x4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base_Map/Wall_4x4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/ADController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/ADController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Chains_Ghost.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Chains_Ghost.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/InputReader.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/InputReader.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Player .prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh-NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh-NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/URP/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/URP/New Universal Render Pipeline Asset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Ghosts/WalkingGhost/WalkingGhostAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Ghosts/WalkingGhost/WalkingGhostAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheckController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Fsm/PlayerAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Fsm/PlayerAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Fsm/States/WalkIdle/WalkIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Fsm/States/WalkIdle/WalkIdle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/AD/AD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/AD/AD.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +23,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/38/dc3a64fc/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/93/bd8475c6/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/cc/71ed4340/Debug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/fb/79a77f92/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,6 +31,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/cf/4f53dfe1/Delegate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd823a7663ea4cdb840e6c898e2256ce958800/09/374f6397/HostView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventSystem/SceneManager/EventListenerSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SetHandPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.1/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownGUI.cs" root0="SKIP_HIGHLIGHTING" />
@@ -61,10 +39,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/NativeInputRuntime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/FSM.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/State.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/Transition.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.5/RunTime/FSM.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -79,7 +56,7 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NewUI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -90,7 +67,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/build/ManoloBusters v0.6.0\Desarrollo3-Fantasmones.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/builds/prueab\Spooky Wipe Out.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\builds\v0.3.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -123,10 +100,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4336">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="4336" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,6 +137,13 @@
       <workItem from="1729066052121" duration="3358000" />
       <workItem from="1729657872349" duration="431000" />
       <workItem from="1729662277327" duration="3306000" />
+      <workItem from="1729923986279" duration="203000" />
+      <workItem from="1729948635466" duration="116000" />
+      <workItem from="1729948770566" duration="3196000" />
+      <workItem from="1729953888226" duration="3000" />
+      <workItem from="1729953930619" duration="1279000" />
+      <workItem from="1730221775744" duration="202000" />
+      <workItem from="1730221994057" duration="6265000" />
     </task>
     <servers />
   </component>
@@ -185,6 +169,19 @@
           <line>24</line>
           <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Ghosts\WalkingGhost\Fsm\State\Capture.cs" containingFunctionPresentation="Method 'Enter'" />
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/CleanerSelectionUIControler.cs</url>
+          <line>52</line>
+          <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Game\CleanerSelectionUIControler.cs" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="1327" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1328" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
