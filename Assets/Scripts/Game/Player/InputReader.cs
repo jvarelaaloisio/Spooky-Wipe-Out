@@ -14,7 +14,7 @@ namespace Player.FSM
         public Action OnClickPerform;
         public Action OnClickEnd;
         public Action OnSwitchTool;
-        public Action OnJumpStart;
+        public Action OnSpaceInputStart;
         public Action OnPauseStart;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
@@ -59,7 +59,7 @@ namespace Player.FSM
         {
             if (context.started)
             {
-                OnJumpStart?.Invoke();
+                OnSpaceInputStart?.Invoke();
             }
         }
         
