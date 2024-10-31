@@ -21,6 +21,9 @@ public class SkillCheckController : Minigame
     [SerializeField] private Canvas canvas;
     
     [SerializeField] private float needleSpeed = 100f;
+    [SerializeField] private float minNeedleSpeed = 60f;
+    [SerializeField] private float maxNeedleSpeed = 600f;
+    
     [SerializeField] private float decreaseRate = 0.1f;
     [SerializeField] private float increaseAmount = 0.35f;
     
@@ -29,9 +32,6 @@ public class SkillCheckController : Minigame
     
     [SerializeField] private float maxWidthSafeZone;
     [SerializeField] private float minWidthSafeZone;
-    
-    [SerializeField] private float barOffset;
-    [SerializeField] private float barAnchor;
 
     [SerializeField] private SkillCheck skillCheck;
     [SerializeField] private SkillCheckState skillCheckState;
@@ -42,21 +42,6 @@ public class SkillCheckController : Minigame
 
     private bool HasPlayerWon => progress >= maxProgress;
     private bool HasPlayerLost => progress <= minProgress;
-
-    private void Start()
-    {
-        // RectTransform canvasRect = canvas.GetComponent<RectTransform>();
-        //
-        // float maxOffset = (canvasRect.rect.width / 2) - (skillCheck.bar.rect.width / 2);
-        //
-        // barOffset = Mathf.Clamp(barOffset, -maxOffset, maxOffset);
-        //
-        // skillCheck.bar.anchorMin = new Vector2(barAnchor, skillCheck.bar.anchorMin.y);
-        // skillCheck.bar.anchorMax = new Vector2(barAnchor, skillCheck.bar.anchorMax.y);
-        //
-        // skillCheck.bar.offsetMin = new Vector2(-barOffset, skillCheck.bar.offsetMin.y); 
-        // skillCheck.bar.offsetMax = new Vector2(barOffset, skillCheck.bar.offsetMax.y);  
-    }
 
     protected override void WinGame()
     {
@@ -85,7 +70,7 @@ public class SkillCheckController : Minigame
     {
         progress = minProgress;
         skillCheck.gameObject.SetActive(false);
-        
+        _isActive = false;
         StopCoroutine(DecreaseProgressOverTime());
         StopCoroutine(MoveNeedleOverTime());
     }
@@ -97,7 +82,7 @@ public class SkillCheckController : Minigame
         inputReader.OnSpaceInputStart += HandleInput;
         skillCheck.gameObject.SetActive(true);
         RandomizeSafeZoneWidth();
-        
+        _isActive = true;
         StartCoroutine(DecreaseProgressOverTime());
         StartCoroutine(MoveNeedleOverTime());
     }
@@ -123,8 +108,11 @@ public class SkillCheckController : Minigame
         
         if (IsColliding(needleRect, safeZoneRect))
         {
-            RandomizeSafeZoneWidth();
             UpdateProgress(progress + increaseAmount);
+            
+            RandomizeSafeZoneWidth();
+            RandomizeSafeZonePosition();
+            RandomizeNeedleSpeed();
         }
     }
 
@@ -132,6 +120,18 @@ public class SkillCheckController : Minigame
     {
         float randomWidth = Random.Range(minWidthSafeZone, maxWidthSafeZone);
         skillCheck.safeZone.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, randomWidth);
+    }
+    
+    private void RandomizeSafeZonePosition()
+    {
+        float newX = Random.Range(skillCheck.bar.offsetMin.x, skillCheck.bar.offsetMax.x);
+        skillCheck.safeZone.transform.localPosition = new Vector2(newX, skillCheck.safeZone.transform.localPosition.y);
+    }
+    
+    private void RandomizeNeedleSpeed()
+    {
+        float newSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
+        needleSpeed = newSpeed;
     }
     
     private Rect GetScreenRect(RectTransform rectTransform)

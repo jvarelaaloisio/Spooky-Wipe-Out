@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheckController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/InputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/InputReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
