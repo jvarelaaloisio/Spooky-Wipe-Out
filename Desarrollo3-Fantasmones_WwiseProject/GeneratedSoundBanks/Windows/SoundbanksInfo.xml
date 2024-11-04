@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BAE4F864-49BB-F32A-1760-191D9AEBD7CC}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="4091656514" Name="GameState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1305749800" Name="Playing_04"/>
+						<State Id="1305749801" Name="Playing_05"/>
+						<State Id="1305749802" Name="Playing_06"/>
+						<State Id="1305749805" Name="Playing_01"/>
+						<State Id="1305749806" Name="Playing_02"/>
+						<State Id="1305749807" Name="Playing_03"/>
+						<State Id="1852808225" Name="Playing"/>
+						<State Id="2201105581" Name="Credits"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1718617278" Name="Steps">
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
+						<Switch Id="2637588553" Name="Tile"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3699816212" Name="Vacuum">
+					<Switches>
+						<Switch Id="445047094" Name="HidroWorkingOnGoo"/>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2036889338" Name="VacWorking"/>
+						<Switch Id="2909722414" Name="HidroWorking"/>
+						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2B01494-74F2-230B-2C47-42FF4D36CAB3}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Keys.wav</ShortName>
+					<Path>Media/414954598.wem</Path>
+					<CachePath>SFX/Keys_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="523675216" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>1 Tubthumping.wav</ShortName>
+					<Path>Media/523675216.wem</Path>
+					<CachePath>SFX/1 Tubthumping_8709A909.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="234075148" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1281810935" Name="Start" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="414954598"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="1852808225"/>
+							<MediaRefs>
+								<MediaRef Id="523675216"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="234075148"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="2201105581"/>
+							<MediaRefs>
+								<MediaRef Id="414954598"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="3092587493"/>
+							<MediaRefs>
+								<MediaRef Id="523675216"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="234075148"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1123143573" Name="Start_Lvl1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2644656531" Name="TrashVacuumed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="4091656514" Name="GameState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1305749800" Name="Playing_04"/>
+						<State Id="1305749801" Name="Playing_05"/>
+						<State Id="1305749802" Name="Playing_06"/>
+						<State Id="1305749805" Name="Playing_01"/>
+						<State Id="1305749806" Name="Playing_02"/>
+						<State Id="1305749807" Name="Playing_03"/>
+						<State Id="1852808225" Name="Playing"/>
+						<State Id="2201105581" Name="Credits"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{50B3A369-7B68-7E01-1280-2205A988B26F}</FileHash>
+</SoundBanksInfo>

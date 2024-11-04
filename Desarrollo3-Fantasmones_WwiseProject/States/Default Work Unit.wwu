@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{58280D57-A644-4038-8713-1B41B403A5F4}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{58280D57-A644-4038-8713-1B41B403A5F4}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameState" ID="{C349B599-7156-458A-868B-22FC2BC1E854}">
+					<ChildrenList>
+						<State Name="None" ID="{8104D599-B0BC-4675-902E-E6001385A495}"/>
+						<State Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+						<State Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+						<State Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+						<State Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+						<State Name="Playing_01" ID="{DE2C2292-1DAC-4EC4-B6FF-4CD989FCA22D}"/>
+						<State Name="Playing_02" ID="{2B9C49CA-E07E-4EF7-9947-FBE7F35DE46E}"/>
+						<State Name="Playing_03" ID="{CE26D3CF-ACA1-4231-B9C6-0E8C4D8DBCA2}"/>
+						<State Name="Playing_04" ID="{9EA73F07-EAF7-4300-A689-36727B742CB7}"/>
+						<State Name="Playing_05" ID="{3F241BD0-51B2-42A1-8AA2-5653C6CBD523}"/>
+						<State Name="Playing_06" ID="{F2A91BFF-75CE-4001-A1A3-B0E7DF48DD82}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+							<EndState Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+							<Time>0.6</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+							<EndState Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+							<EndState Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+							<EndState Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+							<Time>0.6</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+							<EndState Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

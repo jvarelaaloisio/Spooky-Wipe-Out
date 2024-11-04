@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Start" ID="{13B0EC72-58F7-43FE-945A-4BF54CAB2F48}">
+					<ChildrenList>
+						<Action Name="" ID="{A70B06E9-DFD5-4DAC-BE9B-C5305451AC29}" ShortID="1032489432">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}"/>
+				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
