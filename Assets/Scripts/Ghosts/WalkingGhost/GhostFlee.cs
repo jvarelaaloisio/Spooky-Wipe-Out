@@ -15,7 +15,8 @@ public class GhostFlee : MonoBehaviour, IRest
     private float minScapeDistance = 40.0f;
     private float maxScapeDistance = 45.0f;
 
-    private int maxAttempts = 30;
+    private int maxWalkableAttempts = 30;
+    private int maxAngleAttempts = 10;
 
     public UnityEvent<bool> SetRestState { get; set; } = new UnityEvent<bool>();
 
@@ -33,7 +34,7 @@ public class GhostFlee : MonoBehaviour, IRest
     {
         _fleeSpeedDeltaTimed = _fleeSpeed * Time.deltaTime;
 
-        if(_agent.remainingDistance < 0.5f)
+        if (_agent.remainingDistance < 0.5f)
         {
             Flee();
         }
@@ -50,7 +51,9 @@ public class GhostFlee : MonoBehaviour, IRest
         NavMeshHit navMeshHit;
         int attempts = 0;
 
-        while (attempts < maxAttempts)
+        Vector3 toPlayer = (_player.position - this.gameObject.transform.position).normalized;
+
+        while (attempts < maxWalkableAttempts)
         {
             Vector3 randomDirection = Random.insideUnitSphere.normalized;
 
@@ -59,9 +62,23 @@ public class GhostFlee : MonoBehaviour, IRest
             randomDirection *= randomScapeDistance;
             randomDirection += this.gameObject.transform.position;
 
-            if(NavMesh.SamplePosition(randomDirection, out navMeshHit, maxScapeDistance, NavMesh.AllAreas))
+            if (NavMesh.SamplePosition(randomDirection, out navMeshHit, maxScapeDistance, NavMesh.AllAreas))
             {
-                return navMeshHit.position;
+                if (attempts < maxAngleAttempts)
+                {
+                    Vector3 toEscapePoint = (navMeshHit.position - this.gameObject.transform.position).normalized;
+
+                    float angle = Vector3.Angle(toPlayer, toEscapePoint);
+
+                    if (angle >= 90.0f)
+                    {
+                        return navMeshHit.position;
+                    }
+                }
+                else
+                {
+                    return navMeshHit.position;
+                }
             }
 
             attempts++;
