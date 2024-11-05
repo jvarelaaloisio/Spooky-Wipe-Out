@@ -17,9 +17,7 @@ enum SkillCheckState
 public class SkillCheckController : Minigame
 {
     [SerializeField] private InputReader inputReader;
-    
-    [SerializeField] private Canvas canvas;
-    
+   
     [SerializeField] private float needleSpeed = 100f;
     [SerializeField] private float minNeedleSpeed = 60f;
     [SerializeField] private float maxNeedleSpeed = 600f;

@@ -61,6 +61,10 @@ namespace Fsm_Mk2
             skillCheckController.OnWin += SetStruggleToWalkIdle;
             skillCheckController.OnLose += SetStruggleToWalkIdle;
             skillCheckController.OnStop += SetStruggleToWalkIdle;
+            
+            skillCheckController.OnWin += SetCleanerIdleMode;
+            skillCheckController.OnLose += SetCleanerIdleMode;
+            skillCheckController.OnStop += SetCleanerIdleMode;
 
             State _walkIdle = new WalkIdle(this.gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _states.Add(_walkIdle);
@@ -258,6 +262,7 @@ namespace Fsm_Mk2
         private void SetStruggleToWalkIdle()
         {
             _fsm.ApplyTransition(_struggleToWalkIdle);
+            
         }
 
         private void SetWalkIdleToStruggle()
