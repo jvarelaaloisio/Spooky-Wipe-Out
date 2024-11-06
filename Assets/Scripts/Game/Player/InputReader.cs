@@ -18,15 +18,18 @@ namespace Player.FSM
         public Action OnPauseStart;
         public Action OnSeeTimerStart;
         public Action OnSeeTasksStart;
+        public Action<InputDevice> OnInputDevice;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
             OnMove?.Invoke(context.ReadValue<Vector2>());
+            OnInputDevice?.Invoke(context.control.device);
         }
 
         public void HandleMouseInput(InputAction.CallbackContext context)
         {
             OnAimingVacuum?.Invoke(context.ReadValue<Vector2>());
+            OnInputDevice?.Invoke(context.control.device);
         }
 
         public void HandleClickInput(InputAction.CallbackContext context)
@@ -47,6 +50,8 @@ namespace Player.FSM
             {
                 OnClickEnd?.Invoke();
             }
+            
+            OnInputDevice?.Invoke(context.control.device);
         }
 
         public void HandleSwitchTool(InputAction.CallbackContext context)
@@ -55,6 +60,7 @@ namespace Player.FSM
             {
                 OnSwitchTool?.Invoke();
             }
+            OnInputDevice?.Invoke(context.control.device);
         }
 
         public void HandleSpaceInput(InputAction.CallbackContext context)
@@ -63,6 +69,7 @@ namespace Player.FSM
             {
                 OnSpaceInputStart?.Invoke();
             }
+            OnInputDevice?.Invoke(context.control.device);
         }
         
         public void HandlePause(InputAction.CallbackContext context)
@@ -71,6 +78,7 @@ namespace Player.FSM
             {
                 OnPauseStart?.Invoke();
             }
+            OnInputDevice?.Invoke(context.control.device);
         }
 
         public void HandleTimerUI(InputAction.CallbackContext context)
@@ -79,6 +87,7 @@ namespace Player.FSM
             {
                 OnSeeTimerStart?.Invoke();
             }
+            OnInputDevice?.Invoke(context.control.device);
         }
 
         public void HandleTasksUI(InputAction.CallbackContext context)
@@ -87,6 +96,7 @@ namespace Player.FSM
             {
                 OnSeeTasksStart?.Invoke();
             }
+            OnInputDevice?.Invoke(context.control.device);
         }
     }
 }
