@@ -75,8 +75,8 @@ namespace Ghosts
             _agent = GetComponent<NavMeshAgent>();
 
             minigame.OnWin += SetCaptureState;
-            minigame.OnLose += SetWalkState;
-            minigame.OnStop += SetWalkState;
+            minigame.OnLose += SetWalkingFleeState;
+            minigame.OnStop += SetWalkingFleeState;
 
             GameManager.GetInstance().ghosts.Add(this);
 
@@ -157,7 +157,6 @@ namespace Ghosts
         private void SetRestedState(bool value)
         {
             isRested = value;
-            Debug.Log($"estado del descanso: {isRested}");
         }
 
         private void HandleDecision(object[] args)

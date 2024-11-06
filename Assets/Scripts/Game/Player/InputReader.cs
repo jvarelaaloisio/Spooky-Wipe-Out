@@ -16,6 +16,8 @@ namespace Player.FSM
         public Action OnSwitchTool;
         public Action OnSpaceInputStart;
         public Action OnPauseStart;
+        public Action OnSeeTimerStart;
+        public Action OnSeeTasksStart;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -68,6 +70,22 @@ namespace Player.FSM
             if (context.started)
             {
                 OnPauseStart?.Invoke();
+            }
+        }
+
+        public void HandleTimerUI(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnSeeTimerStart?.Invoke();
+            }
+        }
+
+        public void HandleTasksUI(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnSeeTasksStart?.Invoke();
             }
         }
     }

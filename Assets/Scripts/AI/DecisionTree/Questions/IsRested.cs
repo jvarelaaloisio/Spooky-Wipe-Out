@@ -10,8 +10,6 @@ public class IsRested : AI.DecisionTree.TreeQuestion
         {
             var isRested = data.self.isRested;
 
-            Debug.Log($"The state rested is: {isRested}");
-
             return isRested ? 0 : 1;
         }
 
