@@ -8070,6 +8070,11 @@ Transform:
   - {fileID: 61631678}
   m_Father: {fileID: 806256473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1372276634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 976578609315871470, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+  m_PrefabInstance: {fileID: 112671403817669789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1374050534
 GameObject:
   m_ObjectHideFlags: 0
@@ -11992,6 +11997,11 @@ Transform:
   - {fileID: 1531616060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2032375892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9171529080418631701, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+  m_PrefabInstance: {fileID: 112671403817669789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2035576619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12335,6 +12345,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 435495722082713921, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859564782839588755, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0609632
+      objectReference: {fileID: 0}
+    - target: {fileID: 859564782839588755, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9964404
+      objectReference: {fileID: 0}
+    - target: {fileID: 859564782839588755, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Center.y
+      value: -0.3499958
+      objectReference: {fileID: 0}
+    - target: {fileID: 859564782839588755, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0017797977
+      objectReference: {fileID: 0}
+    - target: {fileID: 976578609315871470, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 980319638015406981, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: Camera
       value: 
@@ -12367,13 +12401,17 @@ PrefabInstance:
       propertyPath: SKMinigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: vacuumNozzle
+      value: 
+      objectReference: {fileID: 2032375892}
     - target: {fileID: 3682512791674879740, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6136936489199683965, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6185105946525444678, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12451,6 +12489,10 @@ PrefabInstance:
       propertyPath: OnStruggle.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7090365597876866152, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8260102735222170896, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_Name
       value: 'Player '
@@ -12498,6 +12540,10 @@ PrefabInstance:
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171529080418631701, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12866,6 +12912,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 817542080605804852, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: vacuumNuzzle
+      value: 
+      objectReference: {fileID: 2032375892}
+    - target: {fileID: 817542080605804852, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: washFloorNuzzle
+      value: 
+      objectReference: {fileID: 1372276634}
     - target: {fileID: 1619716221461630316, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_IsActive
       value: 1

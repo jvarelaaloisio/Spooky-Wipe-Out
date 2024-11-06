@@ -15,6 +15,7 @@ namespace VacuumCleaner.Modes
         [SerializeField] private SkillCheckController SKMinigame;
         [SerializeField] private ADController ADMinigame;
 
+
         private void Start()
         {
             SKMinigame.OnLose += PowerOff;

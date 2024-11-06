@@ -14,6 +14,10 @@ public class CleanerSelectionUIControler : MonoBehaviour
     [Header("HUD Elements")] 
     [SerializeField] private GameObject vacuumHUD;
     [SerializeField] private GameObject washFloorHUD;
+    
+    [Header("Player Elements")] 
+    [SerializeField] private GameObject vacuumNuzzle;
+    [SerializeField] private GameObject washFloorNuzzle;
 
     private Image _currentVacuum;
     private Image _currentWashFloor;
@@ -87,6 +91,9 @@ public class CleanerSelectionUIControler : MonoBehaviour
         }
         _currentVacuum.sprite = powerOnVacuum;
         _currentWashFloor.sprite = powerOffWashFloor;
+        
+        vacuumNuzzle.SetActive(true);
+        washFloorNuzzle.SetActive(false);
     }
 
     public void PowerOnWashFloor()
@@ -98,5 +105,8 @@ public class CleanerSelectionUIControler : MonoBehaviour
         }
         _currentWashFloor.sprite = powerOnWashFloor;
         _currentVacuum.sprite = powerOffVacuum;
+        
+        vacuumNuzzle.SetActive(false);
+        washFloorNuzzle.SetActive(true);
     }
 }
