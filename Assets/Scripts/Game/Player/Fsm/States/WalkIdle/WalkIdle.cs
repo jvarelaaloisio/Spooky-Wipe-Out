@@ -44,7 +44,7 @@ namespace Fsm_Mk2
         public override void Exit()
         {
             _dir = Vector3.zero;
-            _isClickPressed = false;
+            //_isClickPressed = false;
         }
 
         private void Move()

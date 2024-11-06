@@ -267,6 +267,7 @@ namespace Fsm_Mk2
 
         private void SetWalkIdleToStruggle()
         {
+            SetIsClickPressed(false);
             _fsm.ApplyTransition(_walkIdleToStruggle);
         }
 
