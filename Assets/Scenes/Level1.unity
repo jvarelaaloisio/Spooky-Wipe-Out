@@ -12428,6 +12428,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 22.421661
       objectReference: {fileID: 0}
+    - target: {fileID: 3401537753010384554, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6084712
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401537753010384554, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Size.z
+      value: 0.64793396
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401537753010384554, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0013466319
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401537753010384554, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Center.z
+      value: -0.14251179
+      objectReference: {fileID: 0}
     - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: ADMinigame
       value: 
@@ -12440,6 +12456,18 @@ PrefabInstance:
       propertyPath: vacuumNozzle
       value: 
       objectReference: {fileID: 2032375892}
+    - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 122ec9938443a2446b3e1d78c40bb6df, type: 2}
+    - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e0a54cb088c346349829f6ee7e68505f, type: 2}
     - target: {fileID: 3682512791674879740, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -12528,6 +12556,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7452878416173193616, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: weaponDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133736838026780245, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: 851c70e7c2da453458d207e4a191f6f0, type: 2}
     - target: {fileID: 8260102735222170896, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_Name
       value: 'Player '
@@ -12535,6 +12571,14 @@ PrefabInstance:
     - target: {fileID: 8260102735222170896, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006773269549684460, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Size.z
+      value: 1.2172617
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006773269549684460, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_Center.z
+      value: 0.10863278
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.x

@@ -234,13 +234,13 @@ namespace Fsm_Mk2
         private void ActiveCleaner()
         {
             OnCleaning?.Invoke(true);
-            cleanerController.SwitchToTool(currentCleaner);
+            StartCoroutine(cleanerController.SwitchToTool(currentCleaner));
         }
 
         private void SetCleanerIdleMode()
         {
             OnCleaning?.Invoke(false);
-            cleanerController.SwitchToTool(0);
+            StartCoroutine(cleanerController.SwitchToTool(0));
         }
         private void SwitchTool()
         {
