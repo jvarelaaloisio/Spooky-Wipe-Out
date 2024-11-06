@@ -13594,6 +13594,10 @@ PrefabInstance:
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9097102196205262616, guid: 83bf09b6787b3b44aba971eddd2cfe79, type: 3}
+      propertyPath: decreaseAmount
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097102196205262616, guid: 83bf09b6787b3b44aba971eddd2cfe79, type: 3}
       propertyPath: maxNeedleSpeed
       value: 500
       objectReference: {fileID: 0}

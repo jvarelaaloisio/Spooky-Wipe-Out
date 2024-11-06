@@ -17,17 +17,18 @@ enum SkillCheckState
 public class SkillCheckController : Minigame
 {
     [SerializeField] private InputReader inputReader;
-   
+
     [SerializeField] private float needleSpeed = 100f;
     [SerializeField] private float minNeedleSpeed = 60f;
     [SerializeField] private float maxNeedleSpeed = 600f;
-    
+
     [SerializeField] private float decreaseRate = 0.1f;
-    [SerializeField] private float increaseAmount = 0.35f;
-    
+    [SerializeField] private float increaseAmount = 0.15f;
+    [SerializeField] private float decreaseAmount = -0.15f;
+
     [SerializeField] private float maxProgress = 1f;
     [SerializeField] private float minProgress = 0f;
-    
+
     [SerializeField] private float maxWidthSafeZone;
     [SerializeField] private float minWidthSafeZone;
 
@@ -35,11 +36,11 @@ public class SkillCheckController : Minigame
     [SerializeField] private SkillCheckState skillCheckState;
 
     [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    
+
     private float progress { get; set; } = 0.0f;
 
     private bool HasPlayerWon => progress >= maxProgress;
-    private bool HasPlayerLost => progress <= minProgress;
+    private bool HasPlayerLost;
 
     protected override void WinGame()
     {
@@ -58,14 +59,15 @@ public class SkillCheckController : Minigame
         progress = value;
         if (HasPlayerWon)
             WinGame();
-        // else if (HasPlayerLost && maxAfkTime <= _lastSuccessfulInputTime - Time.time)
-        //     LoseGame();
+        else if (HasPlayerLost)
+            LoseGame();
 
         skillCheck.SetProgressBarFill(progress);
     }
 
     protected override void ResetGame()
     {
+        HasPlayerLost = false;
         progress = minProgress;
         skillCheck.gameObject.SetActive(false);
         _isActive = false;
@@ -76,7 +78,7 @@ public class SkillCheckController : Minigame
     public override void StartGame()
     {
         OnStart?.Invoke();
-        
+
         inputReader.OnSpaceInputStart += HandleInput;
         skillCheck.gameObject.SetActive(true);
         RandomizeSafeZoneWidth();
@@ -89,7 +91,8 @@ public class SkillCheckController : Minigame
     {
         var transformLocalPosition = skillCheck.needle.transform.localPosition;
 
-        if (transformLocalPosition.x >= skillCheck.bar.offsetMax.x || transformLocalPosition.x <= skillCheck.bar.offsetMin.x)
+        if (transformLocalPosition.x >= skillCheck.bar.offsetMax.x ||
+            transformLocalPosition.x <= skillCheck.bar.offsetMin.x)
         {
             needleSpeed = -needleSpeed;
         }
@@ -98,19 +101,27 @@ public class SkillCheckController : Minigame
 
         skillCheck.needle.transform.localPosition = transformLocalPosition;
     }
-    
+
     private void HandleInput()
     {
         RectTransform needleRect = skillCheck.needle;
         RectTransform safeZoneRect = skillCheck.safeZone;
-        
+
         if (IsColliding(needleRect, safeZoneRect))
         {
             UpdateProgress(progress + increaseAmount);
-            
+
             RandomizeSafeZoneWidth();
             RandomizeSafeZonePosition();
             RandomizeNeedleSpeed();
+        }
+        else if( progress <= minProgress)
+        {
+            HasPlayerLost = true;
+        }
+        else
+        {
+            UpdateProgress(progress + decreaseAmount);
         }
     }
 
@@ -119,19 +130,19 @@ public class SkillCheckController : Minigame
         float randomWidth = Random.Range(minWidthSafeZone, maxWidthSafeZone);
         skillCheck.safeZone.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, randomWidth);
     }
-    
+
     private void RandomizeSafeZonePosition()
     {
         float newX = Random.Range(skillCheck.bar.offsetMin.x, skillCheck.bar.offsetMax.x);
         skillCheck.safeZone.transform.localPosition = new Vector2(newX, skillCheck.safeZone.transform.localPosition.y);
     }
-    
+
     private void RandomizeNeedleSpeed()
     {
         float newSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
         needleSpeed = newSpeed;
     }
-    
+
     private Rect GetScreenRect(RectTransform rectTransform)
     {
         Vector3[] corners = new Vector3[4];
@@ -152,10 +163,10 @@ public class SkillCheckController : Minigame
             Debug.LogWarning("RectTransform no asignado");
             return false;
         }
-        
+
         Rect rect1 = GetScreenRect(rectA);
         Rect rect2 = GetScreenRect(rectB);
-        
+
         return rect1.Overlaps(rect2);
     }
 
@@ -167,7 +178,7 @@ public class SkillCheckController : Minigame
             ResetGame();
         }
     }
-    
+
     private IEnumerator DecreaseProgressOverTime()
     {
         while (skillCheck.gameObject.activeInHierarchy)
@@ -185,11 +196,11 @@ public class SkillCheckController : Minigame
             yield return null;
         }
     }
-    
+
     private void DecreaseProgress()
     {
         float curveValue = decreaseCurve.Evaluate(progress);
-            
+
         var decreaseAmount = Mathf.Clamp(
             progress - decreaseRate * Time.deltaTime * curveValue,
             minProgress, maxProgress);
