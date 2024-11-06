@@ -14,8 +14,10 @@ namespace Fsm_Mk2
     public class PlayerAgent : MonoBehaviour
     {
         public Action<Transform> OnHunted;
-        public Action<Transform> OnStruggle;
+        
         public UnityEvent<bool> OnWalk;
+        public UnityEvent<bool> OnStruggle;
+        public UnityEvent<bool> OnCleaning;
         
         private List<State> _states = new List<State>();
 
@@ -231,11 +233,13 @@ namespace Fsm_Mk2
 
         private void ActiveCleaner()
         {
+            OnCleaning?.Invoke(true);
             cleanerController.SwitchToTool(currentCleaner);
         }
 
         private void SetCleanerIdleMode()
         {
+            OnCleaning?.Invoke(false);
             cleanerController.SwitchToTool(0);
         }
         private void SwitchTool()
@@ -261,12 +265,14 @@ namespace Fsm_Mk2
 
         private void SetStruggleToWalkIdle()
         {
+            OnStruggle?.Invoke(false);
             _fsm.ApplyTransition(_struggleToWalkIdle);
             
         }
 
         private void SetWalkIdleToStruggle()
         {
+            OnStruggle?.Invoke(true);
             SetIsClickPressed(false);
             _fsm.ApplyTransition(_walkIdleToStruggle);
         }
