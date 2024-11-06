@@ -1,14 +1,19 @@
 using System.Collections.Generic;
+using AK.Wwise;
 using Fsm_Mk2;
 using Ghosts.WallGhost;
 using Minigames;
 using UnityEngine;
+using UnityEngine.Events;
 using State = Fsm_Mk2.State;
 
 namespace Ghosts
 {
     public class WallGhostAgent : Ghost
     {
+        public UnityEvent OnCatch;
+        public UnityEvent<bool> OnDeath;
+        
         [SerializeField] private Minigame minigame;
         [SerializeField] private Transform trappingPos;
         
@@ -36,7 +41,7 @@ namespace Ghosts
             State _catch = new Catch();
             _states.Add(_catch);
 
-            State _dead = new Dead(gameObject);
+            State _dead = new Dead();
             _states.Add(_dead);
 
             _huntToCatch = new Transition() { From = _hunt, To = _catch };
@@ -50,11 +55,13 @@ namespace Ghosts
 
         private void SetCatchState()
         {
+            OnCatch?.Invoke();
             _fsm.ApplyTransition(_huntToCatch);
         }
         
         private void SetDeadState()
         {
+            OnDeath?.Invoke(true);
             _fsm.ApplyTransition(_catchToDead);
         }
 
