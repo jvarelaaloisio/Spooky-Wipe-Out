@@ -42,6 +42,8 @@ public class SkillCheckController : Minigame
     private bool HasPlayerWon => progress >= maxProgress;
     private bool HasPlayerLost;
 
+    private float _needleDir = 1;
+
     protected override void WinGame()
     {
         ResetGame();
@@ -67,37 +69,39 @@ public class SkillCheckController : Minigame
 
     protected override void ResetGame()
     {
-        HasPlayerLost = false;
         progress = minProgress;
-        skillCheck.gameObject.SetActive(false);
         _isActive = false;
         StopCoroutine(DecreaseProgressOverTime());
         StopCoroutine(MoveNeedleOverTime());
+        skillCheck.gameObject.SetActive(false);
     }
 
     public override void StartGame()
     {
         OnStart?.Invoke();
-
+        HasPlayerLost = false;
         inputReader.OnSpaceInputStart += HandleInput;
         skillCheck.gameObject.SetActive(true);
-        RandomizeSafeZoneWidth();
-        _isActive = true;
         StartCoroutine(DecreaseProgressOverTime());
         StartCoroutine(MoveNeedleOverTime());
+        RandomizeSafeZoneWidth();
+        _isActive = true;
     }
 
     private void MoveNeedle()
     {
         var transformLocalPosition = skillCheck.needle.transform.localPosition;
 
-        if (transformLocalPosition.x >= skillCheck.bar.offsetMax.x ||
-            transformLocalPosition.x <= skillCheck.bar.offsetMin.x)
+        if (transformLocalPosition.x <= skillCheck.bar.offsetMin.x)
         {
-            needleSpeed = -needleSpeed;
+            _needleDir = 1;
+        }
+        else if (transformLocalPosition.x >= skillCheck.bar.offsetMax.x)
+        {
+            _needleDir = -1;
         }
 
-        transformLocalPosition.x += needleSpeed * Time.deltaTime;
+        transformLocalPosition.x += needleSpeed * _needleDir * Time.deltaTime;
 
         skillCheck.needle.transform.localPosition = transformLocalPosition;
     }
@@ -110,10 +114,11 @@ public class SkillCheckController : Minigame
         if (IsColliding(needleRect, safeZoneRect))
         {
             UpdateProgress(progress + increaseAmount);
-
+            
             RandomizeSafeZoneWidth();
             RandomizeSafeZonePosition();
             RandomizeNeedleSpeed();
+            
         }
         else if( progress <= minProgress)
         {
