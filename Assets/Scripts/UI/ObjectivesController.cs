@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Player.FSM;
 using UnityEngine;
 
-public class TimerTasksController : MonoBehaviour
+public class ObjectivesController : MonoBehaviour
 {
     [SerializeField] private InputReader inputReader;
 
