@@ -12347,6 +12347,18 @@ PrefabInstance:
       propertyPath: Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 6fcfeae0983493c42ba6fd7cb22539b6, type: 2}
+    - target: {fileID: 2432974729119047995, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39.891163
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432974729119047995, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75715405
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432974729119047995, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.421661
+      objectReference: {fileID: 0}
     - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: ADMinigame
       value: 
@@ -12355,6 +12367,26 @@ PrefabInstance:
       propertyPath: SKMinigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 3682512791674879740, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136936489199683965, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185105946525444678, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39.891163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185105946525444678, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75715405
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185105946525444678, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.421661
+      objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: inputReader
       value: 
