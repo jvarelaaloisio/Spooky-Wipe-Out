@@ -8,13 +8,15 @@ using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using State = Fsm_Mk2.State;
 
 namespace Ghosts
 {
-    public class WalkingGhostAgent : Ghost, IVacuumable
+    public class ChainGhostAgent : Ghost, IVacuumable
     {
         public UnityEvent<bool> OnVacuumed;
+        public UnityEvent<bool> OnTired;
         
         [SerializeField] private Minigame minigame;
         [SerializeField] private GameObject model;

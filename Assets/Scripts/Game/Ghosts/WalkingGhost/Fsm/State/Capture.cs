@@ -7,10 +7,10 @@ namespace Ghosts.WalkingGhost
     public class Capture : State
     {
         private GameObject _model;
-        private WalkingGhostAgent _agent;
+        private ChainGhostAgent _agent;
         private Minigame _minigame;
 
-        public Capture(GameObject model, WalkingGhostAgent agent, Minigame minigame)
+        public Capture(GameObject model, ChainGhostAgent agent, Minigame minigame)
         {
             _model = model;
             _agent = agent;

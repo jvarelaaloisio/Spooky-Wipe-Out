@@ -10094,6 +10094,30 @@ PrefabInstance:
       propertyPath: minigame
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: OnTired.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: OnTired.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1688402450}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: OnTired.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: OnTired.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetIsTiredState
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: OnTired.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChainGhostAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: OnTired.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1421820055152367310, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: _waypoints.Array.data[0]
       value: 
@@ -10136,6 +10160,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 161826005871552228, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
   m_PrefabInstance: {fileID: 1688402448}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1688402450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 705575695356465264, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+  m_PrefabInstance: {fileID: 1688402448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0b4f758364934489e7f3d5911e49d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706693295
 GameObject:
   m_ObjectHideFlags: 0
@@ -12447,7 +12482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnStruggle.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnCleaning.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12456,7 +12491,7 @@ PrefabInstance:
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnStruggle.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 112671403817669790}
+      objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnCleaning.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -12471,7 +12506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnStruggle.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetVacuumGhost
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnCleaning.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -12479,7 +12514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnStruggle.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerAnimation, Assembly-CSharp
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnCleaning.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -12487,7 +12522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnStruggle.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7090365597876866152, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_IsActive

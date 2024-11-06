@@ -7,13 +7,13 @@ public class PlayerAnimation : MonoBehaviour
     
     [SerializeField] private Animator animator;
     
-    public void SetWalkState(bool isWalking)
+    public void SetWalkState(bool state)
     {
-        animator.SetBool(IsWalking, isWalking);
+        animator.SetBool(IsWalking, state);
     }
     
-    public void SetCleaning(bool isCleaning)
+    public void SetCleaning(bool state)
     {
-        animator.SetBool(IsCleaning, isCleaning);
+        animator.SetBool(IsCleaning, state);
     }
 }

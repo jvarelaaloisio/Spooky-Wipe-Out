@@ -3,13 +3,13 @@ using Ghosts;
 
 public struct GhostBehaviourData
 {
-    public GhostBehaviourData(WalkingGhostAgent self, Transform hunter)
+    public GhostBehaviourData(ChainGhostAgent self, Transform hunter)
     {
         this.self = self;
         this.hunter = hunter;
     }
 
-    public WalkingGhostAgent self { get; set; }
+    public ChainGhostAgent self { get; set; }
 
     public Transform hunter{ get; set; }
 }
