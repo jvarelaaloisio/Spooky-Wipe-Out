@@ -16,7 +16,6 @@ namespace Ghosts
     public class ChainGhostAgent : Ghost, IVacuumable
     {
         public UnityEvent<bool> OnVacuumed;
-        public UnityEvent<bool> OnTired;
         
         [SerializeField] private Minigame minigame;
         [SerializeField] private GameObject model;

@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class GhostRest : MonoBehaviour, IRest
 {
+    public UnityEvent<bool> OnTired;
+    
     private NavMeshAgent _agent;
 
     [SerializeField] private float restDuration = 3f;
@@ -32,10 +34,11 @@ public class GhostRest : MonoBehaviour, IRest
     private IEnumerator Rest()
     {
         _agent.isStopped = true;
-
+        OnTired?.Invoke(true);
         yield return new WaitForSeconds(restDuration);
 
         _agent.isStopped = false;
+        OnTired?.Invoke(false);
 
         SetRestState.Invoke(true);
 

@@ -71,6 +71,8 @@ MonoBehaviour:
   model: {fileID: 7241681532952809860}
   treeAsset: {fileID: 4900000, guid: c8a5fb8aedb139b4c9766fdb78a3d73c, type: 3}
   <viewHunterDistance>k__BackingField: 8
+  <awareHunterDistance>k__BackingField: 16
+  <currentHunterDistance>k__BackingField: 0
   <isRested>k__BackingField: 0
   hunter: {fileID: 0}
   logFsmStateChanges: 0
@@ -141,6 +143,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db070a9aa0a6b34b852902c5a4f8420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetIsTiredState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   restDuration: 6
 --- !u!54 &2861774883517133326
 Rigidbody:
