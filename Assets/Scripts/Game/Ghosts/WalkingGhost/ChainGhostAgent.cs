@@ -31,6 +31,7 @@ namespace Ghosts
         [field:SerializeField] public bool isRested { get; set; }
 
         [SerializeField] private Transform hunter;
+        [SerializeField] private ParticleSystem surprisedVfx;
 
         private List<State> _states = new List<State>();
 
@@ -113,6 +114,7 @@ namespace Ghosts
             _flee.transitions.Add(_fleeToWalk);
 
             _walkToFlee = new Transition() { From = _walk, To = _flee };
+            _walkToFlee.TransitionAction += surprisedVfx.Play;
             _walk.transitions.Add(_walkToFlee);
 
             _startWalk = new Transition() { From = _walk, To = _walk };
@@ -128,6 +130,7 @@ namespace Ghosts
             _rest.transitions.Add(_restToWalk);
 
             _restToFlee = new Transition() { From = _rest, To = _flee };
+            _restToFlee.TransitionAction += surprisedVfx.Play;
             _rest.transitions.Add(_restToFlee);
 
             _restToStruggle = new Transition() { From = _rest, To = _struggle };
