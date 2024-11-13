@@ -3572,6 +3572,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8503408253854406107, guid: 8f7f7015a3fb8a2449f81490477f2d5d, type: 3}
+      propertyPath: m_Extents.x
+      value: 2.165
+      objectReference: {fileID: 0}
     - target: {fileID: 8979229202025193115, guid: 8f7f7015a3fb8a2449f81490477f2d5d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3637,6 +3641,14 @@ PrefabInstance:
     - target: {fileID: 635063267988621989, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
       propertyPath: m_Name
       value: Washbasin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237337842521829114, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: m_Extents.x
+      value: 1.785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237337842521829114, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: m_Extents.z
+      value: 0.89
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4556,6 +4568,14 @@ PrefabInstance:
     - target: {fileID: 3842716563012591815, guid: d559a76e7fba54a41a7efb2a149f7309, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596070411604003386, guid: d559a76e7fba54a41a7efb2a149f7309, type: 3}
+      propertyPath: m_Extents.x
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596070411604003386, guid: d559a76e7fba54a41a7efb2a149f7309, type: 3}
+      propertyPath: m_Extents.z
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 6217811558294699750, guid: d559a76e7fba54a41a7efb2a149f7309, type: 3}
       propertyPath: m_Name
@@ -5989,6 +6009,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Washbasin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7237337842521829114, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: m_Extents.x
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237337842521829114, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: m_Extents.z
+      value: 0.785
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6359,6 +6387,10 @@ PrefabInstance:
     - target: {fileID: 4482676646542886606, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
       propertyPath: m_Name
       value: Toilet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358963608479700331, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
+      propertyPath: m_Extents.x
+      value: 2.415
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6995,6 +7027,10 @@ PrefabInstance:
     - target: {fileID: 4482676646542886606, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
       propertyPath: m_Name
       value: Toilet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358963608479700331, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
+      propertyPath: m_Extents.x
+      value: 1.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7770,6 +7806,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 784883840}
     m_Modifications:
+    - target: {fileID: 38418228098514478, guid: d07a4de348e1fbb41829bd956135c153, type: 3}
+      propertyPath: m_Extents.x
+      value: 3.57
+      objectReference: {fileID: 0}
     - target: {fileID: 1254002996970120724, guid: d07a4de348e1fbb41829bd956135c153, type: 3}
       propertyPath: m_Name
       value: Bookshelf (3)
@@ -10532,10 +10572,6 @@ PrefabInstance:
       value: Chair (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7391892361470390415, guid: ad18f659da72725409e94eb1e8ca51d7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391892361470390415, guid: ad18f659da72725409e94eb1e8ca51d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.450003
       objectReference: {fileID: 0}
@@ -12398,7 +12434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.12
+      value: -14.26
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12406,7 +12442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.94
+      value: -25.58
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12585,7 +12621,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3277197
+      value: -8.467721
       objectReference: {fileID: 0}
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12593,7 +12629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.73228
+      value: -31.372282
       objectReference: {fileID: 0}
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12712,7 +12748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3277197
+      value: -8.467721
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12720,7 +12756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.73228
+      value: -31.372282
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12984,6 +13020,10 @@ PrefabInstance:
     - target: {fileID: 4482676646542886606, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
       propertyPath: m_Name
       value: Toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358963608479700331, guid: f094caab6ac40c24097b9a67afc762b5, type: 3}
+      propertyPath: m_Extents.x
+      value: 2.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
