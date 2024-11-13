@@ -12799,6 +12799,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 425331134524046857, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 817542080605804852, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: vacuumNuzzle
       value: 
@@ -13010,6 +13014,10 @@ PrefabInstance:
     - target: {fileID: 6320206865232050716, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426539489628483980, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7640098835346752244, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_fontSize
