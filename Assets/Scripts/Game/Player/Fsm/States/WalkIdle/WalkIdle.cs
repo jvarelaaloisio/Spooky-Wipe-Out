@@ -19,6 +19,8 @@ namespace Fsm_Mk2
 
         private Vector3 _counterMovement;
 
+        private float _stickRotatingSpeed = 5.0f;
+
         public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast, Action<bool> OnWalk)
         {
             _gameObject = gameObject;
@@ -110,7 +112,7 @@ namespace Fsm_Mk2
             if (mousePosition == Vector3.zero) return;
 
             Quaternion targetRotation = Quaternion.LookRotation(mousePosition);
-            _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation, 5 * Time.deltaTime);
+            _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation, _stickRotatingSpeed * Time.deltaTime);
         }
 
         public void SetDir(Vector3 newDir)
