@@ -16,8 +16,10 @@ namespace Player.FSM
         public Action OnSwitchTool;
         public Action OnSpaceInputStart;
         public Action OnPauseStart;
-        public Action OnSeeTimerStart;
-        public Action OnSeeTasksStart;
+        public Action OnShowTimer;
+        public Action OnHideTimer;
+        public Action OnShowTasks;
+        public Action OnHideTasks;
         public Action<InputDevice> OnInputDevice;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
@@ -85,7 +87,11 @@ namespace Player.FSM
         {
             if (context.started)
             {
-                OnSeeTimerStart?.Invoke();
+                OnShowTimer?.Invoke();
+            }
+            else if (context.canceled)
+            {
+                OnHideTimer?.Invoke();
             }
             OnInputDevice?.Invoke(context.control.device);
         }
@@ -94,7 +100,11 @@ namespace Player.FSM
         {
             if (context.started)
             {
-                OnSeeTasksStart?.Invoke();
+                OnShowTasks?.Invoke();
+            }
+            else if (context.canceled)
+            {
+                OnHideTasks?.Invoke();
             }
             OnInputDevice?.Invoke(context.control.device);
         }
