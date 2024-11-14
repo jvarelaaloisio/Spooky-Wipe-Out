@@ -21,17 +21,34 @@ namespace Player.FSM
         public Action OnShowTasks;
         public Action OnHideTasks;
         public Action<InputDevice> OnInputDevice;
+        public static bool isUsingController = false;
+
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
             OnMove?.Invoke(context.ReadValue<Vector2>());
             OnInputDevice?.Invoke(context.control.device);
         }
+        
+        public void HandleInputChange(PlayerInput context)
+        {
+            if (context.devices[0] is Mouse || context.devices[0] is Keyboard)
+            {
+                isUsingController = false;
+            }
+            else if (context.devices[0] is Gamepad) 
+            { 
+                isUsingController = true;
+            }
+
+
+        }
 
         public void HandleMouseInput(InputAction.CallbackContext context)
         {
             OnAimingVacuum?.Invoke(context.ReadValue<Vector2>());
             OnInputDevice?.Invoke(context.control.device);
+            
         }
 
         public void HandleClickInput(InputAction.CallbackContext context)

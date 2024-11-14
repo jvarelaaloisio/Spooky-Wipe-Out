@@ -1,6 +1,6 @@
+using Player.FSM;
 using System;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 namespace Fsm_Mk2
 {
@@ -67,8 +67,14 @@ namespace Fsm_Mk2
                 else
                 {
                     _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForceVacuuming, 0, -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming);
-
-                    RotateWhileVacuuming();
+                    if(InputReader.isUsingController)
+                    {
+                        RotateWhileVacuumingStick();
+                    }
+                    else
+                    {
+                        RotateWhileVacuuming();
+                    }
                 }
             }
         }
@@ -98,6 +104,15 @@ namespace Fsm_Mk2
             }
         }
 
+        private void RotateWhileVacuumingStick()
+        {
+            if (!Camera.main) return;
+            if (mousePosition == Vector3.zero) return;
+
+            Quaternion targetRotation = Quaternion.LookRotation(mousePosition);
+            _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation, 5 * Time.deltaTime);
+        }
+
         public void SetDir(Vector3 newDir)
         {
             _dir = newDir;
@@ -106,7 +121,6 @@ namespace Fsm_Mk2
         public void SetIsClickPressedState(bool isClickPresed)
         {
             _isClickPressed = isClickPresed;
-            //Debug.Log($"The button is : {isClickPresed}");
         }
 
         public void SetMousePosition(Vector3 mousePosition)
