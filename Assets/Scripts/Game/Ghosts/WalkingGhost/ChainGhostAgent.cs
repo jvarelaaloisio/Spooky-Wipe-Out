@@ -16,6 +16,7 @@ namespace Ghosts
     public class ChainGhostAgent : Ghost, IVacuumable
     {
         public UnityEvent<bool> OnVacuumed;
+        private Action<bool> OnRested = delegate { };
         
         [SerializeField] private Minigame minigame;
         [SerializeField] private GameObject model;
@@ -95,7 +96,7 @@ namespace Ghosts
             State _flee = new Flee(_fleeGhost);
             _states.Add(_flee);
 
-            State _rest = new Rest(_restGhost);
+            State _rest = new Rest(_restGhost, OnRested);
             _states.Add(_rest);
 
             _fleeToStruggle = new Transition() { From = _flee, To = _struggle };
@@ -105,6 +106,7 @@ namespace Ghosts
             _struggle.transitions.Add(_struggleToCapture);
 
             _struggleToFlee = new Transition() { From = _struggle, To = _flee };
+            _struggleToFlee.TransitionAction += () => { isRested = true; OnRested(isRested = true); };
             _struggle.transitions.Add(_struggleToFlee);
 
             _struggleToWalk = new Transition() { From = _struggle, To = _walk };
@@ -225,7 +227,8 @@ namespace Ghosts
             OnVacuumed?.Invoke(false);
             currentHunterDistance = awareHunterDistance;
             _fsm.ApplyTransition(_walkToFlee);
-            _fsm.ApplyTransition(_restToFlee);
+            _fsm.ApplyTransition(_struggleToFlee);
+            OnRested?.Invoke(true);
         }
 
         private void SetFleeRestState()
